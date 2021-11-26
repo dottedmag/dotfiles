@@ -1,0 +1,23 @@
+[diff]
+	algorithm = histogram
+
+[include]
+	path = .gitconfig.host
+
+[merge]
+	ff = only
+
+[pull]
+	ff = only
+
+[push]
+	followTags = true
+
+[http]
+	cookieFile = .gitcookies
+
+[core]
+	precomposeUnicode = true
+
+[init]
+	defaultBranch = master
