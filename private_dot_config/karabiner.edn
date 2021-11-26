@@ -11,7 +11,7 @@
  :tos {:to-en {:input :en}
        :to-ru {:input :ru}}
  :main [{:des "Caps->Ctrl"
-         :rules [[:caps_lock :left_control]]}
+         :rules [[:##caps_lock :left_control]]}
         {:des "[Shift+]Cmd+Tab -> Witch"
          :rules [[:!Ctab :!COTtab]
                  [:!SCtab :!SCOTtab]]}
