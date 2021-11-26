@@ -1,0 +1,37 @@
+Host abel
+  Hostname abel.local
+
+Host abel2
+  Hostname 10.0.10.2
+  HostKeyAlgorithms +ssh-rsa
+  PubkeyAcceptedAlgorithms +ssh-rsa
+  User root
+
+Host abel3
+  Hostname 10.0.10.3
+  HostKeyAlgorithms +ssh-rsa
+  PubkeyAcceptedAlgorithms +ssh-rsa
+  User root
+
+Host backup
+  Hostname backup.dottedmag.net
+  Port 922
+
+Host tea
+  Hostname tea.dottedmag.net
+
+Host ev3
+  Hostname 192.168.2.3
+  User robot
+
+Host azbooka
+  Hostname 192.168.111.1
+  KexAlgorithms diffie-hellman-group1-sha1
+  User root
+  
+Host *
+  ControlMaster auto
+  ControlPath ~/.local/share/ssh/control/%r@%h:%p
+  ControlPersist yes
+  ExitOnForwardFailure yes
+  HashKnownHosts yes
