@@ -1,0 +1,81 @@
+if [[ -d /System ]]; then # macOS
+    alias grep='ggrep --color=auto'
+    alias ls='ls --color -F'
+elif [[ -f /etc/debian_version -o -f /etc/ubuntu_version ]]; then
+    alias grep='grep --color=auto'
+    export GZIP=--rsyncable
+    eval $(lessfile)
+    alias ls='ls --color -F'
+else # Unknown system
+    if grep --version 2>&1 | grep -q GNU; then
+	alias grep='grep --color=auto'
+    fi
+    if gzip --help 2>&1 | grep -q rsyncable; then
+	alias GZIP=--rsyncable
+    fi
+    if whence lessfile >/dev/null; then
+	eval $(lessfile)
+    fi
+    if ls --version 2>&1 | grep -q GNU; then
+	alias ls='ls --color -F'
+    fi
+fi
+
+export LESS=-iFQRS
+
+alias gdb='gdb -q'
+
+# FIXME: Use emacsclient
+if whence nano >/dev/null; then
+    export EDITOR=nano
+fi
+
+# History
+
+HISTFILE=$HOME/.zsh_history
+export HISTSIZE=1000000
+export SAVEHIST=800000
+setopt EXTENDED_HISTORY
+setopt HIST_FCNTL_LOCK
+setopt HIST_IGNORE_ALL_DUPS
+setopt HIST_IGNORE_SPACE
+setopt HIST_NO_STORE
+setopt HIST_REDUCE_BLANKS
+setopt HIST_SAVE_NO_DUPS
+setopt SHARE_HISTORY
+unsetopt BANG_HIST
+
+# Misc zsh settings
+
+setopt AUTO_PUSHD
+unsetopt AUTO_MENU
+unsetopt BEEP
+# / is not a part of word
+slashre=/; export WORDCHARS=${WORDCHARS/$slashre}
+
+# Prompt, terminal title
+
+case "$TERM" in
+    dumb)
+	export PROMPT="%n@%m%f:%~ %# "
+	;;
+    xterm*)
+	preexec() {
+	    print -nP "\033]2;%m:%~ %# $2\007"
+	}
+	precmd() {
+	    if [[ $USER == dottedmag ]]; then
+		PROMPT_U=
+	    else
+		PROMPT_U="%F{white}%K{red}$USER%f%k@"
+	    fi
+	    print -nP "\033]2;%m:%~ %#\007"
+	}
+
+	setopt PROMPT_SUBST
+	export PROMPT='[$PROMPT_U%F{blue}%m%f:%~]%(?..%F{white}%K{red}%?%f%k )%B%#%b '
+	;;
+esac
+
+# FIXME: git status
+

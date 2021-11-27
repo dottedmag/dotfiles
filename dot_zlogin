@@ -1,0 +1,4 @@
+# Show chezmoi status sometimes
+if [[ "$RANDOM" -lt 4000 ]]; then
+    chezmoi status
+fi
