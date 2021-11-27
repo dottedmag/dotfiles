@@ -31,6 +31,6 @@
                  [:left_command :left_option [:sculpt]]
                  [:left_option :left_command [:sculpt]]]}
         {:des "Keychron keys"
-         :rules [[:home :page_down [:k3]]
-                 [:page_down :page_up [:k3]]
-                 [:page_up :home [:k3]]]}]}
+         :rules [[:##home :page_down [:k3]]
+                 [:##page_down :page_up [:k3]]
+                 [:##page_up :home [:k3]]]}]}
