@@ -87,7 +87,7 @@
 
 ;; *** Fonts ***
 
-(set-face-attribute 'default nil :family "Roboto Mono" :height 120)
+(set-face-attribute 'default nil :family "Liberation Mono" :height 110)
 
 ;; *** Input ***
 
@@ -225,7 +225,7 @@
 
 ;; *** Backup files ***
 
-(setq make-backup-files nil)e
+(setq make-backup-files nil)
 
 ;; *** Environment ***
 
@@ -275,6 +275,9 @@
 (autoload 'enable-paredit-mode "paredit" "Turn on pseudo-structural editing of Lisp code." t)
 
 (straight-use-package 'rainbow-delimiters)
+
+;; Required to set face attributes below
+(require 'rainbow-delimiters)
 
 (set-face-attribute 'rainbow-delimiters-depth-1-face nil :foreground "#000000")
 (set-face-attribute 'rainbow-delimiters-depth-2-face nil :foreground "#ee0000")
