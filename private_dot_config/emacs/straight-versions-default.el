@@ -1,0 +1,10 @@
+(("dash.el" . "da167c51e9fd167a48d06c7c0ee8e3ac7abd9718")
+ ("el-get" . "960f3fb962c35d3196bab20b2a3f6d6228119277")
+ ("emacsmirror-mirror" . "82752f0de28041e61b709810d3acb67fba69c8c1")
+ ("gnu-elpa-mirror" . "fea2b2e75458dc7ed77290d10fc0a7c47dccd24d")
+ ("magit" . "a66b86d51139479d74962cc077c5215d20dd72e6")
+ ("melpa" . "79cfb4a1c6b89cc5d93020089804b5e6ae711387")
+ ("straight.el" . "af5437f2afd00936c883124d6d3098721c2d306c")
+ ("transient" . "349116159f707a474926b47e5f6b6240e8997a4d")
+ ("with-editor" . "cfe70f43c551852125bc139df467e28e1b6087df"))
+:beta
