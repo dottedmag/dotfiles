@@ -12,6 +12,9 @@
 (global-unset-key "\C-h\C-n")
 (global-unset-key "\C-h\C-m")
 
+;; This is the easiest way to get rid of the startup message
+(defun startup-echo-area-message () "")
+
 ;; *** GC ***
 
 (setq gc-cons-threshold 10000000)
@@ -67,6 +70,21 @@
 ;; Show current file or buffer name in title
 (setq frame-title-format
       '((:eval (dm>frame-title))))
+
+;; Make highlight less visually harsh
+
+(set-face-attribute 'highlight nil :background "gray90")
+
+;; font-lock faces
+
+(set-face-attribute 'font-lock-keyword-face nil :foreground "#888888")
+(set-face-attribute 'font-lock-comment-face nil :foreground "#00bb00")
+(set-face-attribute 'font-lock-string-face nil :foreground "#008800")
+(set-face-attribute 'font-lock-constant-face nil :foreground "blue1")
+(set-face-attribute 'font-lock-function-name-face nil :foreground "blue1")
+(set-face-attribute 'font-lock-variable-name-face nil :foreground 'unspecified)
+(set-face-attribute 'font-lock-builtin-face nil :foreground 'unspecified)
+(set-face-attribute 'font-lock-type-face nil :foreground "#008080")
 
 ;; * Visual bell *
 
@@ -214,6 +232,18 @@
 (global-set-key (kbd "C-,") #'dm>switch-to-previous-window)
 (global-set-key (kbd "C-.") #'dm>switch-to-next-window)
 
+(global-set-key (kbd "s-o") 'find-file)
+(global-set-key (kbd "s-w") 'kill-this-buffer)
+
+(defun dm>new-buffer ()
+  (interactive)
+  (let ((buf (generate-new-buffer "untitled")))
+    (switch-to-buffer buf)
+    (funcall initial-major-mode)
+    (setq buffer-offer-save t)))
+
+(global-set-key (kbd "s-n") 'dm>new-buffer)
+
 ;; *** Sessions ***
 
 (savehist-mode 1)
@@ -234,6 +264,48 @@
   (require 'exec-path-from-shell)
   (exec-path-from-shell-initialize))
 
+;; *** OS integration ***
+
+;; * Darwin
+
+(defun dm>kitty ()
+  (interactive)
+  (start-process "kitty" nil "kitty" "--single-instance"))
+
+(defun dm>darwin-dir ()
+  (interactive)
+  (start-process "finder" nil "open" "."))
+
+(defun dm>darwin-setup-os-integration ()
+  (global-set-key (kbd "s-t") #'dm>kitty)
+  (global-set-key (kbd "s-f") #'dm>darwin-dir)
+
+  (global-unset-key (kbd "s-k")) ; kill-this-buffer, use Cmd-W instead
+  (global-unset-key (kbd "s-q")) ; save-buffers-kill-emacs, just disable it
+  (global-unset-key (kbd "s-p")) ; ns-print-buffer, unused
+  (global-unset-key (kbd "s-n")) ; ns-make-frame, unused
+)
+
+(if (eq system-type 'darwin)
+    (dm>darwin-setup-os-integration))
+
+;; * Linux/X/Wayland
+
+(defun dm>x-terminal-emulator ()
+  (interactive)
+  (start-process "x-terminal-emulator" nil "x-terminal-emulator"))
+
+(defun dm>xdg-dir ()
+  (interactive)
+  (start-process "xdg-dir" nil "xdg-open" "."))
+
+(defun dm>linux-setup-os-integration ()
+  (global-set-key (kbd "s-t") #'dm>x-terminal-emulator)
+  (global-set-key (kbd "s-f") #'dm>xdg-dir))
+
+(if (eq system-type 'gnu/linux)
+    (dm>linux-setup-os-integration))
+
 ;; *** Modes ***
 
 ;; * LSP *
@@ -241,11 +313,35 @@
 (straight-use-package 'lsp-mode)
 (straight-use-package 'lsp-ui)
 
+(require 'lsp-ui) ;; lsp-ui-doc--frame-visible-p is used below
+
 ;; Do not use default configuration: it enables too much UX
 (setq lsp-auto-configure nil)
 
 ;; No slowpokes around
 (setq lsp-idle-delay 0.01)
+
+;; Enable symbol highlight (what lsp-ui usually does)
+(defun dm>lsp-enable-symbol-highlight ()
+  (setq lsp-enable-symbol-highlighting t)
+  (add-hook 'lsp-on-idle-hook #'lsp--document-highlight nil t))
+(add-hook 'lsp-configure-hook #'dm>lsp-enable-symbol-highlight)
+
+;; Disable ElDoc in LSP, lsp-ui enables it unconditionally
+(defun dm>lsp-disable-eldoc ()
+  (eldoc-mode 0))
+(add-hook 'lsp-configure-hook #'dm>lsp-disable-eldoc)
+
+;; Can be used by any mode
+(defun dm>lsp-ui-doc-toggle ()
+  (interactive)
+  (if (lsp-ui-doc--frame-visible-p)
+      (lsp-ui-doc-hide)
+    (lsp-ui-doc-show)))
+
+;; Configuration of lsp-ui doc window
+(setq lsp-ui-doc-header t
+      lsp-ui-doc-include-signature t)
 
 ;; * Flycheck *
 
@@ -262,8 +358,70 @@
 
 (straight-use-package 'go-mode)
 
+;; Needed to add keys to go-mode-map
+(require 'go-mode)
+
 (when (eq system-type 'darwin)
   (exec-path-from-shell-copy-env "GOPATH"))
+
+(add-hook 'go-mode-hook #'lsp)
+
+;; Configure LSP for Go
+
+(require 'lsp-go) ;; Load gopls support
+(require 'lsp) ;; lsp-defun is used below
+
+;; Autoformat on save
+(defun dm>go-mode-hook ()
+  (add-hook 'before-save-hook #'lsp-format-buffer)
+  (add-hook 'before-save-hook #'lsp-organize-imports))
+(add-hook 'go-mode-hook #'dm>go-mode-hook)
+
+;; Show documentation on Ctrl-F1
+(define-key go-mode-map (kbd "C-<f1>") #'dm>lsp-ui-doc-toggle)
+
+;; Open documentation in browser on Shift-Ctrl-F1
+(defconst dm>godoc-re "(https://godoc\\.org/\\(.*?\\))")
+
+(defun dm>godoc--find-open (contents)
+  (save-match-data
+    (when (string-match dm>godoc-re contents)
+      (browse-url (concat "https://pkg.go.dev/" (match-string 1 contents))))))
+
+(lsp-defun dm>godoc--open-callback ((hover &as &Hover? :contents) bounds buffer)
+  (if (hash-table-p contents)
+      (dm>godoc--find-open (gethash "value" contents))))
+
+(defun dm>godoc-open ()
+  "Open pkg.go.dev documentation for the current symbol"
+  (interactive)
+  (dm>godoc--open-callback
+   (lsp-request "textDocument/hover" (lsp--text-document-position-params))
+   (or (bounds-of-thing-at-point 'symbol) (cons (point) (1+ (point))))
+   (current-buffer)))
+(define-key go-mode-map (kbd "C-S-<f1>") #'dm>godoc-open)
+
+;; Run golangci-lint after LSP lint
+
+(straight-use-package 'flycheck-golangci-lint)
+
+(flycheck-golangci-lint-setup)
+
+(defun dm>flycheck-add-next-checker-golangci-lint ()
+  (unless (seq-contains-p (flycheck-get-next-checkers 'lsp) 'golangci-lint)
+    (flycheck-add-next-checker 'lsp 'golangci-lint)))
+
+(defun dm>flycheck-remove-next-checker-golangci-lint ()
+  (when (seq-contains-p (flycheck-get-next-checkers 'lsp) 'golangci-lint)
+    (flycheck-remove-next-checker 'lsp 'golangci-lint)))
+
+(defun dm>window-switch-apply-flycheck-golangci-lint (&optional arg)
+  (if (eq major-mode 'go-mode)
+      (dm>flycheck-add-next-chechker-golangci-lint)
+    (dm>flycheck-remove-next-checker-golangci-lint)))
+
+(add-hook 'window-state-change-functions #'dm>window-switch-apply-flycheck-golangci-lint)
+(add-hook 'after-change-major-mode-hook #'dm>window-switch-apply-flycheck-golangci-lint)
 
 ;; * YAML *
 
