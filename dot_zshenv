@@ -5,17 +5,25 @@ prepend_path() {
 }
 
 if [[ -z "$_ZSHENV_PATH_SET" ]]; then
-    prepend_path /usr/local/bin
+    case $OSTYPE in
+	linux-gnu)
+	    # Nothing to do
+	    ;;
+	darwin*)
+	    # Do not read /etc/zshrc or /etc/zprofile, they mess up PATH
+	    unsetopt GLOBAL_RCS
 
-    eval "$(/opt/homebrew/bin/brew shellenv)"
+	    prepend_path /usr/local/bin
+	    eval "$(/opt/homebrew/bin/brew shellenv)"
+	    ;;
+	*)
+	    echo "Unknown OS $OSTYPE" >&2
+	    ;;
+    esac
 
     prepend_path "$HOME/go/bin"
     prepend_path "$HOME/bin"
-
     export PATH
-
-    # Do not read /etc/zshrc or /etc/zprofile, it messes up PATH
-    unsetopt GLOBAL_RCS 
 
     export _ZSHENV_PATH_SET=1
 fi

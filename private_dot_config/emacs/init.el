@@ -88,7 +88,7 @@
 
 ;; * Visual bell *
 
-;; Visual bell on macOS is ugly, so make our own by flashing the mode line
+;; Default visual bell is ugly, so make our own by flashing the mode line
 
 (defun dm>invert-mode-line ()
   (invert-face 'mode-line)
@@ -99,9 +99,7 @@
   (dm>invert-mode-line)
   (run-with-timer 0.1 nil 'dm>invert-mode-line))
 
-(if (eq system-type 'darwin)
-    (setq ring-bell-function #'dm>ring-bell-flash-mode-line))
-(setq visible-bell nil)
+(setq ring-bell-function #'dm>ring-bell-flash-mode-line)
 
 ;; *** Fonts ***
 
@@ -117,9 +115,13 @@
     (setq ns-right-alternate-modifier 'none))
 
 ;; Scroll by moving cursor, not viewport around
-(if (eq system-type 'darwin) ;; Due to some reason these are other way around in mwheel.el
+
+;; Due to some reason these are other way around in mwheel.el
+(if (eq system-type 'darwin)
     (setq mouse-wheel-down-event 'wheel-down
-          mouse-wheel-up-event 'wheel-up))
+          mouse-wheel-up-event 'wheel-up)
+  (setq mouse-wheel-down-event 'mouse-5
+        mouse-wheel-up-event 'mouse-4))
 
 (setq mwheel-scroll-up-function 'previous-line
       mwheel-scroll-down-function 'next-line)
@@ -233,6 +235,7 @@
 (global-set-key (kbd "C-.") #'dm>switch-to-next-window)
 
 (global-set-key (kbd "s-o") 'find-file)
+(global-set-key (kbd "s-s") 'save-buffer)
 (global-set-key (kbd "s-w") 'kill-this-buffer)
 
 (defun dm>new-buffer ()
@@ -370,11 +373,12 @@
 
 (require 'lsp-go) ;; Load gopls support
 (require 'lsp) ;; lsp-defun is used below
+(require 'lsp-ui-flycheck) ;; Load lsp-flycheck support
 
 ;; Autoformat on save
 (defun dm>go-mode-hook ()
-  (add-hook 'before-save-hook #'lsp-format-buffer)
-  (add-hook 'before-save-hook #'lsp-organize-imports))
+  (add-hook 'before-save-hook #'lsp-format-buffer nil 'local)
+  (add-hook 'before-save-hook #'lsp-organize-imports nil 'local))
 (add-hook 'go-mode-hook #'dm>go-mode-hook)
 
 ;; Show documentation on Ctrl-F1
@@ -417,7 +421,7 @@
 
 (defun dm>window-switch-apply-flycheck-golangci-lint (&optional arg)
   (if (eq major-mode 'go-mode)
-      (dm>flycheck-add-next-chechker-golangci-lint)
+      (dm>flycheck-add-next-checker-golangci-lint)
     (dm>flycheck-remove-next-checker-golangci-lint)))
 
 (add-hook 'window-state-change-functions #'dm>window-switch-apply-flycheck-golangci-lint)

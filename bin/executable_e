@@ -1,3 +1,7 @@
 #!/bin/sh
 
-exec /opt/homebrew/bin/emasclient -t "$@"
+if [ $(uname -s) = Darwin ]; then
+    exec /opt/homebrew/bin/emasclient -t "$@"
+else
+    exec emacsclient -t "$@"
+fi

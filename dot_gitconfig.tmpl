@@ -21,3 +21,12 @@
 
 [init]
 	defaultBranch = master
+
+[user]
+{{- if eq .chezmoi.hostname "p1" }}
+	email = misha@ridge.co
+	name = Misha Gusarov
+{{ else }}
+	email = dottedmag@dottedmag.net
+	name = Mikhail Gusarov
+{{ end -}}

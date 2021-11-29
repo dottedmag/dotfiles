@@ -1,25 +1,30 @@
-if [[ -d /System ]]; then # macOS
-    alias grep='ggrep --color=auto'
-    alias ls='ls --color -F'
-elif [[ -f /etc/debian_version -o -f /etc/ubuntu_version ]]; then
-    alias grep='grep --color=auto'
-    export GZIP=--rsyncable
-    eval $(lessfile)
-    alias ls='ls --color -F'
-else # Unknown system
-    if grep --version 2>&1 | grep -q GNU; then
-	alias grep='grep --color=auto'
-    fi
-    if gzip --help 2>&1 | grep -q rsyncable; then
-	alias GZIP=--rsyncable
-    fi
-    if whence lessfile >/dev/null; then
-	eval $(lessfile)
-    fi
-    if ls --version 2>&1 | grep -q GNU; then
+case $OSTYPE in
+    darwin*)
+	alias grep='ggrep --color=auto'
 	alias ls='ls --color -F'
-    fi
-fi
+        ;;
+    linux-gnu)
+	if [[ -f /etc/debian_version ]] || [[ -f /etc/ubuntu_version ]]; then
+	    alias grep='grep --color=auto'
+	    export GZIP=--rsyncable
+	    eval $(lessfile)
+	    alias ls='ls --color -F'
+	else # Unknown system
+	    if grep --version 2>&1 | grep -q GNU; then
+		alias grep='grep --color=auto'
+	    fi
+	    if gzip --help 2>&1 | grep -q rsyncable; then
+		alias GZIP=--rsyncable
+	    fi
+	    if whence lessfile >/dev/null; then
+		eval $(lessfile)
+	    fi
+	    if ls --version 2>&1 | grep -q GNU; then
+		alias ls='ls --color -F'
+	    fi
+	fi
+	;;
+esac
 
 export LESS=-iFQRS
 
