@@ -1,3 +1,5 @@
+autoload add-zsh-hook
+
 case $OSTYPE in
     darwin*)
 	alias grep='ggrep --color=auto'
@@ -70,17 +72,108 @@ case "$TERM" in
 	}
 	precmd() {
 	    if [[ $USER == dottedmag ]]; then
-		PROMPT_U=
+		DM_PROMPT_USER=
 	    else
-		PROMPT_U="%F{white}%K{red}$USER%f%k@"
+		DM_PROMPT_USER="%F{white}%K{red}$USER%f%k@"
 	    fi
 	    print -nP "\033]2;%m:%~ %#\007"
 	}
 
 	setopt PROMPT_SUBST
-	export PROMPT='[$PROMPT_U%F{blue}%m%f:%~]%(?..%F{white}%K{red}%?%f%k )%B%#%b '
+	export PROMPT='[${DM_PROMPT_USER}%F{blue}%m%f:%~]%(?.. %F{white}%K{red}%?%f%k)${DM_PROMPT_GIT}%B%#%b '
 	;;
 esac
 
-# FIXME: git status
+dm_git_action() {
+  local git_dir="$1"
 
+  if [ -d "$git_dir/rebase-apply" ]; then
+    if [ -f "$git_dir/rebase/rebasing" ]; then
+      echo rebase
+    elif [ -f "$git_dir/rebase/applying" ]; then
+      echo am
+    else
+      echo rebase/am
+    fi
+    return
+  fi
+
+  if [ -d "$git_dir/rebase-merge" ]; then
+    if [ -f "$git_dir/rebase-merge/interactive" ]; then
+      echo rebase-i
+    else
+      echo rebase-m
+    fi
+    return
+  fi
+
+  if [ -f "$git_dir/MERGE_HEAD" ]; then
+    echo merge
+    return
+  fi
+
+  if [ -f "$git_dir/BISECT_LOG" ]; then
+    echo bisect
+    return
+  fi
+
+  if [ -f "$git_dir/CHERRY_PICK_HEAD" ]; then
+    if [ -d "$git_dir/sequencer" ]; then
+      echo cherry-seq
+    else
+      echo cherry
+    fi
+    return
+  fi
+
+  if [ -d "$git_dir/sequencer" ]; then
+    echo cherry-or-revert
+    return
+  fi
+}
+
+dm_git_ref() {
+  local git_dir="$1"
+  local branch
+
+  branch=$(git --git-dir="$1" symbolic-ref --short HEAD 2>/dev/null)
+
+  if [ -n "$branch" ]; then
+    echo "$branch"
+    return
+  fi
+
+  # git describe might take a lot of time on large repositories if
+  # it performs a fuzzy match, so --candidates=0 disables it
+  ref=$(git --git-dir="$1" describe --candidates=0 HEAD 2>/dev/null)
+
+  if [ -n "$ref" ]; then
+    echo "$ref"
+    return
+  fi
+
+  git --git-dir="$1" rev-parse --short HEAD
+}
+
+dm_git_dir() {
+  git rev-parse --git-dir 2>/dev/null
+}
+
+dm_git_prompt() {
+  local git_dir git_ref git_action
+
+  git_dir=$(dm_git_dir)
+  if [[ $git_dir = "" ]]; then
+    DM_PROMPT_GIT=
+    return
+  fi
+
+  git_ref=$(dm_git_ref "$git_dir")
+  git_action=$(dm_git_action "$git_dir")
+  if [[ "$git_action" != "" ]]; then
+    git_action="%F{blue}-$git_action%f"
+  fi
+
+  DM_PROMPT_GIT=" %F{green}(${git_ref}${git_action})%f "
+}
+add-zsh-hook precmd dm_git_prompt
