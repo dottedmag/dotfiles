@@ -407,6 +407,7 @@
 
 ;; Run golangci-lint after LSP lint
 
+(require 'lsp-diagnostics)
 (straight-use-package 'flycheck-golangci-lint)
 
 (flycheck-golangci-lint-setup)
