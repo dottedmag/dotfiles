@@ -5,3 +5,5 @@
 bin/tokindle
 bin/rgrep
 {{ end }}
+README.md
+new-mac.md
