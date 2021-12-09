@@ -4,7 +4,7 @@
            :air2020 [{:vendor_id 1452 :product_id 641}] ; MB Air 2020 built-in keyboard
            :wl [{:vendor_id 1452 :product_id 597}] ; Apple Wireless keyboard
            :magic [{:vendor_id 1452 :product_id 615}] ; Apple Magic keyboard
-           :k3 [{:vendor_id 1452 :product_id 591}] ; Keychron K3
+           :k3 [{:vendor_id 1452 :product_id 591}] ; Keychron K3 (Windows configuration!)
            :race3 [{:vendor_id 1241 :product_id 402}]} ; Vortex Race 3
  :input-sources {:en {:language "^en$"}
                  :ru {:language "^ru$"}}
@@ -25,12 +25,15 @@
                  [:!CTd "open -a Emacs"]
                  [:!CTw "open -a OmniFocus"]]}
         {:des "Sculpt keys"
-         :rules [[:page_up :page_down [:sculpt]]
-                 [:page_down :end [:sculpt]]
-                 [:end :page_up [:sculpt]]
-                 [:left_command :left_option [:sculpt]]
-                 [:left_option :left_command [:sculpt]]]}
+         :rules [[:##page_up :page_down [:sculpt]]
+                 [:##page_down :end [:sculpt]]
+                 [:##end :page_up [:sculpt]]
+                 [:##left_command :left_option [:sculpt]]
+                 [:##left_option :left_command [:sculpt]]]}
         {:des "Keychron keys"
          :rules [[:##home :page_down [:k3]]
                  [:##page_down :page_up [:k3]]
-                 [:##page_up :home [:k3]]]}]}
+                 [:##page_up :home [:k3]]
+                 [:##left_command :left_option [:k3]]
+                 [:##left_option :left_command [:k3]]
+                 [:##right_option :right_command [:k3]]]}]}
