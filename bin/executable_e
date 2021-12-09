@@ -1,7 +1,7 @@
 #!/bin/sh
 
 if [ $(uname -s) = Darwin ]; then
-    exec /opt/homebrew/bin/emacslient -t "$@"
+    exec /opt/homebrew/bin/emacsclient -t "$@"
 else
     exec emacsclient -t "$@"
 fi
