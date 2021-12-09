@@ -162,6 +162,7 @@
 - pstree
 - pv
 - pwgen
+- ripgrep
 - socat
 - wget
 
