@@ -5,8 +5,8 @@ case $OSTYPE in
         ;;
     linux-gnu)
 	if [[ -f /etc/debian_version ]] || [[ -f /etc/ubuntu_version ]]; then
-	    alias grep='grep --color=auto'
-	    export GZIP=--rsyncable
+	  alias grep='grep --color=auto'
+	  alias gzip='gzip --rsyncable'
 	    eval $(lessfile)
 	    alias ls='ls --color -F'
 	else # Unknown system
@@ -14,7 +14,7 @@ case $OSTYPE in
 		alias grep='grep --color=auto'
 	    fi
 	    if gzip --help 2>&1 | grep -q rsyncable; then
-		alias GZIP=--rsyncable
+	      alias gzip='gzip --rsyncable'
 	    fi
 	    if whence lessfile >/dev/null; then
 		eval $(lessfile)
