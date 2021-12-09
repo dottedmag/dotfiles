@@ -252,6 +252,8 @@
 (straight-use-package 'rg)
 
 (global-set-key (kbd "s-f") #'rg)
+(global-set-key (kbd "<f11>") #'previous-error)
+(global-set-key (kbd "<f12>") #'next-error)
 
 ;; *** Sessions ***
 
