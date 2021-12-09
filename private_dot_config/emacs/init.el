@@ -247,6 +247,12 @@
 
 (global-set-key (kbd "s-n") 'dm>new-buffer)
 
+;; *** Search ***
+
+(straight-use-package 'rg)
+
+(global-set-key (kbd "s-f") #'rg)
+
 ;; *** Sessions ***
 
 (savehist-mode 1)
@@ -281,7 +287,7 @@
 
 (defun dm>darwin-setup-os-integration ()
   (global-set-key (kbd "s-t") #'dm>kitty)
-  (global-set-key (kbd "s-f") #'dm>darwin-dir)
+  (global-set-key (kbd "s-r") #'dm>darwin-dir)
 
   (global-unset-key (kbd "s-k")) ; kill-this-buffer, use Cmd-W instead
   (global-unset-key (kbd "s-q")) ; save-buffers-kill-emacs, just disable it
@@ -304,7 +310,7 @@
 
 (defun dm>linux-setup-os-integration ()
   (global-set-key (kbd "s-t") #'dm>x-terminal-emulator)
-  (global-set-key (kbd "s-f") #'dm>xdg-dir))
+  (global-set-key (kbd "s-r") #'dm>xdg-dir))
 
 (if (eq system-type 'gnu/linux)
     (dm>linux-setup-os-integration))
