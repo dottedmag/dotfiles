@@ -103,7 +103,9 @@
 
 ;; *** Fonts ***
 
-(set-face-attribute 'default nil :family "Liberation Mono" :height 110)
+(if (eq system-type 'darwin)
+    (set-face-attribute 'default nil :family "Liberation Mono" :height 110)
+  (set-face-attribute 'default nil :family "Liberation Mono" :height 84))
 
 ;; *** Input ***
 
@@ -167,6 +169,10 @@
 
 ;; Keep cursor to the end of line when moving around vertically
 (setq track-eol t)
+
+;; * SEARCH *
+
+;; FIXME: Add "grep" shortcut that defaults to "git grep" inside Git repositories
 
 ;; * Highlight full expressions *
 
