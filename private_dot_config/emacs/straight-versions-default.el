@@ -5,7 +5,6 @@
  ("emacs-which-key" . "521a59b6f461232a008fba62f79bbb14f487b16e")
  ("emacsmirror-mirror" . "82752f0de28041e61b709810d3acb67fba69c8c1")
  ("epl" . "78ab7a85c08222cd15582a298a364774e3282ce6")
- ("exec-path-from-shell" . "3a8d97c096c2c5714b667130fd8a80d5622ee067")
  ("f.el" . "50af874cd19042f17c8686813d52569b1025c76a")
  ("flycheck" . "784f184cdd9f9cb4e3dbb997c09d93e954142842")
  ("flycheck-golangci-lint" . "8e446c68311048f0b87febf8ef0379e29d358851")
