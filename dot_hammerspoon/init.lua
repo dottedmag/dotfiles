@@ -5,15 +5,25 @@ hs.grid.setMargins(hs.geometry(nil, nil, 0, 0))
 
 local function recalcGrids()
    for i, screen in pairs(hs.screen.allScreens()) do
-      local columns, rows = 2, 2
-      if screen:frame().w > 4000 then
-         columns = 3
+      local m = screen:currentMode()
+
+      local columns, rows
+      if m.w*m.scale < 3000 then
+	 columns = 2
+      elseif m.w*m.scale < 4000 then
+	 columns = 3
+      else
+         columns = 4
+      end
+
+      if m.h*m.scale < 2000 then
+	 rows = 2
+      else
+	 rows = 3
       end
       hs.grid.setGrid(hs.geometry(nil, nil, columns, rows), screen)
 
-      local ffr = screen:fullFrame()
-
-      local m = "Grid for "..screen:name().." "..ffr.string..": "..columns.."x"..rows
+      local m = "Grid for "..m.desc..": "..columns.."x"..rows
       hs.alert.show(m)
       log.i(m)
    end
