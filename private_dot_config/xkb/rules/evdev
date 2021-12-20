@@ -1,0 +1,4 @@
+!include %S/evdev
+
+! option = symbols
+  dottedmag:sculpt = +dottedmag(sculpt)
