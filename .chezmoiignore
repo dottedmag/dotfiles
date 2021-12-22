@@ -7,3 +7,5 @@ bin/rgrep
 {{ end }}
 README.md
 new-mac.md
+new-linux.md
+
