@@ -456,7 +456,7 @@
 ;; Required to set face attributes below
 (require 'rainbow-delimiters)
 
-(set-face-attribute 'rainbow-delimiters-depth-1-face nil :foreground "#000000")
+(set-face-attribute 'rainbow-delimiters-depth-1-face nil :foreground "#ffffff")
 (set-face-attribute 'rainbow-delimiters-depth-2-face nil :foreground "#ee0000")
 (set-face-attribute 'rainbow-delimiters-depth-3-face nil :foreground "#0000ee")
 (set-face-attribute 'rainbow-delimiters-depth-4-face nil :foreground "#ee7600")

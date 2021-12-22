@@ -30,3 +30,7 @@
 (if (eq system-type 'darwin)
     (dm>hide-menu-in-terminal-frames)
   (dm>hide-menu-everywhere))
+
+;; Dark mode
+
+(set-face-attribute 'default nil :foreground "white" :background "black")
