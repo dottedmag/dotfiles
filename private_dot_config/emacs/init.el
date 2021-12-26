@@ -78,10 +78,10 @@
 ;; font-lock faces
 
 (set-face-attribute 'font-lock-keyword-face nil :foreground "#888888")
-(set-face-attribute 'font-lock-comment-face nil :foreground "#00bb00")
-(set-face-attribute 'font-lock-string-face nil :foreground "#008800")
-(set-face-attribute 'font-lock-constant-face nil :foreground "blue1")
-(set-face-attribute 'font-lock-function-name-face nil :foreground "blue1")
+(set-face-attribute 'font-lock-comment-face nil :foreground "#aaffaa")
+(set-face-attribute 'font-lock-string-face nil :foreground "#40af40")
+(set-face-attribute 'font-lock-constant-face nil :foreground "#6060ff")
+(set-face-attribute 'font-lock-function-name-face nil :foreground "#6060ff")
 (set-face-attribute 'font-lock-variable-name-face nil :foreground 'unspecified)
 (set-face-attribute 'font-lock-builtin-face nil :foreground 'unspecified)
 (set-face-attribute 'font-lock-type-face nil :foreground "#008080")
