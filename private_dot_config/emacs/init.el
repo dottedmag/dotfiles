@@ -197,10 +197,10 @@
  (remove '(space-mark ?\  [?·] [?.]) whitespace-display-mappings))
 
 ;; Show tabs as light-gray chevrons, not black
-(set-face-attribute 'whitespace-tab nil :foreground "gray90" :background 'unspecified)
+(set-face-attribute 'whitespace-tab nil :foreground "#4d4d4d" :background 'unspecified)
 
 ;; Show overly long lines as gray
-(set-face-attribute 'whitespace-line nil :background "gray80")
+(set-face-attribute 'whitespace-line nil :background "gray40")
 
 (setq whitespace-style
       '(face             ;; Enable visualization via faces
