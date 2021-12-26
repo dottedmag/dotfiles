@@ -200,7 +200,7 @@
 (set-face-attribute 'whitespace-tab nil :foreground "#4d4d4d" :background 'unspecified)
 
 ;; Show overly long lines as gray
-(set-face-attribute 'whitespace-line nil :background "gray40")
+(set-face-attribute 'whitespace-line nil :background "#4d4d4d")
 
 (setq whitespace-style
       '(face             ;; Enable visualization via faces
