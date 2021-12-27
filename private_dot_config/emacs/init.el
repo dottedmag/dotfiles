@@ -144,6 +144,8 @@
 (straight-use-package 'which-key)
 (which-key-mode t)
 
+(define-key global-map (kbd "s-.") 'execute-extended-command)
+
 ;; *** Autorevert ***
 
 (global-auto-revert-mode t)
