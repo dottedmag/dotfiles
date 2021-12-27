@@ -2,3 +2,4 @@
 
 ! option = symbols
   dottedmag:sculpt = +dottedmag(sculpt)
+  dottedmag:ralt_mode_switch = +dottedmag(ralt_mode_switch)

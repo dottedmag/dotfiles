@@ -5,3 +5,12 @@ xkb_symbols "sculpt" {
   key <PGUP> { [ Next ] };
   key <PGDN> { [ End ] };
 };
+
+xkb_symbols "ralt_mode_switch" {
+  key <RALT> {
+    virtualMods = AltGr,
+    symbols[Group1] = [ Mode_switch, Mode_switch ],
+    symbols[Group2] = [ Mode_switch, Mode_switch ],
+    symbols[Group3] = [ Mode_switch, Mode_switch ]
+  };
+};
