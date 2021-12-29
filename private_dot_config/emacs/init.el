@@ -1,3 +1,5 @@
+;; -*- lexical-binding: t -*-
+
 ;; *** Ads ***
 
 ;; Remove GNU advertisements
@@ -518,3 +520,49 @@
 
 ;; I do not use anyting but Git in Emacs anyway
 (setq vc-handled-backends nil)
+
+;; *** INBOX ***
+
+(setq org-default-notes-file "~/tasks.org")
+
+(defun dm>inbox-close (f)
+  (dolist (b (buffer-list f))
+    (with-current-buffer b
+      (when org-capture-mode
+        (org-capture-finalize)))))
+
+(defun dm>inbox-org-switch-to-buffer (&rest args)
+  (org-no-popups (apply #'switch-to-buffer args)))
+
+(defun dm>inbox-open ()
+  (let ((f (make-frame '((name . "INBOX")))))
+    (select-frame-set-input-focus f)
+    (unwind-protect
+        (progn
+          (advice-add 'org-switch-to-buffer-other-window
+                      :override #'dm>inbox-org-switch-to-buffer)
+          (org-capture nil "t"))
+      (advice-remove 'org-switch-to-buffer-other-window
+                     #'dm>inbox-org-switch-to-buffer))))
+
+(defun dm>inbox-frame-if-name (f name)
+  (when (equal name (frame-parameter f 'name)) f))
+
+(defun dm>inbox-frame-by-name (name)
+  (seq-some (lambda (f) (dm>inbox-frame-if-name f name)) (frame-list)))
+
+(defun dm>inbox ()
+  (let ((inbox-frame (dm>inbox-frame-by-name "INBOX")))
+    (if inbox-frame
+        (dm>inbox-close inbox-frame)
+      (dm>inbox-open))))
+
+(defun dm>inbox-capture-finalized ()
+  (if (equal "INBOX" (frame-parameter nil 'name))
+      (delete-frame)))
+
+(add-hook 'org-capture-after-finalize-hook #'dm>inbox-capture-finalized)
+
+(defun dm>tasks ()
+  (select-frame-set-input-focus (selected-frame))
+  (org-capture-goto-target "t"))
