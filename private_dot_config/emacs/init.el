@@ -87,6 +87,7 @@
 (set-face-attribute 'font-lock-variable-name-face nil :foreground 'unspecified)
 (set-face-attribute 'font-lock-builtin-face nil :foreground 'unspecified)
 (set-face-attribute 'font-lock-type-face nil :foreground "#008080")
+(set-face-attribute 'highlight nil :background "#333333")
 
 ;; * Visual bell *
 
