@@ -147,6 +147,7 @@
 - Yubikey Manager
 - Zoom
 - kitty
+- AltTab
 
 - coreutils
 - ffmpeg
@@ -194,7 +195,6 @@
 - Telegram
 - Textual (+license)
 - Vivaldi (set to default browser)
-- Witch (+license)
 
 ## Files/data
 
