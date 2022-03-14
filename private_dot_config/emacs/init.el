@@ -343,6 +343,13 @@
 ;; No slowpokes around
 (setq lsp-idle-delay 0.01)
 
+;; Large repos
+(setq lsp-file-watch-threshold 10000)
+
+(defvar-local lsp-gopls-ignored-directories nil)
+(put 'lsp-gopls-ignored-directories 'safe-local-variable 'arrayp)
+(lsp-register-custom-settings '(("gopls.directoryFilters" lsp-gopls-ignored-directories)))
+
 ;; Enable symbol highlight (what lsp-ui usually does)
 (defun dm>lsp-enable-symbol-highlight ()
   (setq lsp-enable-symbol-highlighting t)
