@@ -6,7 +6,7 @@ import sys, subprocess, os.path, argparse, configparser
 
 
 def known_extension(f):
-    return f.endswith(".epub") or f.endswith(".mobi") or f.endswith(".txt") or f.endswith(".fb2") or f.endswith(".azw3") or f.endswith(".cbr")
+    return f.endswith(".epub") or f.endswith(".mobi") or f.endswith(".txt") or f.endswith(".fb2") or f.endswith(".azw3") or f.endswith(".cbr") or f.endswith(".fb2.zip")
 
 
 def check_type(filenames):
@@ -17,7 +17,7 @@ def check_type(filenames):
 
 
 def convert_file(fnm):
-    if fnm.endswith(".epub") or fnm.endswith(".fb2"):
+    if fnm.endswith(".epub") or fnm.endswith(".fb2") or fnm.endswith(".fb2.zip"):
         fne = os.path.splitext(fnm)[0]+".mobi"
         if subprocess.call(["ebook-convert", fnm, fne]) != 0:
             sys.stderr.write("Unable to convert %s to Mobi\n" % fnm)
