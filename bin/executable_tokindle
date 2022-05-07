@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Send .epub and .mobi books to Kindle
+Send books to Kindle
 """
 import sys, subprocess, os.path, argparse, configparser
 
@@ -17,8 +17,8 @@ def check_type(filenames):
 
 
 def convert_file(fnm):
-    if fnm.endswith(".epub") or fnm.endswith(".fb2") or fnm.endswith(".fb2.zip"):
-        fne = os.path.splitext(fnm)[0]+".mobi"
+    if fnm.endswith(".mobi") or fnm.endswith(".azw3") or fnm.endswith(".fb2") or fnm.endswith(".fb2.zip"):
+        fne = os.path.splitext(fnm)[0]+".epub"
         if subprocess.call(["ebook-convert", fnm, fne]) != 0:
             sys.stderr.write("Unable to convert %s to Mobi\n" % fnm)
             sys.exit(1)
