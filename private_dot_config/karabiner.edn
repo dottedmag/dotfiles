@@ -2,6 +2,7 @@
            :surface [{:vendor_id 1118 :product_id 2071}] ; Microsoft Surface Ergonomic
            :pro2014 [{:vendor_id 1452 :product_id 610}] ; MB Pro 2014 built-in keyboard
            :air2020 [{:vendor_id 1452 :product_id 641}] ; MB Air 2020 built-in keyboard
+           :pro2021 [{:vendor_id 1452 :product_id 834}] ; MB Pro 2021 built-in keyboard
            :wl [{:vendor_id 1452 :product_id 597}] ; Apple Wireless keyboard
            :magic [{:vendor_id 1452 :product_id 615}] ; Apple Magic keyboard (Wired)
            :magic-bt [{:vendor_id 76 :product_id 615}] ; Apple Magic keyboard (Bluetooth)
@@ -17,7 +18,7 @@
          :rules [[:!Ctab :!COTtab]
                  [:!SCtab :!SCOTtab]]}
         {:des "Non-locking Russian input"
-         :rules [[:##right_command :to-ru [:pro2014 :air2020 :wl :magic :magic-bt] {:afterup :to-en}]
+         :rules [[:##right_command :to-ru [:pro2014 :air2020 :pro2021 :wl :magic :magic-bt] {:afterup :to-en}]
                  [:##right_option :to-ru [:sculpt :surface :race3 :k3] {:afterup :to-en}]]}
         {:des "Open apps"
          :rules [[:!CTk "open -a Kitty"]
