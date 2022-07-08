@@ -23,6 +23,7 @@ if [[ -z "$_ZSHENV_PATH_SET" ]]; then
 
     prepend_path "$HOME/go/bin"
     prepend_path "$HOME/bin"
+    prepend_path "$HOME/.cargo/bin"
     export PATH
 
     export _ZSHENV_PATH_SET=1
