@@ -22,7 +22,7 @@
                  [:##right_option :to-ru [:sculpt :surface :race3 :k3] {:afterup :to-en}]]}
         {:des "Open apps"
          :rules [[:!CTk "open -a Kitty"]
-                 [:!CTi "open -a Vivaldi"]
+                 [:!CTi "open -a Chromium"]
                  [:!CTy "open -a Finder"]
                  [:!CTd "open -a Emacs"]
                  [:!CTw "open -a OmniFocus"]]}
