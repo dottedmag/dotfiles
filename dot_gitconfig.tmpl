@@ -25,7 +25,10 @@
 [user]
 {{- if eq .chezmoi.hostname "p1" }}
 	email = misha@ridge.co
-	name = Misha Gusarov
+	name = Mikhail Gusarov
+{{ else if eq .chezmoi.hostname "mmwork" }}
+	email = misha@ridge.co
+	name = Mikhail Gusarov
 {{ else }}
 	email = dottedmag@dottedmag.net
 	name = Mikhail Gusarov
