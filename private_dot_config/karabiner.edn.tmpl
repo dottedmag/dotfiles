@@ -22,7 +22,11 @@
                  [:##right_option :to-ru [:sculpt :surface :race3 :k3] {:afterup :to-en}]]}
         {:des "Open apps"
          :rules [[:!CTk "open -a Kitty"]
+{{- if eq .chezmoi.hostname "mmwork" }}
+                 [:!CTi "open -a Firefox"]
+{{ else }}
                  [:!CTi "open -a Chromium"]
+{{ end -}}
                  [:!CTy "open -a Finder"]
                  [:!CTd "open -a Emacs"]
                  [:!CTw "open -a OmniFocus"]]}
