@@ -113,7 +113,7 @@
 - Calibre
 - Dozer
 - Electrium
-- Emacs
+- Emacs (from dottedmag/homebrew-misc)
 - Fusion 360
 - Hammerspoon
 - Karabiner
