@@ -527,6 +527,20 @@
 ;; I do not use anyting but Git in Emacs anyway
 (setq vc-handled-backends nil)
 
+;; *** Copilot ***
+
+(straight-use-package
+ '(copilot :type git :host github :repo "zerolfx/copilot.el"))
+
+;; FIXME (dottedmag): Linux
+(setq copilot-node-executable
+      "/opt/homebrew/opt/node@16/bin/node")
+(add-hook 'prog-mode-hook 'copilot-mode)
+
+(global-set-key (kbd "C-<return>") 'copilot-accept-completion)
+(global-set-key (kbd "M-p") 'copilot-previous-completion)
+(global-set-key (kbd "M-n") 'copilot-next-completion)
+
 ;; *** INBOX ***
 
 (setq org-default-notes-file "~/tasks.org")
