@@ -32,10 +32,7 @@ export LESS=-iQRS
 
 alias gdb='gdb -q'
 
-# FIXME: Use emacsclient
-if whence nano >/dev/null; then
-    export EDITOR=nano
-fi
+export EDITOR=e
 
 # History
 
