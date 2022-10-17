@@ -535,8 +535,9 @@
  '(copilot :type git :host github :repo "zerolfx/copilot.el"))
 
 ;; FIXME (dottedmag): Linux
-(setq copilot-node-executable
-      "/opt/homebrew/opt/node@16/bin/node")
+(when (eq system-type 'darwin)
+  (setq copilot-node-executable
+        "/opt/homebrew/opt/node@16/bin/node"))
 (add-hook 'prog-mode-hook 'copilot-mode)
 
 (global-set-key (kbd "C-<return>") 'copilot-accept-completion)
