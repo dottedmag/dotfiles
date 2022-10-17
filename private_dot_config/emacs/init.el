@@ -108,7 +108,7 @@
 
 (if (eq system-type 'darwin)
     (set-face-attribute 'default nil :family "Liberation Mono" :height 110)
-  (set-face-attribute 'default nil :family "Liberation Mono" :height 75))
+  (set-face-attribute 'default nil :family "Liberation Mono" :height 90))
 
 ;; *** Input ***
 
