@@ -108,7 +108,7 @@
 
 (if (eq system-type 'darwin)
     (set-face-attribute 'default nil :family "Liberation Mono" :height 110)
-  (set-face-attribute 'default nil :family "Liberation Mono" :height 75))
+  (set-face-attribute 'default nil :family "Liberation Mono" :height 90))
 
 ;; *** Input ***
 
@@ -529,14 +529,31 @@
 ;; I do not use anyting but Git in Emacs anyway
 (setq vc-handled-backends nil)
 
+;; When opening a file from 'git commit', show a 72-limit column
+;; FIXME (dottedmag): maybe replicate what magit does?
+
+(defun dm>is-git-commit-buffer ()
+  "Checks if the file is opened by 'git commit'."
+  (and buffer-file-name
+       (string= "COMMIT_EDITMSG" (file-name-nondirectory buffer-file-name))))
+
+(defun dm>git-commit-show-fill-column ()
+    "Display fill-column indicator in buffers opened by 'git commit'"
+  (when (dm>is-git-commit-buffer)
+    (setq fill-column 72)
+    (display-fill-column-indicator-mode)))
+
+(add-hook 'find-file-hook #'dm>git-commit-show-fill-column)
+
 ;; *** Copilot ***
 
 (straight-use-package
  '(copilot :type git :host github :repo "zerolfx/copilot.el"))
 
 ;; FIXME (dottedmag): Linux
-(setq copilot-node-executable
-      "/opt/homebrew/opt/node@16/bin/node")
+(when (eq system-type 'darwin)
+  (setq copilot-node-executable
+        "/opt/homebrew/opt/node@16/bin/node"))
 (add-hook 'prog-mode-hook 'copilot-mode)
 
 (global-set-key (kbd "C-<return>") 'copilot-accept-completion)
