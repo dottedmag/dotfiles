@@ -496,6 +496,10 @@
 
 (add-to-list 'auto-mode-alist '("\\.edn\\'" . clojure-mode))
 
+;; * Zig **
+
+(straight-use-package 'zig-mode)
+
 ;; * JSON *
 
 (straight-use-package 'json-mode)
