@@ -500,6 +500,10 @@
 
 (straight-use-package 'zig-mode)
 
+;; * Terraform *
+
+(straight-use-package 'terraform-mode)
+
 ;; * JSON *
 
 (straight-use-package 'json-mode)
