@@ -49,6 +49,10 @@ setopt HIST_SAVE_NO_DUPS
 setopt SHARE_HISTORY
 unsetopt BANG_HIST
 
+# Make ZLE more emacs-like
+
+bindkey "\C-w" kill-region
+
 # Misc zsh settings
 
 setopt AUTO_PUSHD
