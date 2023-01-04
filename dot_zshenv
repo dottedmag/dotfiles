@@ -14,6 +14,7 @@ if [[ -z "$_ZSHENV_PATH_SET" ]]; then
 	    unsetopt GLOBAL_RCS
 
 	    prepend_path /usr/local/bin
+	    prepend_path "$HOME/Library/Python/3.10/bin"
 	    eval "$(/opt/homebrew/bin/brew shellenv)"
 	    ;;
 	*)
