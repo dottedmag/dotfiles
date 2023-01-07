@@ -439,10 +439,12 @@
 (flycheck-golangci-lint-setup)
 
 (defun dm>flycheck-add-next-checker-golangci-lint ()
+  (lsp-diagnostics-lsp-checker-if-needed)
   (unless (seq-contains-p (flycheck-get-next-checkers 'lsp) 'golangci-lint)
     (flycheck-add-next-checker 'lsp 'golangci-lint)))
 
 (defun dm>flycheck-remove-next-checker-golangci-lint ()
+  (lsp-diagnostics-lsp-checker-if-needed)
   (when (seq-contains-p (flycheck-get-next-checkers 'lsp) 'golangci-lint)
     (flycheck-remove-next-checker 'lsp 'golangci-lint)))
 
