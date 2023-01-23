@@ -519,6 +519,12 @@
 
 (straight-use-package 'markdown-mode)
 
+;; * Groovy *
+
+(straight-use-package 'groovy-mode)
+
+(add-hook 'groovy-mode-hook #'dm>disable-indent-tabs)
+
 ;; *** Compilation ***
 
 ;; Autosave modified buffers
