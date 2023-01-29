@@ -63,6 +63,13 @@ slashre=/; export WORDCHARS=${WORDCHARS/$slashre}
 
 # Prompt, terminal title
 
+case "$HOST" in
+  p1)
+    EXPECTED_USER=misha;;
+  *)
+    EXPECTED_USER=dottedmag;;
+esac
+
 case "$TERM" in
     dumb)
 	export PROMPT="%n@%m%f:%~ %# "
@@ -73,7 +80,7 @@ case "$TERM" in
 	  print -n "$2\007"
 	}
 	precmd() {
-	    if [[ $USER == dottedmag ]]; then
+	    if [[ $USER == $EXPECTED_USER ]]; then
 		DM_PROMPT_USER=
 	    else
 		DM_PROMPT_USER="%F{white}%K{red}$USER%f%k@"
