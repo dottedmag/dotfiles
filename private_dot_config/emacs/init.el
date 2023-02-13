@@ -189,6 +189,22 @@
 
 (show-paren-mode 1)
 
+;; * M-d/M-\ should not save text to kill ring *
+
+(defun dm>delete-word (arg)
+  (interactive "p")
+  (delete-region (point) (progn (forward-word arg) (point))))
+
+(defun dm>backward-delete-word (arg)
+  (interactive "p")
+  (dm>delete-word (- arg)))
+
+(global-set-key (kbd "C-<backspace>") #'dm>backward-delete-word)
+(global-set-key (kbd "M-<delete>") #'dm>backward-delete-word)
+(global-set-key (kbd "M-DEL") #'dm>backward-delete-word)
+(global-set-key (kbd "C-<delete>") #'dm>delete-word)
+(global-set-key (kbd "M-d") #'dm>delete-word)
+
 ;; *** Whitespace ***
 
 ;; This `require' is needed because whitespace-display-mappings are modified below
@@ -466,6 +482,68 @@
 (autoload 'enable-paredit-mode "paredit" "Turn on pseudo-structural editing of Lisp code." t)
 
 (straight-use-package 'rainbow-delimiters)
+
+(defun dm>paredit-backward-delete-word ()
+  "Kill a word backward, skipping over any intervening delimiters."
+  (interactive)
+  (if (not (or (bobp)
+               (eq (char-syntax (char-before)) ?w)))
+      (let ((end (point)))
+        (backward-word 1)
+        (forward-word 1)
+        (goto-char (min end (point)))
+        (let* ((parse-state (paredit-current-parse-state))
+               (state
+                (paredit-kill-word-state parse-state 'char-before)))
+          (while (and (< (point) end)
+                      (progn
+                        (setq parse-state
+                              (parse-partial-sexp (point) (1+ (point))
+                                                  nil nil parse-state))
+                        (or (eq state
+                                (paredit-kill-word-state parse-state
+                                                         'char-before))
+                            (progn (backward-char 1) nil)))))
+          (if (and (eq state 'comment)
+                   (eq ?\# (char-after (point)))
+                   (eq ?\| (char-before (point))))
+              (backward-char 1)))))
+  (dm>backward-delete-word 1))
+
+(defun dm>paredit-forward-delete-word ()
+  "Kill a word forward, skipping over intervening delimiters."
+  (interactive)
+  (let ((beginning (point)))
+    (skip-syntax-forward " -")
+    (let* ((parse-state (paredit-current-parse-state))
+           (state (paredit-kill-word-state parse-state 'char-after)))
+      (while (not (or (eobp)
+                      (eq ?w (char-syntax (char-after)))))
+        (setq parse-state
+              (progn (forward-char 1) (paredit-current-parse-state))
+;;               (parse-partial-sexp (point) (1+ (point))
+;;                                   nil nil parse-state)
+              )
+        (let* ((old-state state)
+               (new-state
+                (paredit-kill-word-state parse-state 'char-after)))
+          (cond ((not (eq old-state new-state))
+                 (setq parse-state
+                       (paredit-kill-word-hack old-state
+                                               new-state
+                                               parse-state))
+                 (setq state
+                       (paredit-kill-word-state parse-state
+                                                'char-after))
+                 (setq beginning (point)))))))
+    (goto-char beginning)
+    (dm>delete-word 1)))
+
+(define-key paredit-mode-map (kbd "C-<backspace>") #'dm>paredit-backward-delete-word)
+(define-key paredit-mode-map (kbd "M-<delete>") #'dm>paredit-backward-delete-word)
+(define-key paredit-mode-map (kbd "M-DEL") #'dm>paredit-backward-delete-word)
+(define-key paredit-mode-map (kbd "C-<delete>") #'dm>paredit-forward-delete-word)
+(define-key paredit-mode-map (kbd "M-d") #'dm>paredit-forward-delete-word)
 
 ;; Required to set face attributes below
 (require 'rainbow-delimiters)
