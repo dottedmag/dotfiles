@@ -539,11 +539,14 @@
     (goto-char beginning)
     (dm>delete-word 1)))
 
-(define-key paredit-mode-map (kbd "C-<backspace>") #'dm>paredit-backward-delete-word)
-(define-key paredit-mode-map (kbd "M-<delete>") #'dm>paredit-backward-delete-word)
-(define-key paredit-mode-map (kbd "M-DEL") #'dm>paredit-backward-delete-word)
-(define-key paredit-mode-map (kbd "C-<delete>") #'dm>paredit-forward-delete-word)
-(define-key paredit-mode-map (kbd "M-d") #'dm>paredit-forward-delete-word)
+(defun dm>setup-paredit ()
+  (define-key paredit-mode-map (kbd "C-<backspace>") #'dm>paredit-backward-delete-word)
+  (define-key paredit-mode-map (kbd "M-<delete>") #'dm>paredit-backward-delete-word)
+  (define-key paredit-mode-map (kbd "M-DEL") #'dm>paredit-backward-delete-word)
+  (define-key paredit-mode-map (kbd "C-<delete>") #'dm>paredit-forward-delete-word)
+  (define-key paredit-mode-map (kbd "M-d") #'dm>paredit-forward-delete-word))
+
+(eval-after-load 'paredit #'dm>setup-paredit)
 
 ;; Required to set face attributes below
 (require 'rainbow-delimiters)
