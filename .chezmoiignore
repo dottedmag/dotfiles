@@ -1,4 +1,5 @@
 {{ if ne .chezmoi.os "darwin" }}
+Library/Keyboard Layouts
 .config/karabiner.edn
 .config/kitty
 .hammerspoon
@@ -8,4 +9,3 @@ bin/rgrep
 README.md
 new-mac.md
 new-linux.md
-

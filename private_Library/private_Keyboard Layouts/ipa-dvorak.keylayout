@@ -1,0 +1,3548 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!DOCTYPE keyboard SYSTEM "file://localhost/System/Library/DTDs/KeyboardLayout.dtd">
+<!-- Fri, 24 Feb 2006 Generated from KCHR: &#x0022;DVORAK - QWERTY CMD&#x0022; &#x000A;&#x000A;Removed base layout&#x0009;-->
+<!--Last edited by Ukelele version 359 on 2023-02-25 at 14:08 (GMT+1)-->
+<!--Created by Ukelele version 2.2.8 on 2015-12-03 at 23:32 (PST)-->
+<keyboard group="126" id="-2643" name="IPA Dvorak" maxout="9">
+    <layouts>
+        <layout first="0" last="0" mapSet="ANSI" modifiers="commonModifiers"/>
+    </layouts>
+    <modifierMap id="commonModifiers" defaultIndex="2">
+        <keyMapSelect mapIndex="2">
+            <modifier keys="caps? command? anyControl?"/>
+        </keyMapSelect>
+        <keyMapSelect mapIndex="3">
+            <modifier keys="anyShift caps? command? anyControl?"/>
+        </keyMapSelect>
+        <keyMapSelect mapIndex="5">
+            <modifier keys="caps? anyOption command? anyControl?"/>
+        </keyMapSelect>
+        <keyMapSelect mapIndex="6">
+            <modifier keys="anyShift caps? anyOption command? anyControl?"/>
+        </keyMapSelect>
+    </modifierMap>
+    <keyMapSet id="ANSI">
+        <keyMap index="0">
+            <key code="0" action="A"/>
+            <key code="1" action="O"/>
+            <key code="2" action="E"/>
+            <key code="3" action="U"/>
+            <key code="4" action="D 1"/>
+            <key code="5" action="I"/>
+            <key code="6" output=";"/>
+            <key code="7" action="Q 1"/>
+            <key code="8" action="J 1"/>
+            <key code="9" action="K 1"/>
+            <key code="10" output="§"/>
+            <key code="11" action="X 1"/>
+            <key code="12" action="&#x0027; 1"/>
+            <key code="13" action=", 1"/>
+            <key code="14" action=". 1"/>
+            <key code="15" action="P 1"/>
+            <key code="16" action="F 1"/>
+            <key code="17" action="Y"/>
+            <key code="18" action="1 1"/>
+            <key code="19" action="2 1"/>
+            <key code="20" action="3 1"/>
+            <key code="21" action="4 1"/>
+            <key code="22" action="6 1"/>
+            <key code="23" action="5 1"/>
+            <key code="24" output="]"/>
+            <key code="25" action="9 1"/>
+            <key code="26" action="7 1"/>
+            <key code="27" output="["/>
+            <key code="28" action="8 1"/>
+            <key code="29" action="0 1"/>
+            <key code="30" action="= 1"/>
+            <key code="31" action="R 1"/>
+            <key code="32" action="G 1"/>
+            <key code="33" action="/ 1"/>
+            <key code="34" action="C 1"/>
+            <key code="35" action="L 1"/>
+            <key code="36" output="&#x000D;"/>
+            <key code="37" action="N"/>
+            <key code="38" action="H 1"/>
+            <key code="39" action="- 1"/>
+            <key code="40" action="T 1"/>
+            <key code="41" action="S 1"/>
+            <key code="42" action="\ 1"/>
+            <key code="43" action="W 1"/>
+            <key code="44" action="Z 1"/>
+            <key code="45" action="B 1"/>
+            <key code="46" action="M 1"/>
+            <key code="47" action="V 1"/>
+            <key code="48" output="&#x0009;"/>
+            <key code="49" action=" "/>
+            <key code="50" output="`"/>
+            <key code="51" output="&#x0008;"/>
+            <key code="52" output="&#x0003;"/>
+            <key code="53" output="&#x001B;"/>
+            <!-- Fri, 24 Feb 2006 Generated from KCHR: &#x0022;DVORAK - QWERTY CMD&#x0022; &#x000A;&#x000A;Removed base layout-->
+            <key code="64" output="&#x0010;"/>
+            <key code="65" output="."/>
+            <key code="66" output="&#x001D;"/>
+            <key code="67" output="*"/>
+            <!-- gap, 68 -->
+            <key code="69" output="+"/>
+            <key code="70" output="&#x001C;"/>
+            <key code="71" output="&#x001B;"/>
+            <key code="72" output="&#x001F;"/>
+            <!-- gap, 73 through 74 -->
+            <key code="75" output="/"/>
+            <key code="76" output="&#x0003;"/>
+            <key code="77" output="&#x001E;"/>
+            <key code="78" output="-"/>
+            <!-- gap, 79 through 80 -->
+            <key code="79" output="&#x0010;"/>
+            <key code="80" output="&#x0010;"/>
+            <key code="81" output="="/>
+            <key code="82" output="0"/>
+            <key code="83" output="1"/>
+            <key code="84" output="2"/>
+            <key code="85" output="3"/>
+            <key code="86" output="4"/>
+            <key code="87" output="5"/>
+            <key code="88" output="6"/>
+            <key code="89" output="7"/>
+            <!-- gap, 90 -->
+            <key code="91" output="8"/>
+            <key code="92" output="9"/>
+            <!-- gap, 93 through 95 -->
+            <key code="96" output="&#x0010;"/>
+            <key code="97" output="&#x0010;"/>
+            <key code="98" output="&#x0010;"/>
+            <key code="99" output="&#x0010;"/>
+            <key code="100" output="&#x0010;"/>
+            <key code="101" output="&#x0010;"/>
+            <key code="102" output="&#x0010;"/>
+            <key code="103" output="&#x0010;"/>
+            <key code="104" output="&#x0010;"/>
+            <key code="105" output="&#x0010;"/>
+            <key code="106" output="&#x0010;"/>
+            <key code="107" output="&#x0010;"/>
+            <key code="108" output="&#x0010;"/>
+            <key code="109" output="&#x0010;"/>
+            <key code="110" output="&#x0010;"/>
+            <key code="111" output="&#x0010;"/>
+            <key code="112" output="&#x0010;"/>
+            <key code="113" output="&#x0010;"/>
+            <key code="114" output="&#x0005;"/>
+            <key code="115" output="&#x0001;"/>
+            <key code="116" output="&#x000B;"/>
+            <key code="117" output="&#x007F;"/>
+            <key code="118" output="&#x0010;"/>
+            <key code="119" output="&#x0004;"/>
+            <key code="120" output="&#x0010;"/>
+            <key code="121" output="&#x000C;"/>
+            <key code="122" output="&#x0010;"/>
+            <key code="123" output="&#x001C;"/>
+            <key code="124" output="&#x001D;"/>
+            <key code="125" output="&#x001F;"/>
+            <key code="126" output="&#x001E;"/>
+        </keyMap>
+        <keyMap index="1">
+            <key code="0" action="Å 1"/>
+            <key code="1" action="Ø 1"/>
+            <key code="2" action="´ 1"/>
+            <key code="3" action="¨ 1"/>
+            <key code="4" output="∂"/>
+            <key code="5" action="ˆ 2"/>
+            <key code="6" output="…"/>
+            <key code="7" output="Œ"/>
+            <key code="8" output="∆"/>
+            <key code="9" action="˚ 1"/>
+            <key code="10" output="§"/>
+            <key code="11" output="≈"/>
+            <key code="12" action="Æ 1"/>
+            <key code="13" output="≤"/>
+            <key code="14" output="≥"/>
+            <key code="15" output="∏"/>
+            <key code="16" output="ƒ"/>
+            <key code="17" output="¥"/>
+            <key code="18" output="¡"/>
+            <key code="19" output="™"/>
+            <key code="20" output="£"/>
+            <key code="21" output="¢"/>
+            <key code="22" output="§"/>
+            <key code="23" output="∞"/>
+            <key code="24" output="‘"/>
+            <key code="25" output="ª"/>
+            <key code="26" output="¶"/>
+            <key code="27" output="“"/>
+            <key code="28" output="•"/>
+            <key code="29" output="º"/>
+            <key code="30" output="≠"/>
+            <key code="31" output="®"/>
+            <key code="32" output="©"/>
+            <key code="33" output="÷"/>
+            <key code="34" action="Ç 1"/>
+            <key code="35" output="¬"/>
+            <key code="36" output="&#x000D;"/>
+            <key code="37" action="˜ 1"/>
+            <key code="38" action="Ó 1"/>
+            <key code="39" output="–"/>
+            <key code="40" output="†"/>
+            <key code="41" output="ß"/>
+            <key code="42" output="«"/>
+            <key code="43" output="∑"/>
+            <key code="44" output="Ω"/>
+            <key code="45" output="∫"/>
+            <key code="46" output="µ"/>
+            <key code="47" output="√"/>
+            <key code="48" output="&#x0009;"/>
+            <key code="49" output=" "/>
+            <key code="50" action="` 2"/>
+            <key code="51" output="&#x0008;"/>
+            <key code="52" output="&#x0003;"/>
+            <key code="53" output="&#x001B;"/>
+            <!-- gap, 54 through 64 -->
+            <key code="64" output="&#x0010;"/>
+            <key code="65" output="."/>
+            <key code="66" output="&#x001D;"/>
+            <key code="67" output="*"/>
+            <!-- gap, 68 -->
+            <key code="69" output="+"/>
+            <key code="70" output="&#x001C;"/>
+            <key code="71" output="&#x001B;"/>
+            <key code="72" output="&#x001F;"/>
+            <!-- gap, 73 through 74 -->
+            <key code="75" output="/"/>
+            <key code="76" output="&#x0003;"/>
+            <key code="77" output="&#x001E;"/>
+            <key code="78" output="-"/>
+            <!-- gap, 79 through 80 -->
+            <key code="79" output="&#x0010;"/>
+            <key code="80" output="&#x0010;"/>
+            <key code="81" output="="/>
+            <key code="82" output="0"/>
+            <key code="83" output="1"/>
+            <key code="84" output="2"/>
+            <key code="85" output="3"/>
+            <key code="86" output="4"/>
+            <key code="87" output="5"/>
+            <key code="88" output="6"/>
+            <key code="89" output="7"/>
+            <!-- gap, 90 -->
+            <key code="91" output="8"/>
+            <key code="92" output="9"/>
+            <!-- gap, 93 through 95 -->
+            <key code="96" output="&#x0010;"/>
+            <key code="97" output="&#x0010;"/>
+            <key code="98" output="&#x0010;"/>
+            <key code="99" output="&#x0010;"/>
+            <key code="100" output="&#x0010;"/>
+            <key code="101" output="&#x0010;"/>
+            <key code="102" output="&#x0010;"/>
+            <key code="103" output="&#x0010;"/>
+            <key code="104" output="&#x0010;"/>
+            <key code="105" output="&#x0010;"/>
+            <key code="106" output="&#x0010;"/>
+            <key code="107" output="&#x0010;"/>
+            <key code="108" output="&#x0010;"/>
+            <key code="109" output="&#x0010;"/>
+            <key code="110" output="&#x0010;"/>
+            <key code="111" output="&#x0010;"/>
+            <key code="112" output="&#x0010;"/>
+            <key code="113" output="&#x0010;"/>
+            <key code="114" output="&#x0005;"/>
+            <key code="115" output="&#x0001;"/>
+            <key code="116" output="&#x000B;"/>
+            <key code="117" output="&#x007F;"/>
+            <key code="118" output="&#x0010;"/>
+            <key code="119" output="&#x0004;"/>
+            <key code="120" output="&#x0010;"/>
+            <key code="121" output="&#x000C;"/>
+            <key code="122" output="&#x0010;"/>
+            <key code="123" output="&#x001C;"/>
+            <key code="124" output="&#x001D;"/>
+            <key code="125" output="&#x001F;"/>
+            <key code="126" output="&#x001E;"/>
+        </keyMap>
+        <keyMap index="2">
+            <key code="0" action="a"/>
+            <key code="1" action="o"/>
+            <key code="2" action="e"/>
+            <key code="3" action="u"/>
+            <key code="4" action="d"/>
+            <key code="5" action="i"/>
+            <key code="6" action=";"/>
+            <key code="7" action="q"/>
+            <key code="8" action="j"/>
+            <key code="9" action="k"/>
+            <key code="10" output="§"/>
+            <key code="11" action="x"/>
+            <key code="12" action="IPA&#x0027;"/>
+            <key code="13" action=","/>
+            <key code="14" action="."/>
+            <key code="15" action="p"/>
+            <key code="16" action="f"/>
+            <key code="17" action="y"/>
+            <key code="18" action="IPA1"/>
+            <key code="19" action="IPA2"/>
+            <key code="20" action="IPA3"/>
+            <key code="21" action="IPA4"/>
+            <key code="22" action="IPA6"/>
+            <key code="23" action="IPA5"/>
+            <key code="24" action="]"/>
+            <key code="25" action="IPA9"/>
+            <key code="26" action="IPA7"/>
+            <key code="27" action="["/>
+            <key code="28" action="IPA8"/>
+            <key code="29" action="0"/>
+            <key code="30" action="IPA="/>
+            <key code="31" action="r"/>
+            <key code="32" action="IPAg"/>
+            <key code="33" action="/"/>
+            <key code="34" action="c"/>
+            <key code="35" action="l"/>
+            <key code="36" output="&#x000D;"/>
+            <key code="37" action="n"/>
+            <key code="38" action="h"/>
+            <key code="39" action="-"/>
+            <key code="40" action="t"/>
+            <key code="41" action="s"/>
+            <key code="42" action="IPA\"/>
+            <key code="43" action="w"/>
+            <key code="44" action="z"/>
+            <key code="45" action="b"/>
+            <key code="46" action="m"/>
+            <key code="47" action="v"/>
+            <key code="48" output="&#x0009;"/>
+            <key code="49" action=" "/>
+            <key code="50" action="IPA` 1"/>
+            <key code="51" output="&#x0008;"/>
+            <key code="52" output="&#x0003;"/>
+            <key code="53" action="&#x001B;"/>
+            <!-- gap, 54 through 64 -->
+            <key code="55" output=""/>
+            <key code="56" output=""/>
+            <key code="58" output=""/>
+            <key code="59" output=""/>
+            <key code="64" output="&#x0010;"/>
+            <key code="65" output="."/>
+            <key code="66" output="&#x001D;"/>
+            <key code="67" output="*"/>
+            <!-- gap, 68 -->
+            <key code="69" output="+"/>
+            <key code="70" output="&#x001C;"/>
+            <key code="71" output="&#x001B;"/>
+            <key code="72" output="&#x001F;"/>
+            <!-- gap, 73 through 74 -->
+            <key code="75" output="/"/>
+            <key code="76" output="&#x0003;"/>
+            <key code="77" output="&#x001E;"/>
+            <key code="78" output="-"/>
+            <!-- gap, 79 through 80 -->
+            <key code="79" output="&#x0010;"/>
+            <key code="80" output="&#x0010;"/>
+            <key code="81" output="="/>
+            <key code="82" output="0"/>
+            <key code="83" output="1"/>
+            <key code="84" output="2"/>
+            <key code="85" output="3"/>
+            <key code="86" output="4"/>
+            <key code="87" output="5"/>
+            <key code="88" output="6"/>
+            <key code="89" output="7"/>
+            <!-- gap, 90 -->
+            <key code="91" output="8"/>
+            <key code="92" output="9"/>
+            <!-- gap, 93 through 95 -->
+            <key code="96" output="&#x0010;"/>
+            <key code="97" output="&#x0010;"/>
+            <key code="98" output="&#x0010;"/>
+            <key code="99" output="&#x0010;"/>
+            <key code="100" output="&#x0010;"/>
+            <key code="101" output="&#x0010;"/>
+            <key code="102" output="&#x0010;"/>
+            <key code="103" output="&#x0010;"/>
+            <key code="104" output="&#x0010;"/>
+            <key code="105" output="&#x0010;"/>
+            <key code="106" output="&#x0010;"/>
+            <key code="107" output="&#x0010;"/>
+            <key code="108" output="&#x0010;"/>
+            <key code="109" output="&#x0010;"/>
+            <key code="110" output="&#x0010;"/>
+            <key code="111" output="&#x0010;"/>
+            <key code="112" output="&#x0010;"/>
+            <key code="113" output="&#x0010;"/>
+            <key code="114" output="&#x0005;"/>
+            <key code="115" output="&#x0001;"/>
+            <key code="116" output="&#x000B;"/>
+            <key code="117" output="&#x007F;"/>
+            <key code="118" output="&#x0010;"/>
+            <key code="119" output="&#x0004;"/>
+            <key code="120" output="&#x0010;"/>
+            <key code="121" output="&#x000C;"/>
+            <key code="122" output="&#x0010;"/>
+            <key code="123" output="&#x001C;"/>
+            <key code="124" output="&#x001D;"/>
+            <key code="125" output="&#x001F;"/>
+            <key code="126" output="&#x001E;"/>
+        </keyMap>
+        <keyMap index="3">
+            <key code="0" action="IPAA"/>
+            <key code="1" action="IPAO"/>
+            <key code="2" action="IPAE"/>
+            <key code="3" action="IPAU"/>
+            <key code="4" action="IPAD"/>
+            <key code="5" action="IPAI"/>
+            <key code="6" action="IPA:"/>
+            <key code="7" action="IPAQ"/>
+            <key code="8" action="IPAJ"/>
+            <key code="9" action="IPAK"/>
+            <key code="10" output="±"/>
+            <key code="11" action="IPAX"/>
+            <key code="12" action="IPA&#x0022;"/>
+            <key code="13" action="&#x003C;"/>
+            <key code="14" action="&#x003E;"/>
+            <key code="15" action="IPAP"/>
+            <key code="16" action="IPAF"/>
+            <key code="17" action="IPAY"/>
+            <key code="18" action="IPA!"/>
+            <key code="19" action="IPA@"/>
+            <key code="20" action="#"/>
+            <key code="21" action="$"/>
+            <key code="22" action="IPA^"/>
+            <key code="23" action="IPA%"/>
+            <key code="24" action="IPA}"/>
+            <key code="25" action="("/>
+            <key code="26" action="IPA&#x0026;"/>
+            <key code="27" action="IPA{"/>
+            <key code="28" action="*"/>
+            <key code="29" action=")"/>
+            <key code="30" action="+"/>
+            <key code="31" action="IPAR"/>
+            <key code="32" action="IPAG"/>
+            <key code="33" action="IPA?"/>
+            <key code="34" action="IPAC"/>
+            <key code="35" action="IPAL"/>
+            <key code="36" output="&#x000D;"/>
+            <key code="37" action="IPAN"/>
+            <key code="38" action="IPAH"/>
+            <key code="39" action="IPA_"/>
+            <key code="40" action="IPAT"/>
+            <key code="41" action="IPAS"/>
+            <key code="42" action="IPA|"/>
+            <key code="43" action="IPAW"/>
+            <key code="44" action="IPAZ"/>
+            <key code="45" action="IPAB"/>
+            <key code="46" action="IPAM"/>
+            <key code="47" action="IPAV"/>
+            <key code="48" output="&#x0009;"/>
+            <key code="49" action=" "/>
+            <key code="50" action="IPA~"/>
+            <key code="51" output="&#x0008;"/>
+            <key code="52" output="&#x0003;"/>
+            <key code="53" output="&#x001B;"/>
+            <!-- gap, 54 through 64 -->
+            <key code="64" output="&#x0010;"/>
+            <key code="65" output="."/>
+            <key code="66" output="*"/>
+            <key code="67" output="*"/>
+            <!-- gap, 68 -->
+            <key code="69" output="+"/>
+            <key code="70" output="+"/>
+            <key code="71" output="&#x001B;"/>
+            <key code="72" output="="/>
+            <!-- gap, 73 through 74 -->
+            <key code="75" output="/"/>
+            <key code="76" output="&#x0003;"/>
+            <key code="77" output="/"/>
+            <key code="78" output="-"/>
+            <!-- gap, 79 through 80 -->
+            <key code="79" output="&#x0010;"/>
+            <key code="80" output="&#x0010;"/>
+            <key code="81" output="="/>
+            <key code="82" output="0"/>
+            <key code="83" output="1"/>
+            <key code="84" output="2"/>
+            <key code="85" output="3"/>
+            <key code="86" output="4"/>
+            <key code="87" output="5"/>
+            <key code="88" output="6"/>
+            <key code="89" output="7"/>
+            <!-- gap, 90 -->
+            <key code="91" output="8"/>
+            <key code="92" output="9"/>
+            <!-- gap, 93 through 95 -->
+            <key code="96" output="&#x0010;"/>
+            <key code="97" output="&#x0010;"/>
+            <key code="98" output="&#x0010;"/>
+            <key code="99" output="&#x0010;"/>
+            <key code="100" output="&#x0010;"/>
+            <key code="101" output="&#x0010;"/>
+            <key code="102" output="&#x0010;"/>
+            <key code="103" output="&#x0010;"/>
+            <key code="104" output="&#x0010;"/>
+            <key code="105" output="&#x0010;"/>
+            <key code="106" output="&#x0010;"/>
+            <key code="107" output="&#x0010;"/>
+            <key code="108" output="&#x0010;"/>
+            <key code="109" output="&#x0010;"/>
+            <key code="110" output="&#x0010;"/>
+            <key code="111" output="&#x0010;"/>
+            <key code="112" output="&#x0010;"/>
+            <key code="113" output="&#x0010;"/>
+            <key code="114" output="&#x0005;"/>
+            <key code="115" output="&#x0001;"/>
+            <key code="116" output="&#x000B;"/>
+            <key code="117" output="&#x007F;"/>
+            <key code="118" output="&#x0010;"/>
+            <key code="119" output="&#x0004;"/>
+            <key code="120" output="&#x0010;"/>
+            <key code="121" output="&#x000C;"/>
+            <key code="122" output="&#x0010;"/>
+            <key code="123" output="&#x001C;"/>
+            <key code="124" output="&#x001D;"/>
+            <key code="125" output="&#x001F;"/>
+            <key code="126" output="&#x001E;"/>
+        </keyMap>
+        <keyMap index="4">
+            <key code="0" action="IPAA"/>
+            <key code="1" action="IPAO"/>
+            <key code="2" action="IPAE"/>
+            <key code="3" action="IPAU"/>
+            <key code="4" action="D 1"/>
+            <key code="5" action="IPAI"/>
+            <key code="6" output=";"/>
+            <key code="7" action="Q 1"/>
+            <key code="8" action="J 1"/>
+            <key code="9" action="K 1"/>
+            <key code="10" output="§"/>
+            <key code="11" action="X 1"/>
+            <key code="12" action="&#x0027; 1"/>
+            <key code="13" action=", 1"/>
+            <key code="14" action=". 1"/>
+            <key code="15" action="P 1"/>
+            <key code="16" action="F 1"/>
+            <key code="17" action="IPAY"/>
+            <key code="18" action="1 1"/>
+            <key code="19" action="2 1"/>
+            <key code="20" action="3 1"/>
+            <key code="21" action="4 1"/>
+            <key code="22" action="6 1"/>
+            <key code="23" action="5 1"/>
+            <key code="24" output="]"/>
+            <key code="25" action="9 1"/>
+            <key code="26" action="7 1"/>
+            <key code="27" output="["/>
+            <key code="28" action="8 1"/>
+            <key code="29" action="0 1"/>
+            <key code="30" action="= 1"/>
+            <key code="31" action="R 1"/>
+            <key code="32" action="G 1"/>
+            <key code="33" action="/ 1"/>
+            <key code="34" action="C 1"/>
+            <key code="35" action="L 1"/>
+            <key code="36" output="&#x000D;"/>
+            <key code="37" action="IPAN"/>
+            <key code="38" action="H 1"/>
+            <key code="39" action="- 1"/>
+            <key code="40" action="T 1"/>
+            <key code="41" action="S 1"/>
+            <key code="42" action="\ 1"/>
+            <key code="43" action="W 1"/>
+            <key code="44" action="Z 1"/>
+            <key code="45" action="B 1"/>
+            <key code="46" action="M 1"/>
+            <key code="47" action="V 1"/>
+            <key code="48" output="&#x0009;"/>
+            <key code="49" action=" "/>
+            <key code="50" output="`"/>
+            <key code="51" output="&#x0008;"/>
+            <key code="52" output="&#x0003;"/>
+            <key code="53" output="&#x001B;"/>
+            <!-- gap, 54 through 64 -->
+            <key code="64" output="&#x0010;"/>
+            <key code="65" output="."/>
+            <key code="66" output="&#x001D;"/>
+            <key code="67" output="*"/>
+            <!-- gap, 68 -->
+            <key code="69" output="+"/>
+            <key code="70" output="&#x001C;"/>
+            <key code="71" output="&#x001B;"/>
+            <key code="72" output="&#x001F;"/>
+            <!-- gap, 73 through 74 -->
+            <key code="75" output="/"/>
+            <key code="76" output="&#x0003;"/>
+            <key code="77" output="&#x001E;"/>
+            <key code="78" output="-"/>
+            <!-- gap, 79 through 80 -->
+            <key code="79" output="&#x0010;"/>
+            <key code="80" output="&#x0010;"/>
+            <key code="81" output="="/>
+            <key code="82" output="0"/>
+            <key code="83" output="1"/>
+            <key code="84" output="2"/>
+            <key code="85" output="3"/>
+            <key code="86" output="4"/>
+            <key code="87" output="5"/>
+            <key code="88" output="6"/>
+            <key code="89" output="7"/>
+            <!-- gap, 90 -->
+            <key code="91" output="8"/>
+            <key code="92" output="9"/>
+            <!-- gap, 93 through 95 -->
+            <key code="96" output="&#x0010;"/>
+            <key code="97" output="&#x0010;"/>
+            <key code="98" output="&#x0010;"/>
+            <key code="99" output="&#x0010;"/>
+            <key code="100" output="&#x0010;"/>
+            <key code="101" output="&#x0010;"/>
+            <key code="102" output="&#x0010;"/>
+            <key code="103" output="&#x0010;"/>
+            <key code="104" output="&#x0010;"/>
+            <key code="105" output="&#x0010;"/>
+            <key code="106" output="&#x0010;"/>
+            <key code="107" output="&#x0010;"/>
+            <key code="108" output="&#x0010;"/>
+            <key code="109" output="&#x0010;"/>
+            <key code="110" output="&#x0010;"/>
+            <key code="111" output="&#x0010;"/>
+            <key code="112" output="&#x0010;"/>
+            <key code="113" output="&#x0010;"/>
+            <key code="114" output="&#x0005;"/>
+            <key code="115" output="&#x0001;"/>
+            <key code="116" output="&#x000B;"/>
+            <key code="117" output="&#x007F;"/>
+            <key code="118" output="&#x0010;"/>
+            <key code="119" output="&#x0004;"/>
+            <key code="120" output="&#x0010;"/>
+            <key code="121" output="&#x000C;"/>
+            <key code="122" output="&#x0010;"/>
+            <key code="123" output="&#x001C;"/>
+            <key code="124" output="&#x001D;"/>
+            <key code="125" output="&#x001F;"/>
+            <key code="126" output="&#x001E;"/>
+        </keyMap>
+        <keyMap index="5">
+            <key code="0" action="å"/>
+            <key code="1" action="ø"/>
+            <key code="2" action="´"/>
+            <key code="3" action="¨"/>
+            <key code="4" action="∂"/>
+            <key code="5" action="ˆ"/>
+            <key code="6" action="…"/>
+            <key code="7" action="œ"/>
+            <key code="8" action="IPA∆"/>
+            <key code="9" action="˚"/>
+            <key code="10" output="§"/>
+            <key code="11" action="IPA≈"/>
+            <key code="12" action="æ"/>
+            <key code="13" action="≤"/>
+            <key code="14" action="≥"/>
+            <key code="15" action="IPAπ"/>
+            <key code="16" action="ƒ"/>
+            <key code="17" action="¥"/>
+            <key code="18" action="¡"/>
+            <key code="19" action="™"/>
+            <key code="20" action="IPA£"/>
+            <key code="21" action="¢"/>
+            <key code="22" action="§"/>
+            <key code="23" action="∞"/>
+            <key code="24" action="‘"/>
+            <key code="25" action="ª"/>
+            <key code="26" action="¶"/>
+            <key code="27" action="“"/>
+            <key code="28" action="•"/>
+            <key code="29" action="º"/>
+            <key code="30" action="IPA≠"/>
+            <key code="31" action="IPA®"/>
+            <key code="32" action="©"/>
+            <key code="33" action="÷"/>
+            <key code="34" action="ç"/>
+            <key code="35" action="IPA¬"/>
+            <key code="36" output="&#x000D;"/>
+            <key code="37" action="˜"/>
+            <key code="38" action="IPA˙"/>
+            <key code="39" action="IPA–"/>
+            <key code="40" action="†"/>
+            <key code="41" action="IPAß"/>
+            <key code="42" action="IPA«"/>
+            <key code="43" action="∑"/>
+            <key code="44" action="IPAΩ"/>
+            <key code="45" action="∫"/>
+            <key code="46" action="µ"/>
+            <key code="47" action="IPA√"/>
+            <key code="48" output="&#x0009;"/>
+            <key code="49" action=" "/>
+            <key code="50" action="`"/>
+            <key code="51" output="&#x0008;"/>
+            <key code="52" output="&#x0003;"/>
+            <key code="53" output="&#x001B;"/>
+            <!-- gap, 54 through 64 -->
+            <key code="56" output=""/>
+            <key code="64" output="&#x0010;"/>
+            <key code="65" output="."/>
+            <key code="66" output="&#x001D;"/>
+            <key code="67" output="*"/>
+            <!-- gap, 68 -->
+            <key code="69" output="+"/>
+            <key code="70" output="&#x001C;"/>
+            <key code="71" output="&#x001B;"/>
+            <key code="72" output="&#x001F;"/>
+            <!-- gap, 73 through 74 -->
+            <key code="75" output="/"/>
+            <key code="76" output="&#x0003;"/>
+            <key code="77" output="&#x001E;"/>
+            <key code="78" output="-"/>
+            <!-- gap, 79 through 80 -->
+            <key code="79" output="&#x0010;"/>
+            <key code="80" output="&#x0010;"/>
+            <key code="81" output="="/>
+            <key code="82" output="0"/>
+            <key code="83" output="1"/>
+            <key code="84" output="2"/>
+            <key code="85" output="3"/>
+            <key code="86" output="4"/>
+            <key code="87" output="5"/>
+            <key code="88" output="6"/>
+            <key code="89" output="7"/>
+            <!-- gap, 90 -->
+            <key code="91" output="8"/>
+            <key code="92" output="9"/>
+            <!-- gap, 93 through 95 -->
+            <key code="96" output="&#x0010;"/>
+            <key code="97" output="&#x0010;"/>
+            <key code="98" output="&#x0010;"/>
+            <key code="99" output="&#x0010;"/>
+            <key code="100" output="&#x0010;"/>
+            <key code="101" output="&#x0010;"/>
+            <key code="102" output="&#x0010;"/>
+            <key code="103" output="&#x0010;"/>
+            <key code="104" output="&#x0010;"/>
+            <key code="105" output="&#x0010;"/>
+            <key code="106" output="&#x0010;"/>
+            <key code="107" output="&#x0010;"/>
+            <key code="108" output="&#x0010;"/>
+            <key code="109" output="&#x0010;"/>
+            <key code="110" output="&#x0010;"/>
+            <key code="111" output="&#x0010;"/>
+            <key code="112" output="&#x0010;"/>
+            <key code="113" output="&#x0010;"/>
+            <key code="114" output="&#x0005;"/>
+            <key code="115" output="&#x0001;"/>
+            <key code="116" output="&#x000B;"/>
+            <key code="117" output="&#x007F;"/>
+            <key code="118" output="&#x0010;"/>
+            <key code="119" output="&#x0004;"/>
+            <key code="120" output="&#x0010;"/>
+            <key code="121" output="&#x000C;"/>
+            <key code="122" output="&#x0010;"/>
+            <key code="123" output="&#x001C;"/>
+            <key code="124" output="&#x001D;"/>
+            <key code="125" output="&#x001F;"/>
+            <key code="126" output="&#x001E;"/>
+        </keyMap>
+        <keyMap index="6">
+            <key code="0" action="Å"/>
+            <key code="1" action="IPAØ"/>
+            <key code="2" action="ə"/>
+            <key code="3" action="IPA¨ 2"/>
+            <key code="4" action="Î"/>
+            <key code="5" action="IPAˆ 1"/>
+            <key code="6" action="IPAÚ"/>
+            <key code="7" action="Œ"/>
+            <key code="8" action="IPAÔ"/>
+            <key code="9" action="IPA"/>
+            <key code="10" output="±"/>
+            <key code="11" action="IPA˛"/>
+            <key code="12" action="Æ"/>
+            <key code="13" action="IPA¯"/>
+            <key code="14" action="IPA˘"/>
+            <key code="15" action="∏"/>
+            <key code="16" action="Ï"/>
+            <key code="17" action="Á"/>
+            <key code="18" action="IPA⁄"/>
+            <key code="19" action="IPA€"/>
+            <key code="20" action="‹"/>
+            <key code="21" action="›"/>
+            <key code="22" action="ﬂ"/>
+            <key code="23" action="ﬁ"/>
+            <key code="24" action="’"/>
+            <key code="25" action="·"/>
+            <key code="26" action="‡"/>
+            <key code="27" action="”"/>
+            <key code="28" action="°"/>
+            <key code="29" action="‚"/>
+            <key code="30" action="IPA±"/>
+            <key code="31" action="IPA‰"/>
+            <key code="32" action="IPA˝"/>
+            <key code="33" action="IPA¿"/>
+            <key code="34" action="Ç"/>
+            <key code="35" action="IPAÒ"/>
+            <key code="36" output="&#x000D;"/>
+            <key code="37" action="IPAŋ"/>
+            <key code="38" action="IPAÓ"/>
+            <key code="39" action="—"/>
+            <key code="40" action="ˇ"/>
+            <key code="41" action="Í"/>
+            <key code="42" action="IPA»"/>
+            <key code="43" action="„"/>
+            <key code="44" action="¸"/>
+            <key code="45" action="IPAı"/>
+            <key code="46" action="IPAÂ"/>
+            <key code="47" action="◊"/>
+            <key code="48" output="&#x0009;"/>
+            <key code="49" output=" "/>
+            <key code="50" action="` 3"/>
+            <key code="51" output="&#x0008;"/>
+            <key code="52" output="&#x0003;"/>
+            <key code="53" output="&#x001B;"/>
+            <!-- gap, 54 through 64 -->
+            <key code="64" output="&#x0010;"/>
+            <key code="65" output="."/>
+            <key code="66" output="*"/>
+            <key code="67" output="*"/>
+            <!-- gap, 68 -->
+            <key code="69" output="+"/>
+            <key code="70" output="+"/>
+            <key code="71" output="&#x001B;"/>
+            <key code="72" output="="/>
+            <!-- gap, 73 through 74 -->
+            <key code="75" output="/"/>
+            <key code="76" output="&#x0003;"/>
+            <key code="77" output="/"/>
+            <key code="78" output="-"/>
+            <!-- gap, 79 through 80 -->
+            <key code="79" output="&#x0010;"/>
+            <key code="80" output="&#x0010;"/>
+            <key code="81" output="="/>
+            <key code="82" output="0"/>
+            <key code="83" output="1"/>
+            <key code="84" output="2"/>
+            <key code="85" output="3"/>
+            <key code="86" output="4"/>
+            <key code="87" output="5"/>
+            <key code="88" output="6"/>
+            <key code="89" output="7"/>
+            <!-- gap, 90 -->
+            <key code="91" output="8"/>
+            <key code="92" output="9"/>
+            <!-- gap, 93 through 95 -->
+            <key code="96" output="&#x0010;"/>
+            <key code="97" output="&#x0010;"/>
+            <key code="98" output="&#x0010;"/>
+            <key code="99" output="&#x0010;"/>
+            <key code="100" output="&#x0010;"/>
+            <key code="101" output="&#x0010;"/>
+            <key code="102" output="&#x0010;"/>
+            <key code="103" output="&#x0010;"/>
+            <key code="104" output="&#x0010;"/>
+            <key code="105" output="&#x0010;"/>
+            <key code="106" output="&#x0010;"/>
+            <key code="107" output="&#x0010;"/>
+            <key code="108" output="&#x0010;"/>
+            <key code="109" output="&#x0010;"/>
+            <key code="110" output="&#x0010;"/>
+            <key code="111" output="&#x0010;"/>
+            <key code="112" output="&#x0010;"/>
+            <key code="113" output="&#x0010;"/>
+            <key code="114" output="&#x0005;"/>
+            <key code="115" output="&#x0001;"/>
+            <key code="116" output="&#x000B;"/>
+            <key code="117" output="&#x007F;"/>
+            <key code="118" output="&#x0010;"/>
+            <key code="119" output="&#x0004;"/>
+            <key code="120" output="&#x0010;"/>
+            <key code="121" output="&#x000C;"/>
+            <key code="122" output="&#x0010;"/>
+            <key code="123" output="&#x001C;"/>
+            <key code="124" output="&#x001D;"/>
+            <key code="125" output="&#x001F;"/>
+            <key code="126" output="&#x001E;"/>
+        </keyMap>
+    </keyMapSet>
+    <actions>
+        <action id="&#x001B;">
+            <when state="none" output="&#x001B;"/>
+        </action>
+        <action id="&#x001B; 1">
+            <when state="none" next="Dot above"/>
+        </action>
+        <action id="&#x001B; 2">
+            <when state="none" next="Dot above"/>
+        </action>
+        <action id=" ">
+            <when state="none" output=" "/>
+            <when state="Caron" output="ˇ"/>
+            <when state="Cedilla" output="¸"/>
+            <when state="Dot above" output="˙"/>
+            <when state="Double acute" output="˝"/>
+            <when state="Fraction 1" output="⅟"/>
+            <when state="Macron" output="¯"/>
+            <when state="Ogonek" output="˛"/>
+            <when state="Retroflex" output="˞"/>
+            <when state="Ring" output="˚"/>
+            <when state="Slash" output="⁄"/>
+            <when state="s1" output="´"/>
+            <when state="s2" output="¨"/>
+            <when state="s3" output="ˆ"/>
+            <when state="s4" output="˜"/>
+            <when state="s5" output="`"/>
+        </action>
+        <action id="!">
+            <when state="none" output="!"/>
+            <when state="IPA" output="ꜜ"/>
+            <when state="Symbols" output="⚠"/>
+        </action>
+        <action id="&#x0022;">
+            <when state="none" output="&#x0022;"/>
+            <when state="Greek" output="∀"/>
+            <when state="IPA" output="ˈ"/>
+            <when state="IPA modifiers" output="̈"/>
+            <when state="Macron" output="Ǣ"/>
+            <when state="s1" output="Ǽ"/>
+        </action>
+        <action id="#">
+            <when state="none" output="#"/>
+            <when state="Symbols" output="♯"/>
+        </action>
+        <action id="$">
+            <when state="none" output="$"/>
+            <when state="Greek" output="∃"/>
+        </action>
+        <action id="%">
+            <when state="none" output="%"/>
+            <when state="IPA" output="ˌ"/>
+        </action>
+        <action id="&#x0026;">
+            <when state="none" output="&#x0026;"/>
+            <when state="IPA" output="ɶ"/>
+            <when state="Math" output="∧"/>
+        </action>
+        <action id="&#x0027;">
+            <when state="none" output="&#x0027;"/>
+            <when state="Greek" output="∋"/>
+            <when state="IPA" output="ʲ"/>
+            <when state="Macron" output="ǣ"/>
+            <when state="Math" output="⊊"/>
+            <when state="s1" output="ǽ"/>
+        </action>
+        <action id="&#x0027; 1">
+            <when state="none" output="&#x0027;"/>
+            <when state="Greek" output="∋"/>
+            <when state="Macron" output="Ǣ"/>
+            <when state="s1" output="Ǽ"/>
+        </action>
+        <action id="(">
+            <when state="none" output="("/>
+            <when state="Math" output="⟨"/>
+            <when state="Superscript" output="⁽"/>
+            <when state="Symbols" output="☹"/>
+        </action>
+        <action id=")">
+            <when state="none" output=")"/>
+            <when state="Math" output="⟩"/>
+            <when state="Superscript" output="⁾"/>
+            <when state="Symbols" output="☺"/>
+        </action>
+        <action id="*">
+            <when state="none" output="*"/>
+            <when state="Circled" output="⊛"/>
+            <when state="Math" output="∗"/>
+            <when state="Symbols" output="☆"/>
+        </action>
+        <action id="+">
+            <when state="none" output="+"/>
+            <when state="Circled" output="⊕"/>
+            <when state="Dot above" output="∔"/>
+            <when state="IPA modifiers" output="̟"/>
+            <when state="Superscript" output="⁺"/>
+        </action>
+        <action id=",">
+            <when state="none" output=","/>
+            <when state="Breve" output="̆"/>
+            <when state="Caron" output="̌"/>
+            <when state="Cedilla" output="̧"/>
+            <when state="Dot above" output="̇"/>
+            <when state="Dot below" output="̣"/>
+            <when state="Double acute" output="̋"/>
+            <when state="Macron" output="̄"/>
+            <when state="Math" output="⊂"/>
+            <when state="Ogonek" output="̨"/>
+            <when state="Ring" output="̊"/>
+            <when state="Slash" output="̷"/>
+            <when state="Symbols" output="↑"/>
+            <when state="s1" output="́"/>
+            <when state="s2" output="̈"/>
+            <when state="s3" output="̂"/>
+            <when state="s4" output="̃"/>
+            <when state="s5" output="̀"/>
+        </action>
+        <action id=", 1">
+            <when state="none" output=","/>
+            <when state="Breve" output="̆"/>
+            <when state="Caron" output="̌"/>
+            <when state="Cedilla" output="̧"/>
+            <when state="Dot above" output="̇"/>
+            <when state="Dot below" output="̣"/>
+            <when state="Macron" output="̄"/>
+            <when state="Ogonek" output="̨"/>
+            <when state="Ring" output="̊"/>
+            <when state="Slash" output="̸"/>
+            <when state="s1" output="́"/>
+            <when state="s2" output="̈"/>
+            <when state="s3" output="̂"/>
+            <when state="s4" output="̃"/>
+            <when state="s5" output="̀"/>
+        </action>
+        <action id="-">
+            <when state="none" output="-"/>
+            <when state="Circled" output="⊖"/>
+            <when state="Dot above" output="∸"/>
+            <when state="IPA modifiers" output="̠"/>
+            <when state="Superscript" output="⁻"/>
+        </action>
+        <action id="- 1">
+            <when state="none" output="-"/>
+            <when state="Circled" output="⊖"/>
+            <when state="Dot above" output="∸"/>
+        </action>
+        <action id=".">
+            <when state="none" output="."/>
+            <when state="Circled" output="⊙"/>
+            <when state="Math" output="⊃"/>
+        </action>
+        <action id=". 1">
+            <when state="none" output="."/>
+            <when state="Circled" output="⊙"/>
+        </action>
+        <action id="/">
+            <when state="none" output="/"/>
+            <when state="Circled" output="⊘"/>
+            <when state="IPA modifiers" output="̌"/>
+            <when state="Symbols" output="‽"/>
+        </action>
+        <action id="/ 1">
+            <when state="none" output="/"/>
+            <when state="Circled" output="⊘"/>
+        </action>
+        <action id="0">
+            <when state="none" output="0"/>
+            <when state="Fraction 1" output="⅒"/>
+            <when state="IPA modifiers" output="̥"/>
+            <when state="Math" output="∅"/>
+            <when state="Slash" next="Fraction 0"/>
+            <when state="Superscript" output="⁰"/>
+            <when state="Symbols" output="☻"/>
+        </action>
+        <action id="0 1">
+            <when state="none" output="0"/>
+            <when state="Fraction 1" output="⅒"/>
+            <when state="Slash" next="Fraction 0"/>
+            <when state="Superscript" output="⁰"/>
+        </action>
+        <action id="1">
+            <when state="none" output="1"/>
+            <when state="IPA" output="ɨ"/>
+            <when state="Slash" next="Fraction 1"/>
+            <when state="Superscript" output="¹"/>
+        </action>
+        <action id="1 1">
+            <when state="none" output="1"/>
+            <when state="Slash" next="Fraction 1"/>
+            <when state="Superscript" output="¹"/>
+        </action>
+        <action id="2">
+            <when state="none" output="2"/>
+            <when state="Fraction 1" output="½"/>
+            <when state="IPA" output="ø"/>
+            <when state="Slash" next="Fraction 2"/>
+            <when state="Superscript" output="²"/>
+            <when state="Symbols" output="ꙫ"/>
+        </action>
+        <action id="2 1">
+            <when state="none" output="2"/>
+            <when state="Fraction 1" output="½"/>
+            <when state="Slash" next="Fraction 2"/>
+            <when state="Superscript" output="²"/>
+        </action>
+        <action id="3">
+            <when state="none" output="3"/>
+            <when state="Fraction 0" output="↉"/>
+            <when state="Fraction 1" output="⅓"/>
+            <when state="Fraction 2" output="⅔"/>
+            <when state="IPA" output="ɜ"/>
+            <when state="Retroflex" output="ɝ"/>
+            <when state="Slash" next="Fraction 3"/>
+            <when state="Superscript" output="³"/>
+            <when state="Symbols" output="♯"/>
+        </action>
+        <action id="3 1">
+            <when state="none" output="3"/>
+            <when state="Fraction 0" output="↉"/>
+            <when state="Fraction 1" output="⅓"/>
+            <when state="Fraction 2" output="⅔"/>
+            <when state="Slash" next="Fraction 3"/>
+            <when state="Superscript" output="³"/>
+        </action>
+        <action id="4">
+            <when state="none" output="4"/>
+            <when state="Fraction 1" output="¼"/>
+            <when state="Fraction 3" output="¾"/>
+            <when state="IPA" output="ɾ"/>
+            <when state="Slash" next="Fraction 4"/>
+            <when state="Superscript" output="⁴"/>
+            <when state="Symbols" output="♩"/>
+        </action>
+        <action id="4 1">
+            <when state="none" output="4"/>
+            <when state="Fraction 1" output="¼"/>
+            <when state="Fraction 3" output="¾"/>
+            <when state="Slash" next="Fraction 4"/>
+            <when state="Superscript" output="⁴"/>
+        </action>
+        <action id="5">
+            <when state="none" output="5"/>
+            <when state="Fraction 1" output="⅕"/>
+            <when state="Fraction 2" output="⅖"/>
+            <when state="Fraction 3" output="⅗"/>
+            <when state="Fraction 4" output="⅘"/>
+            <when state="IPA" output="ɫ"/>
+            <when state="Slash" next="Fraction 5"/>
+            <when state="Superscript" output="⁵"/>
+            <when state="Symbols" output="♪"/>
+        </action>
+        <action id="5 1">
+            <when state="none" output="5"/>
+            <when state="Fraction 1" output="⅕"/>
+            <when state="Fraction 2" output="⅖"/>
+            <when state="Fraction 3" output="⅗"/>
+            <when state="Fraction 4" output="⅘"/>
+            <when state="Slash" next="Fraction 5"/>
+            <when state="Superscript" output="⁵"/>
+        </action>
+        <action id="6">
+            <when state="none" output="6"/>
+            <when state="Fraction 1" output="⅙"/>
+            <when state="Fraction 5" output="⅚"/>
+            <when state="IPA" output="ɐ"/>
+            <when state="Superscript" output="⁶"/>
+            <when state="Symbols" output="♬"/>
+        </action>
+        <action id="6 1">
+            <when state="none" output="6"/>
+            <when state="Fraction 1" output="⅙"/>
+            <when state="Fraction 5" output="⅚"/>
+            <when state="Superscript" output="⁶"/>
+        </action>
+        <action id="7">
+            <when state="none" output="7"/>
+            <when state="Fraction 1" output="⅐"/>
+            <when state="IPA" output="ɤ"/>
+            <when state="Math" output="⋂"/>
+            <when state="Slash" next="Fraction 7"/>
+            <when state="Superscript" output="⁷"/>
+            <when state="Symbols" output="♫"/>
+        </action>
+        <action id="7 1">
+            <when state="none" output="7"/>
+            <when state="Fraction 1" output="⅐"/>
+            <when state="Slash" next="Fraction 7"/>
+            <when state="Superscript" output="⁷"/>
+        </action>
+        <action id="8">
+            <when state="none" output="8"/>
+            <when state="Circled" output="⊚"/>
+            <when state="Fraction 1" output="⅛"/>
+            <when state="Fraction 3" output="⅜"/>
+            <when state="Fraction 5" output="⅝"/>
+            <when state="Fraction 7" output="⅞"/>
+            <when state="IPA" output="ɵ"/>
+            <when state="Math" output="∘"/>
+            <when state="Superscript" output="⁸"/>
+            <when state="Symbols" output="★"/>
+        </action>
+        <action id="8 1">
+            <when state="none" output="8"/>
+            <when state="Circled" output="⊚"/>
+            <when state="Fraction 1" output="⅛"/>
+            <when state="Fraction 3" output="⅜"/>
+            <when state="Fraction 5" output="⅝"/>
+            <when state="Fraction 7" output="⅞"/>
+            <when state="Superscript" output="⁸"/>
+        </action>
+        <action id="9">
+            <when state="none" output="9"/>
+            <when state="Circled" output="⊙"/>
+            <when state="Fraction 1" output="⅑"/>
+            <when state="IPA" output="œ"/>
+            <when state="Superscript" output="⁹"/>
+            <when state="Symbols" output="⑨"/>
+        </action>
+        <action id="9 1">
+            <when state="none" output="9"/>
+            <when state="Circled" output="⊙"/>
+            <when state="Fraction 1" output="⅑"/>
+            <when state="Superscript" output="⁹"/>
+        </action>
+        <action id=":">
+            <when state="none" output=":"/>
+            <when state="IPA" output="ː"/>
+            <when state="Math" output="⋮"/>
+        </action>
+        <action id=";">
+            <when state="none" output=";"/>
+            <when state="Symbols" output="⌃"/>
+        </action>
+        <action id="&#x003C;">
+            <when state="none" output="&#x003C;"/>
+            <when state="Caron" output="̌"/>
+            <when state="Cedilla" output="̧"/>
+            <when state="Dot above" output="⋖"/>
+            <when state="Dot below" output="̣"/>
+            <when state="IPA modifiers" next="implosive"/>
+            <when state="Macron" output="̄"/>
+            <when state="Math" output="⊆"/>
+            <when state="Ogonek" output="̨"/>
+            <when state="Ring" output="̊"/>
+            <when state="Slash" output="̸"/>
+            <when state="Symbols" output="⇑"/>
+            <when state="s1" output="́"/>
+            <when state="s2" output="̈"/>
+            <when state="s3" output="̂"/>
+            <when state="s4" output="̃"/>
+            <when state="s5" output="̀"/>
+        </action>
+        <action id="=">
+            <when state="none" output="="/>
+            <when state="Circled" output="⊜"/>
+            <when state="IPA" output="̩"/>
+            <when state="IPA modifiers" output="̩"/>
+            <when state="Math" output="≡"/>
+            <when state="Ring" output="≗"/>
+            <when state="Superscript" output="⁼"/>
+            <when state="s4" output="≅"/>
+        </action>
+        <action id="= 1">
+            <when state="none" output="="/>
+            <when state="Circled" output="⊜"/>
+            <when state="Ring" output="≗"/>
+            <when state="Superscript" output="⁼"/>
+            <when state="s4" output="≅"/>
+        </action>
+        <action id="&#x003E;">
+            <when state="none" output="&#x003E;"/>
+            <when state="Dot above" output="⋗"/>
+            <when state="IPA modifiers" output="ʼ"/>
+            <when state="Math" output="⊇"/>
+        </action>
+        <action id="?">
+            <when state="none" output="?"/>
+            <when state="IPA" output="ʔ"/>
+            <when state="Symbols" output="‽"/>
+        </action>
+        <action id="@">
+            <when state="none" output="@"/>
+            <when state="IPA" output="ə"/>
+            <when state="Retroflex" output="ɚ"/>
+            <when state="Symbols" output="Ꙫ"/>
+        </action>
+        <action id="A">
+            <when state="none" output="A"/>
+            <when state="Breve" output="Ă"/>
+            <when state="Caron" output="Ǎ"/>
+            <when state="Dot above" output="Ȧ"/>
+            <when state="Dot below" output="Ạ"/>
+            <when state="Greek" output="Α"/>
+            <when state="IPA" output="ɑ"/>
+            <when state="IPA modifiers" output="̘"/>
+            <when state="Macron" output="Ā"/>
+            <when state="Math" output="𝔸"/>
+            <when state="Ogonek" output="Ą"/>
+            <when state="Ring" output="Å"/>
+            <when state="Slash" output="Ⱥ"/>
+            <when state="Superscript" output="ᴬ"/>
+            <when state="Symbols" output="⇐"/>
+            <when state="s1" output="Á"/>
+            <when state="s2" output="Ä"/>
+            <when state="s3" output="Â"/>
+            <when state="s4" output="Ã"/>
+            <when state="s5" output="À"/>
+        </action>
+        <action id="B">
+            <when state="none" output="B"/>
+            <when state="Dot above" output="Ḃ"/>
+            <when state="Dot below" output="Ḅ"/>
+            <when state="Greek" output="Β"/>
+            <when state="IPA" output="β"/>
+            <when state="IPA modifiers" output="˩"/>
+            <when state="Math" output="𝔹"/>
+            <when state="Superscript" output="ᴮ"/>
+        </action>
+        <action id="B 1">
+            <when state="none" output="B"/>
+            <when state="Dot above" output="Ḃ"/>
+            <when state="Dot below" output="Ḅ"/>
+            <when state="Greek" output="Β"/>
+            <when state="Superscript" output="ᴮ"/>
+        </action>
+        <action id="C">
+            <when state="none" output="C"/>
+            <when state="Caron" output="Č"/>
+            <when state="Cedilla" output="Ç"/>
+            <when state="Dot above" output="Ċ"/>
+            <when state="Greek" output="Χ"/>
+            <when state="IPA" output="ç"/>
+            <when state="Math" output="ℂ"/>
+            <when state="Slash" output="Ȼ"/>
+            <when state="Symbols" output="♢"/>
+            <when state="s1" output="Ć"/>
+            <when state="s3" output="Ĉ"/>
+        </action>
+        <action id="C 1">
+            <when state="none" output="C"/>
+            <when state="Caron" output="Č"/>
+            <when state="Cedilla" output="Ç"/>
+            <when state="Dot above" output="Ċ"/>
+            <when state="Greek" output="Χ"/>
+            <when state="Slash" output="Ȼ"/>
+            <when state="s1" output="Ć"/>
+            <when state="s3" output="Ĉ"/>
+        </action>
+        <action id="D">
+            <when state="none" output="D"/>
+            <when state="Caron" output="Ď"/>
+            <when state="Cedilla" output="Ḑ"/>
+            <when state="Dot above" output="Ḋ"/>
+            <when state="Dot below" output="Ḍ"/>
+            <when state="Greek" output="Δ"/>
+            <when state="IPA" output="ð"/>
+            <when state="Math" output="𝔻"/>
+            <when state="Superscript" output="ᴰ"/>
+            <when state="Symbols" output="Ð"/>
+        </action>
+        <action id="D 1">
+            <when state="none" output="D"/>
+            <when state="Caron" output="Ď"/>
+            <when state="Cedilla" output="Ḑ"/>
+            <when state="Dot above" output="Ḋ"/>
+            <when state="Dot below" output="Ḍ"/>
+            <when state="Greek" output="Δ"/>
+            <when state="Superscript" output="ᴰ"/>
+        </action>
+        <action id="E">
+            <when state="none" output="E"/>
+            <when state="Breve" output="Ĕ"/>
+            <when state="Caron" output="Ě"/>
+            <when state="Cedilla" output="Ȩ"/>
+            <when state="Dot above" output="Ė"/>
+            <when state="Dot below" output="Ẹ"/>
+            <when state="Greek" output="Ε"/>
+            <when state="IPA" output="ɛ"/>
+            <when state="Macron" output="Ē"/>
+            <when state="Math" output="𝔼"/>
+            <when state="Ogonek" output="Ę"/>
+            <when state="Slash" output="Ɇ"/>
+            <when state="Superscript" output="ᴱ"/>
+            <when state="Symbols" output="⇒"/>
+            <when state="s1" output="É"/>
+            <when state="s2" output="Ë"/>
+            <when state="s3" output="Ê"/>
+            <when state="s4" output="Ẽ"/>
+            <when state="s5" output="È"/>
+        </action>
+        <action id="F">
+            <when state="none" output="F"/>
+            <when state="Dot above" output="Ḟ"/>
+            <when state="Greek" output="Φ"/>
+            <when state="IPA" output="ɱ"/>
+            <when state="IPA modifiers" output="̂"/>
+            <when state="Math" output="𝔽"/>
+        </action>
+        <action id="F 1">
+            <when state="none" output="F"/>
+            <when state="Dot above" output="Ḟ"/>
+            <when state="Greek" output="Φ"/>
+        </action>
+        <action id="G">
+            <when state="none" output="G"/>
+            <when state="Breve" output="Ğ"/>
+            <when state="Caron" output="Ǧ"/>
+            <when state="Cedilla" output="Ģ"/>
+            <when state="Dot above" output="Ġ"/>
+            <when state="Greek" output="Γ"/>
+            <when state="IPA" output="ɣ"/>
+            <when state="IPA modifiers" output="ˠ"/>
+            <when state="Macron" output="Ḡ"/>
+            <when state="Math" output="𝔾"/>
+            <when state="Superscript" output="ᴳ"/>
+            <when state="Symbols" output="♡"/>
+            <when state="s1" output="Ǵ"/>
+            <when state="s3" output="Ĝ"/>
+        </action>
+        <action id="G 1">
+            <when state="none" output="G"/>
+            <when state="Breve" output="Ğ"/>
+            <when state="Caron" output="Ǧ"/>
+            <when state="Cedilla" output="Ģ"/>
+            <when state="Dot above" output="Ġ"/>
+            <when state="Greek" output="Γ"/>
+            <when state="Macron" output="Ḡ"/>
+            <when state="Superscript" output="ᴳ"/>
+            <when state="s1" output="Ǵ"/>
+            <when state="s3" output="Ĝ"/>
+        </action>
+        <action id="H">
+            <when state="none" output="H"/>
+            <when state="Caron" output="Ȟ"/>
+            <when state="Cedilla" output="Ḩ"/>
+            <when state="Dot above" output="Ḣ"/>
+            <when state="Dot below" output="Ḥ"/>
+            <when state="Greek" output="Η"/>
+            <when state="IPA" output="ɥ"/>
+            <when state="IPA modifiers" output="˦"/>
+            <when state="Math" output="ℍ"/>
+            <when state="Superscript" output="ᴴ"/>
+            <when state="s2" output="Ḧ"/>
+            <when state="s3" output="Ĥ"/>
+        </action>
+        <action id="H 1">
+            <when state="none" output="H"/>
+            <when state="Caron" output="Ȟ"/>
+            <when state="Cedilla" output="Ḩ"/>
+            <when state="Dot above" output="Ḣ"/>
+            <when state="Dot below" output="Ḥ"/>
+            <when state="Greek" output="Η"/>
+            <when state="Superscript" output="ᴴ"/>
+            <when state="s2" output="Ḧ"/>
+            <when state="s3" output="Ĥ"/>
+        </action>
+        <action id="I">
+            <when state="none" output="I"/>
+            <when state="Breve" output="Ĭ"/>
+            <when state="Caron" output="Ǐ"/>
+            <when state="Dot above" output="İ"/>
+            <when state="Dot below" output="Ị"/>
+            <when state="Greek" output="Ι"/>
+            <when state="IPA" output="ɪ"/>
+            <when state="Macron" output="Ī"/>
+            <when state="Math" output="𝕀"/>
+            <when state="Ogonek" output="Į"/>
+            <when state="Superscript" output="ᴵ"/>
+            <when state="s1" output="Í"/>
+            <when state="s2" output="Ï"/>
+            <when state="s3" output="Î"/>
+            <when state="s4" output="Ĩ"/>
+            <when state="s5" output="Ì"/>
+        </action>
+        <action id="IPA!">
+            <when state="none" output="ꜜ"/>
+            <when state="IPA" output="ꜜ"/>
+            <when state="Symbols" output="⚠"/>
+        </action>
+        <action id="IPA&#x0022;">
+            <when state="none" output="ˈ"/>
+            <when state="Greek" output="∀"/>
+            <when state="IPA" output="ˈ"/>
+            <when state="IPA modifiers" output="̈"/>
+            <when state="Macron" output="Ǣ"/>
+            <when state="s1" output="Ǽ"/>
+        </action>
+        <action id="IPA%">
+            <when state="none" output="ˌ"/>
+            <when state="IPA" output="ˌ"/>
+        </action>
+        <action id="IPA&#x0026;">
+            <when state="none" output="ɶ"/>
+            <when state="IPA" output="ɶ"/>
+            <when state="Math" output="∧"/>
+        </action>
+        <action id="IPA&#x0027;">
+            <when state="none" output="ʲ"/>
+            <when state="Greek" output="∋"/>
+            <when state="IPA" output="ʲ"/>
+            <when state="Macron" output="ǣ"/>
+            <when state="Math" output="⊊"/>
+            <when state="s1" output="ǽ"/>
+        </action>
+        <action id="IPA1">
+            <when state="none" output="ɨ"/>
+            <when state="IPA" output="ɨ"/>
+            <when state="Slash" next="Fraction 1"/>
+            <when state="Superscript" output="¹"/>
+        </action>
+        <action id="IPA2">
+            <when state="none" output="ø"/>
+            <when state="Fraction 1" output="½"/>
+            <when state="IPA" output="ø"/>
+            <when state="Slash" next="Fraction 2"/>
+            <when state="Superscript" output="²"/>
+            <when state="Symbols" output="ꙫ"/>
+        </action>
+        <action id="IPA3">
+            <when state="none" output="ɜ"/>
+            <when state="Fraction 0" output="↉"/>
+            <when state="Fraction 1" output="⅓"/>
+            <when state="Fraction 2" output="⅔"/>
+            <when state="IPA" output="ɜ"/>
+            <when state="Retroflex" output="ɝ"/>
+            <when state="Slash" next="Fraction 3"/>
+            <when state="Superscript" output="³"/>
+            <when state="Symbols" output="♯"/>
+        </action>
+        <action id="IPA4">
+            <when state="none" output="ɾ"/>
+            <when state="Fraction 1" output="¼"/>
+            <when state="Fraction 3" output="¾"/>
+            <when state="IPA" output="ɾ"/>
+            <when state="Slash" next="Fraction 4"/>
+            <when state="Superscript" output="⁴"/>
+            <when state="Symbols" output="♩"/>
+        </action>
+        <action id="IPA5">
+            <when state="none" output="ɫ"/>
+            <when state="Fraction 1" output="⅕"/>
+            <when state="Fraction 2" output="⅖"/>
+            <when state="Fraction 3" output="⅗"/>
+            <when state="Fraction 4" output="⅘"/>
+            <when state="IPA" output="ɫ"/>
+            <when state="Slash" next="Fraction 5"/>
+            <when state="Superscript" output="⁵"/>
+            <when state="Symbols" output="♪"/>
+        </action>
+        <action id="IPA6">
+            <when state="none" output="ɐ"/>
+            <when state="Fraction 1" output="⅙"/>
+            <when state="Fraction 5" output="⅚"/>
+            <when state="IPA" output="ɐ"/>
+            <when state="Superscript" output="⁶"/>
+            <when state="Symbols" output="♬"/>
+        </action>
+        <action id="IPA7">
+            <when state="none" output="ɤ"/>
+            <when state="Fraction 1" output="⅐"/>
+            <when state="IPA" output="ɤ"/>
+            <when state="Math" output="⋂"/>
+            <when state="Slash" next="Fraction 7"/>
+            <when state="Superscript" output="⁷"/>
+            <when state="Symbols" output="♫"/>
+        </action>
+        <action id="IPA8">
+            <when state="none" output="ɵ"/>
+            <when state="Circled" output="⊚"/>
+            <when state="Fraction 1" output="⅛"/>
+            <when state="Fraction 3" output="⅜"/>
+            <when state="Fraction 5" output="⅝"/>
+            <when state="Fraction 7" output="⅞"/>
+            <when state="IPA" output="ɵ"/>
+            <when state="Math" output="∘"/>
+            <when state="Superscript" output="⁸"/>
+            <when state="Symbols" output="★"/>
+        </action>
+        <action id="IPA9">
+            <when state="none" output="œ"/>
+            <when state="Circled" output="⊙"/>
+            <when state="Fraction 1" output="⅑"/>
+            <when state="IPA" output="œ"/>
+            <when state="Superscript" output="⁹"/>
+            <when state="Symbols" output="⑨"/>
+        </action>
+        <action id="IPA:">
+            <when state="none" output="ː"/>
+            <when state="IPA" output="ː"/>
+            <when state="Math" output="⋮"/>
+        </action>
+        <action id="IPA=">
+            <when state="none" output="̩"/>
+            <when state="Circled" output="⊜"/>
+            <when state="IPA" output="̩"/>
+            <when state="IPA modifiers" output="̩"/>
+            <when state="Math" output="≡"/>
+            <when state="Ring" output="≗"/>
+            <when state="Superscript" output="⁼"/>
+            <when state="s4" output="≅"/>
+        </action>
+        <action id="IPA?">
+            <when state="none" output="ʔ"/>
+            <when state="IPA" output="ʔ"/>
+            <when state="Symbols" output="‽"/>
+        </action>
+        <action id="IPA@">
+            <when state="none" output="ə"/>
+            <when state="IPA" output="ə"/>
+            <when state="Retroflex" output="ɚ"/>
+            <when state="Symbols" output="Ꙫ"/>
+        </action>
+        <action id="IPAA">
+            <when state="none" output="ɑ"/>
+            <when state="Breve" output="Ă"/>
+            <when state="Caron" output="Ǎ"/>
+            <when state="Dot above" output="Ȧ"/>
+            <when state="Dot below" output="Ạ"/>
+            <when state="Greek" output="Α"/>
+            <when state="IPA" output="ɑ"/>
+            <when state="IPA modifiers" output="̘"/>
+            <when state="Macron" output="Ā"/>
+            <when state="Math" output="𝔸"/>
+            <when state="Ogonek" output="Ą"/>
+            <when state="Ring" output="Å"/>
+            <when state="Slash" output="Ⱥ"/>
+            <when state="Superscript" output="ᴬ"/>
+            <when state="Symbols" output="⇐"/>
+            <when state="s1" output="Á"/>
+            <when state="s2" output="Ä"/>
+            <when state="s3" output="Â"/>
+            <when state="s4" output="Ã"/>
+            <when state="s5" output="À"/>
+        </action>
+        <action id="IPAB">
+            <when state="none" output="β"/>
+            <when state="Dot above" output="Ḃ"/>
+            <when state="Dot below" output="Ḅ"/>
+            <when state="Greek" output="Β"/>
+            <when state="IPA" output="β"/>
+            <when state="IPA modifiers" output="˩"/>
+            <when state="Math" output="𝔹"/>
+            <when state="Superscript" output="ᴮ"/>
+        </action>
+        <action id="IPAC">
+            <when state="none" output="ç"/>
+            <when state="Caron" output="Č"/>
+            <when state="Cedilla" output="Ç"/>
+            <when state="Dot above" output="Ċ"/>
+            <when state="Greek" output="Χ"/>
+            <when state="IPA" output="ç"/>
+            <when state="Math" output="ℂ"/>
+            <when state="Slash" output="Ȼ"/>
+            <when state="Symbols" output="♢"/>
+            <when state="s1" output="Ć"/>
+            <when state="s3" output="Ĉ"/>
+        </action>
+        <action id="IPAD">
+            <when state="none" output="ð"/>
+            <when state="Caron" output="Ď"/>
+            <when state="Cedilla" output="Ḑ"/>
+            <when state="Dot above" output="Ḋ"/>
+            <when state="Dot below" output="Ḍ"/>
+            <when state="Greek" output="Δ"/>
+            <when state="IPA" output="ð"/>
+            <when state="Math" output="𝔻"/>
+            <when state="Superscript" output="ᴰ"/>
+            <when state="Symbols" output="Ð"/>
+        </action>
+        <action id="IPAE">
+            <when state="none" output="ɛ"/>
+            <when state="Breve" output="Ĕ"/>
+            <when state="Caron" output="Ě"/>
+            <when state="Cedilla" output="Ȩ"/>
+            <when state="Dot above" output="Ė"/>
+            <when state="Dot below" output="Ẹ"/>
+            <when state="Greek" output="Ε"/>
+            <when state="IPA" output="ɛ"/>
+            <when state="Macron" output="Ē"/>
+            <when state="Math" output="𝔼"/>
+            <when state="Ogonek" output="Ę"/>
+            <when state="Slash" output="Ɇ"/>
+            <when state="Superscript" output="ᴱ"/>
+            <when state="Symbols" output="⇒"/>
+            <when state="s1" output="É"/>
+            <when state="s2" output="Ë"/>
+            <when state="s3" output="Ê"/>
+            <when state="s4" output="Ẽ"/>
+            <when state="s5" output="È"/>
+        </action>
+        <action id="IPAF">
+            <when state="none" output="ɱ"/>
+            <when state="Dot above" output="Ḟ"/>
+            <when state="Greek" output="Φ"/>
+            <when state="IPA" output="ɱ"/>
+            <when state="IPA modifiers" output="̂"/>
+            <when state="Math" output="𝔽"/>
+        </action>
+        <action id="IPAG">
+            <when state="none" output="ɣ"/>
+            <when state="Breve" output="Ğ"/>
+            <when state="Caron" output="Ǧ"/>
+            <when state="Cedilla" output="Ģ"/>
+            <when state="Dot above" output="Ġ"/>
+            <when state="Greek" output="Γ"/>
+            <when state="IPA" output="ɣ"/>
+            <when state="IPA modifiers" output="ˠ"/>
+            <when state="Macron" output="Ḡ"/>
+            <when state="Math" output="𝔾"/>
+            <when state="Superscript" output="ᴳ"/>
+            <when state="Symbols" output="♡"/>
+            <when state="s1" output="Ǵ"/>
+            <when state="s3" output="Ĝ"/>
+        </action>
+        <action id="IPAH">
+            <when state="none" output="ɥ"/>
+            <when state="Caron" output="Ȟ"/>
+            <when state="Cedilla" output="Ḩ"/>
+            <when state="Dot above" output="Ḣ"/>
+            <when state="Dot below" output="Ḥ"/>
+            <when state="Greek" output="Η"/>
+            <when state="IPA" output="ɥ"/>
+            <when state="IPA modifiers" output="˦"/>
+            <when state="Math" output="ℍ"/>
+            <when state="Superscript" output="ᴴ"/>
+            <when state="s2" output="Ḧ"/>
+            <when state="s3" output="Ĥ"/>
+        </action>
+        <action id="IPAI">
+            <when state="none" output="ɪ"/>
+            <when state="Breve" output="Ĭ"/>
+            <when state="Caron" output="Ǐ"/>
+            <when state="Dot above" output="İ"/>
+            <when state="Dot below" output="Ị"/>
+            <when state="Greek" output="Ι"/>
+            <when state="IPA" output="ɪ"/>
+            <when state="Macron" output="Ī"/>
+            <when state="Math" output="𝕀"/>
+            <when state="Ogonek" output="Į"/>
+            <when state="Superscript" output="ᴵ"/>
+            <when state="s1" output="Í"/>
+            <when state="s2" output="Ï"/>
+            <when state="s3" output="Î"/>
+            <when state="s4" output="Ĩ"/>
+            <when state="s5" output="Ì"/>
+        </action>
+        <action id="IPAJ">
+            <when state="none" output="ɲ"/>
+            <when state="Greek" output="ϑ"/>
+            <when state="IPA" output="ɲ"/>
+            <when state="Math" output="𝕁"/>
+            <when state="Superscript" output="ᴶ"/>
+            <when state="s3" output="Ĵ"/>
+        </action>
+        <action id="IPAK">
+            <when state="none" output="ɬ"/>
+            <when state="Caron" output="Ǩ"/>
+            <when state="Cedilla" output="Ķ"/>
+            <when state="Dot below" output="Ḳ"/>
+            <when state="Greek" output="Κ"/>
+            <when state="IPA" output="ɬ"/>
+            <when state="Math" output="𝕂"/>
+            <when state="Superscript" output="ᴷ"/>
+            <when state="s1" output="Ḱ"/>
+        </action>
+        <action id="IPAL">
+            <when state="none" output="ʎ"/>
+            <when state="Caron" output="Ľ"/>
+            <when state="Cedilla" output="Ļ"/>
+            <when state="Dot above" output="Ŀ"/>
+            <when state="Dot below" output="Ḷ"/>
+            <when state="Greek" output="Λ"/>
+            <when state="IPA" output="ʎ"/>
+            <when state="IPA modifiers" output="˨"/>
+            <when state="Math" output="𝕃"/>
+            <when state="Slash" output="Ł"/>
+            <when state="Superscript" output="ᴸ"/>
+            <when state="Symbols" output="♤"/>
+            <when state="s1" output="Ĺ"/>
+            <when state="s4" output="Ɫ"/>
+        </action>
+        <action id="IPAM">
+            <when state="none" output="ɯ"/>
+            <when state="Dot above" output="Ṁ"/>
+            <when state="Dot below" output="Ṃ"/>
+            <when state="Greek" output="Μ"/>
+            <when state="IPA" output="ɯ"/>
+            <when state="IPA modifiers" output="˧"/>
+            <when state="Math" output="𝕄"/>
+            <when state="Superscript" output="ᴹ"/>
+            <when state="s1" output="Ḿ"/>
+        </action>
+        <action id="IPAN">
+            <when state="none" output="ŋ"/>
+            <when state="Caron" output="Ň"/>
+            <when state="Cedilla" output="Ņ"/>
+            <when state="Dot above" output="Ṅ"/>
+            <when state="Dot below" output="Ṇ"/>
+            <when state="Greek" output="Ν"/>
+            <when state="IPA" output="ŋ"/>
+            <when state="IPA modifiers" output="̼"/>
+            <when state="Math" output="ℕ"/>
+            <when state="Superscript" output="ᴺ"/>
+            <when state="s1" output="Ń"/>
+            <when state="s4" output="Ñ"/>
+            <when state="s5" output="Ǹ"/>
+        </action>
+        <action id="IPAO">
+            <when state="none" output="ɔ"/>
+            <when state="Breve" output="Ŏ"/>
+            <when state="Caron" output="Ǒ"/>
+            <when state="Circled" output="⊚"/>
+            <when state="Dot above" output="Ȯ"/>
+            <when state="Dot below" output="Ọ"/>
+            <when state="Double acute" output="Ő"/>
+            <when state="Greek" output="Ο"/>
+            <when state="IPA" output="ɔ"/>
+            <when state="IPA modifiers" output="̹"/>
+            <when state="Macron" output="Ō"/>
+            <when state="Math" output="𝕆"/>
+            <when state="Ogonek" output="Ǫ"/>
+            <when state="Slash" output="Ø"/>
+            <when state="Superscript" output="ᴼ"/>
+            <when state="Symbols" output="⇓"/>
+            <when state="s1" output="Ó"/>
+            <when state="s2" output="Ö"/>
+            <when state="s3" output="Ô"/>
+            <when state="s4" output="Õ"/>
+            <when state="s5" output="Ò"/>
+        </action>
+        <action id="IPAP">
+            <when state="none" output="ʋ"/>
+            <when state="Dot above" output="Ṗ"/>
+            <when state="Greek" output="Π"/>
+            <when state="IPA" output="ʋ"/>
+            <when state="Math" output="ℙ"/>
+            <when state="Superscript" output="ᴾ"/>
+            <when state="s1" output="Ṕ"/>
+        </action>
+        <action id="IPAQ">
+            <when state="none" output="ɒ"/>
+            <when state="Greek" output="Θ"/>
+            <when state="IPA" output="ɒ"/>
+            <when state="Math" output="ℚ"/>
+        </action>
+        <action id="IPAR">
+            <when state="none" output="ʁ"/>
+            <when state="Caron" output="Ř"/>
+            <when state="Cedilla" output="Ŗ"/>
+            <when state="Dot above" output="Ṙ"/>
+            <when state="Dot below" output="Ṛ"/>
+            <when state="Greek" output="Ρ"/>
+            <when state="IPA" output="ʁ"/>
+            <when state="IPA modifiers" output="̌"/>
+            <when state="Math" output="ℝ"/>
+            <when state="Superscript" output="ᴿ"/>
+            <when state="Symbols" output="♧"/>
+            <when state="s1" output="Ŕ"/>
+            <when state="s3" output="Ȓ"/>
+        </action>
+        <action id="IPAS">
+            <when state="none" output="ʃ"/>
+            <when state="Caron" output="Š"/>
+            <when state="Cedilla" output="Ş"/>
+            <when state="Dot above" output="Ṡ"/>
+            <when state="Dot below" output="Ṣ"/>
+            <when state="Greek" output="Σ"/>
+            <when state="IPA" output="ʃ"/>
+            <when state="IPA affricate" output="ʧ"/>
+            <when state="Math" output="𝕊"/>
+            <when state="Symbols" output="⇪"/>
+            <when state="s1" output="Ś"/>
+            <when state="s3" output="Ŝ"/>
+        </action>
+        <action id="IPAT">
+            <when state="none" output="θ"/>
+            <when state="Caron" output="Ť"/>
+            <when state="Cedilla" output="Ţ"/>
+            <when state="Dot above" output="Ṫ"/>
+            <when state="Dot below" output="Ṭ"/>
+            <when state="Greek" output="Τ"/>
+            <when state="IPA" output="θ"/>
+            <when state="IPA modifiers" output="˥"/>
+            <when state="Math" output="𝕋"/>
+            <when state="Slash" output="Ⱦ"/>
+            <when state="Superscript" output="ᵀ"/>
+            <when state="Symbols" output="Þ"/>
+        </action>
+        <action id="IPAU">
+            <when state="none" output="ʊ"/>
+            <when state="Breve" output="Ŭ"/>
+            <when state="Caron" output="Ǔ"/>
+            <when state="Dot below" output="Ụ"/>
+            <when state="Double acute" output="Ű"/>
+            <when state="Greek" output="Υ"/>
+            <when state="IPA" output="ʊ"/>
+            <when state="Macron" output="Ū"/>
+            <when state="Math" output="𝕌"/>
+            <when state="Ogonek" output="Ų"/>
+            <when state="Ring" output="Ů"/>
+            <when state="Superscript" output="ᵁ"/>
+            <when state="s1" output="Ú"/>
+            <when state="s2" output="Ü"/>
+            <when state="s3" output="Û"/>
+            <when state="s4" output="Ũ"/>
+            <when state="s5" output="Ù"/>
+        </action>
+        <action id="IPAV">
+            <when state="none" output="ʌ"/>
+            <when state="Dot below" output="Ṿ"/>
+            <when state="Greek" output="ς"/>
+            <when state="IPA" output="ʌ"/>
+            <when state="Math" output="𝕍"/>
+            <when state="s4" output="Ṽ"/>
+        </action>
+        <action id="IPAW">
+            <when state="none" output="ʍ"/>
+            <when state="Dot above" output="Ẇ"/>
+            <when state="Dot below" output="Ẉ"/>
+            <when state="Greek" output="Ω"/>
+            <when state="IPA" output="ʍ"/>
+            <when state="Math" output="𝕎"/>
+            <when state="Superscript" output="ᵂ"/>
+            <when state="s1" output="Ẃ"/>
+            <when state="s2" output="Ẅ"/>
+            <when state="s3" output="Ŵ"/>
+            <when state="s5" output="Ẁ"/>
+        </action>
+        <action id="IPAX">
+            <when state="none" output="χ"/>
+            <when state="Dot above" output="Ẋ"/>
+            <when state="Greek" output="Ξ"/>
+            <when state="IPA" output="χ"/>
+            <when state="IPA modifiers" output="̆"/>
+            <when state="Math" output="𝕏"/>
+            <when state="s2" output="Ẍ"/>
+        </action>
+        <action id="IPAY">
+            <when state="none" output="ʏ"/>
+            <when state="Dot above" output="Ẏ"/>
+            <when state="Dot below" output="Ỵ"/>
+            <when state="Greek" output="Ψ"/>
+            <when state="IPA" output="ʏ"/>
+            <when state="Macron" output="Ȳ"/>
+            <when state="Math" output="𝕐"/>
+            <when state="s1" output="Ý"/>
+            <when state="s2" output="Ÿ"/>
+            <when state="s3" output="Ŷ"/>
+            <when state="s4" output="Ỹ"/>
+            <when state="s5" output="Ỳ"/>
+        </action>
+        <action id="IPAZ">
+            <when state="none" output="ʒ"/>
+            <when state="Caron" output="Ž"/>
+            <when state="Dot above" output="Ż"/>
+            <when state="Dot below" output="Ẓ"/>
+            <when state="Greek" output="Ζ"/>
+            <when state="IPA" output="ʒ"/>
+            <when state="IPA affricate" output="ʤ"/>
+            <when state="Math" output="ℤ"/>
+            <when state="s1" output="Ź"/>
+            <when state="s3" output="Ẑ"/>
+        </action>
+        <action id="IPA\">
+            <when state="none" output="͡"/>
+            <when state="Greek" output="∴"/>
+            <when state="IPA" output="͡"/>
+            <when state="IPA modifiers" output="̂"/>
+            <when state="Math" output="⋃"/>
+        </action>
+        <action id="IPA^">
+            <when state="none" output="ꜛ"/>
+            <when state="Greek" output="⊥"/>
+            <when state="IPA" output="ꜛ"/>
+            <when state="IPA modifiers" output="̯"/>
+        </action>
+        <action id="IPA_">
+            <when state="none" next="IPA modifiers"/>
+            <when state="IPA" next="IPA modifiers"/>
+        </action>
+        <action id="IPA` 1">
+            <when state="none" next="Retroflex"/>
+            <when state="IPA" next="Retroflex"/>
+            <when state="IPA modifiers" output="˞"/>
+            <when state="implosive" output="ᶑ"/>
+        </action>
+        <action id="IPAd">
+            <when state="none" next="IPA affricate"/>
+            <when state="Caron" output="ď"/>
+            <when state="Cedilla" output="ḑ"/>
+            <when state="Dot above" output="ḋ"/>
+            <when state="Dot below" output="ḍ"/>
+            <when state="Greek" output="δ"/>
+            <when state="IPA" next="IPA affricate"/>
+            <when state="IPA modifiers" output="̪"/>
+            <when state="Math" output="∂"/>
+            <when state="Retroflex" output="ɖ"/>
+            <when state="Superscript" output="ᵈ"/>
+            <when state="Symbols" output="ð"/>
+            <when state="implosive" output="ɗ"/>
+        </action>
+        <action id="IPAg">
+            <when state="none" output="ɡ"/>
+            <when state="Breve" output="ğ"/>
+            <when state="Caron" output="ǧ"/>
+            <when state="Cedilla" output="ģ"/>
+            <when state="Dot above" output="ġ"/>
+            <when state="Greek" output="γ"/>
+            <when state="IPA" output="ɡ"/>
+            <when state="Macron" output="ḡ"/>
+            <when state="Superscript" output="ᵍ"/>
+            <when state="Symbols" output="♥"/>
+            <when state="implosive" output="ɠ"/>
+            <when state="s1" output="ǵ"/>
+            <when state="s3" output="ĝ"/>
+        </action>
+        <action id="IPAt">
+            <when state="none" next="IPA affricate"/>
+            <when state="Caron" output="ť"/>
+            <when state="Cedilla" output="ţ"/>
+            <when state="Dot above" output="ṫ"/>
+            <when state="Dot below" output="ṭ"/>
+            <when state="Greek" output="τ"/>
+            <when state="IPA" next="IPA affricate"/>
+            <when state="IPA modifiers" output="̤"/>
+            <when state="Retroflex" output="ʈ"/>
+            <when state="Slash" output="ⱦ"/>
+            <when state="Superscript" output="ᵗ"/>
+            <when state="Symbols" output="þ"/>
+            <when state="s2" output="ẗ"/>
+        </action>
+        <action id="IPA{">
+            <when state="none" output="æ"/>
+            <when state="IPA" output="æ"/>
+        </action>
+        <action id="IPA|">
+            <when state="none" output="͜"/>
+            <when state="IPA" output="͜"/>
+            <when state="Math" output="∨"/>
+        </action>
+        <action id="IPA}">
+            <when state="none" output="ʉ"/>
+            <when state="IPA" output="ʉ"/>
+            <when state="IPA modifiers" output="̚"/>
+        </action>
+        <action id="IPA~">
+            <when state="none" output="̃"/>
+            <when state="IPA" output="̃"/>
+            <when state="IPA modifiers" output="̃"/>
+            <when state="Ring" output="⸛"/>
+            <when state="Symbols" output="⁓"/>
+        </action>
+        <action id="IPA£">
+            <when state="none" output="ɞ"/>
+            <when state="Greek" output="≤"/>
+            <when state="IPA" output="ɞ"/>
+            <when state="Superscript" output="₃"/>
+        </action>
+        <action id="IPA¨ 2">
+            <when state="none" output="ᵿ"/>
+            <when state="Greek" output="←"/>
+            <when state="IPA" output="ᵿ"/>
+            <when state="Superscript" output="ᵤ"/>
+        </action>
+        <action id="IPA«">
+            <when state="none" output="ǁ"/>
+            <when state="Greek" output="∩"/>
+            <when state="IPA" output="ǁ"/>
+        </action>
+        <action id="IPA¬">
+            <when state="none" output="ɺ"/>
+            <when state="Greek" output="ℜ"/>
+            <when state="IPA" output="ɺ"/>
+            <when state="IPA modifiers" output="᷅"/>
+        </action>
+        <action id="IPA®">
+            <when state="none" output="ɹ"/>
+            <when state="Greek" output="♦"/>
+            <when state="IPA" output="ɹ"/>
+            <when state="IPA modifiers" output="᷈"/>
+            <when state="Retroflex" output="ɻ"/>
+            <when state="Superscript" output="ᵣ"/>
+            <when state="Symbols" output="🐰"/>
+        </action>
+        <action id="IPA¯">
+            <when state="none" output="ʢ"/>
+            <when state="Greek" output="⎠"/>
+            <when state="IPA" output="ʢ"/>
+            <when state="Math" output="⊈"/>
+            <when state="Symbols" output="△"/>
+        </action>
+        <action id="IPA±">
+            <when state="none" output="ǂ"/>
+            <when state="Greek" output="±"/>
+            <when state="IPA" output="ǂ"/>
+            <when state="Superscript" output="₊"/>
+        </action>
+        <action id="IPA»">
+            <when state="none" output="ǀ"/>
+            <when state="Greek" output="∪"/>
+            <when state="IPA" output="ǀ"/>
+        </action>
+        <action id="IPA¿">
+            <when state="none" output="ʕ"/>
+            <when state="Greek" output="ℵ"/>
+            <when state="IPA" output="ʕ"/>
+            <when state="IPA modifiers" output="ˤ"/>
+            <when state="Symbols" output="�"/>
+        </action>
+        <action id="IPAÂ">
+            <when state="none" output="ɰ"/>
+            <when state="Greek" output="∑"/>
+            <when state="IPA" output="ɰ"/>
+            <when state="IPA modifiers" output="̄"/>
+            <when state="Symbols" output="🌙"/>
+        </action>
+        <action id="IPAÒ">
+            <when state="none" output="ʟ"/>
+            <when state="Greek" output="〉"/>
+            <when state="IPA" output="ʟ"/>
+            <when state="IPA modifiers" output="̀"/>
+        </action>
+        <action id="IPAÓ">
+            <when state="none" output="ʜ"/>
+            <when state="IPA" output="ʜ"/>
+            <when state="IPA modifiers" output="́"/>
+        </action>
+        <action id="IPAÔ">
+            <when state="none" output="ɟ"/>
+            <when state="Greek" output="⎪"/>
+            <when state="IPA" output="ɟ"/>
+            <when state="implosive" output="ʄ"/>
+        </action>
+        <action id="IPAØ">
+            <when state="none" output="ʘ"/>
+            <when state="Greek" output="↓"/>
+            <when state="IPA" output="ʘ"/>
+            <when state="Symbols" output="▽"/>
+            <when state="s1" output="Ǿ"/>
+        </action>
+        <action id="IPAÚ">
+            <when state="none" output="ˑ"/>
+            <when state="Greek" output="∫"/>
+            <when state="IPA" output="ˑ"/>
+        </action>
+        <action id="IPAß">
+            <when state="none" output="ɕ"/>
+            <when state="Greek" output="♣"/>
+            <when state="IPA" output="ɕ"/>
+            <when state="IPA affricate" output="ʨ"/>
+        </action>
+        <action id="IPAı">
+            <when state="none" output="ʙ"/>
+            <when state="Greek" output="⌡"/>
+            <when state="IPA" output="ʙ"/>
+            <when state="IPA modifiers" output="̏"/>
+        </action>
+        <action id="IPAŋ">
+            <when state="none" output="ɴ"/>
+            <when state="Greek" output="⎟"/>
+            <when state="IPA" output="ɴ"/>
+            <when state="Superscript" output="ᵑ"/>
+        </action>
+        <action id="IPAˆ 1">
+            <when state="none" output="ᵻ"/>
+            <when state="Greek" output="⎞"/>
+            <when state="IPA" output="ᵻ"/>
+            <when state="Math" output="∉"/>
+        </action>
+        <action id="IPA˘">
+            <when state="none" output="ʡ"/>
+            <when state="Greek" output="⎤"/>
+            <when state="IPA" output="ʡ"/>
+            <when state="Math" output="⊉"/>
+        </action>
+        <action id="IPA˙">
+            <when state="none" output="ɦ"/>
+            <when state="Greek" output="⎥"/>
+            <when state="IPA" output="ɦ"/>
+            <when state="IPA modifiers" output="᷄"/>
+            <when state="Symbols" output="🤔"/>
+        </action>
+        <action id="IPA˛">
+            <when state="none" output="ħ"/>
+            <when state="Greek" output="⎭"/>
+            <when state="IPA" output="ħ"/>
+        </action>
+        <action id="IPA˝">
+            <when state="none" output="ɢ"/>
+            <when state="Greek" output="⎬"/>
+            <when state="IPA" output="ɢ"/>
+            <when state="Symbols" output="🏳️‍🌈"/>
+            <when state="implosive" output="ʛ"/>
+        </action>
+        <action id="IPAΩ">
+            <when state="none" output="ʑ"/>
+            <when state="Greek" output="⏐"/>
+            <when state="IPA" output="ʑ"/>
+            <when state="IPA affricate" output="ʥ"/>
+            <when state="Symbols" output="😴"/>
+        </action>
+        <action id="IPAπ">
+            <when state="none" output="ɸ"/>
+            <when state="Greek" output="≠"/>
+            <when state="IPA" output="ɸ"/>
+            <when state="Symbols" output="🐾"/>
+        </action>
+        <action id="IPA–">
+            <when state="none" output="‿"/>
+            <when state="Greek" output="∠"/>
+            <when state="IPA" output="‿"/>
+            <when state="Superscript" output="₋"/>
+        </action>
+        <action id="IPA‰">
+            <when state="none" output="ʀ"/>
+            <when state="Greek" output="™"/>
+            <when state="IPA" output="ʀ"/>
+            <when state="Symbols" output="🌈"/>
+        </action>
+        <action id="IPA⁄">
+            <when state="none" output="ǃ"/>
+            <when state="Greek" output="∨"/>
+            <when state="IPA" output="ǃ"/>
+            <when state="Symbols" output="❤️"/>
+        </action>
+        <action id="IPA€">
+            <when state="none" output="ɘ"/>
+            <when state="Greek" output="⇔"/>
+            <when state="IPA" output="ɘ"/>
+            <when state="Symbols" output="¤"/>
+        </action>
+        <action id="IPA∆">
+            <when state="none" output="ʝ"/>
+            <when state="Greek" output="∅"/>
+            <when state="IPA" output="ʝ"/>
+            <when state="Superscript" output="ⱼ"/>
+        </action>
+        <action id="IPA√">
+            <when state="none" output="ʋ"/>
+            <when state="Greek" output="℘"/>
+            <when state="IPA" output="ʋ"/>
+            <when state="Superscript" output="ᵥ"/>
+            <when state="Symbols" output="✔︎"/>
+        </action>
+        <action id="IPA≈">
+            <when state="none" output="ɧ"/>
+            <when state="Greek" output="⊕"/>
+            <when state="IPA" output="ɧ"/>
+            <when state="Superscript" output="ₓ"/>
+            <when state="Symbols" output="🐦"/>
+        </action>
+        <action id="IPA≠">
+            <when state="none" output="ǂ"/>
+            <when state="Greek" output="↑"/>
+            <when state="IPA" output="ǂ"/>
+            <when state="Math" output="≢"/>
+            <when state="Superscript" output="₌"/>
+        </action>
+        <action id="IPA">
+            <when state="none" output="ɮ"/>
+            <when state="IPA" output="ɮ"/>
+        </action>
+        <action id="J">
+            <when state="none" output="J"/>
+            <when state="Greek" output="ϑ"/>
+            <when state="IPA" output="ɲ"/>
+            <when state="Math" output="𝕁"/>
+            <when state="Superscript" output="ᴶ"/>
+            <when state="s3" output="Ĵ"/>
+        </action>
+        <action id="J 1">
+            <when state="none" output="J"/>
+            <when state="Greek" output="ϑ"/>
+            <when state="Superscript" output="ᴶ"/>
+            <when state="s3" output="Ĵ"/>
+        </action>
+        <action id="K">
+            <when state="none" output="K"/>
+            <when state="Caron" output="Ǩ"/>
+            <when state="Cedilla" output="Ķ"/>
+            <when state="Dot below" output="Ḳ"/>
+            <when state="Greek" output="Κ"/>
+            <when state="IPA" output="ɬ"/>
+            <when state="Math" output="𝕂"/>
+            <when state="Superscript" output="ᴷ"/>
+            <when state="s1" output="Ḱ"/>
+        </action>
+        <action id="K 1">
+            <when state="none" output="K"/>
+            <when state="Caron" output="Ǩ"/>
+            <when state="Cedilla" output="Ķ"/>
+            <when state="Dot below" output="Ḳ"/>
+            <when state="Greek" output="Κ"/>
+            <when state="Superscript" output="ᴷ"/>
+            <when state="s1" output="Ḱ"/>
+        </action>
+        <action id="L">
+            <when state="none" output="L"/>
+            <when state="Caron" output="Ľ"/>
+            <when state="Cedilla" output="Ļ"/>
+            <when state="Dot above" output="Ŀ"/>
+            <when state="Dot below" output="Ḷ"/>
+            <when state="Greek" output="Λ"/>
+            <when state="IPA" output="ʎ"/>
+            <when state="IPA modifiers" output="˨"/>
+            <when state="Math" output="𝕃"/>
+            <when state="Slash" output="Ł"/>
+            <when state="Superscript" output="ᴸ"/>
+            <when state="Symbols" output="♤"/>
+            <when state="s1" output="Ĺ"/>
+            <when state="s4" output="Ɫ"/>
+        </action>
+        <action id="L 1">
+            <when state="none" output="L"/>
+            <when state="Caron" output="Ľ"/>
+            <when state="Cedilla" output="Ļ"/>
+            <when state="Dot above" output="Ŀ"/>
+            <when state="Dot below" output="Ḷ"/>
+            <when state="Greek" output="Λ"/>
+            <when state="Slash" output="Ł"/>
+            <when state="Superscript" output="ᴸ"/>
+            <when state="s1" output="Ĺ"/>
+            <when state="s4" output="Ɫ"/>
+        </action>
+        <action id="M">
+            <when state="none" output="M"/>
+            <when state="Dot above" output="Ṁ"/>
+            <when state="Dot below" output="Ṃ"/>
+            <when state="Greek" output="Μ"/>
+            <when state="IPA" output="ɯ"/>
+            <when state="IPA modifiers" output="˧"/>
+            <when state="Math" output="𝕄"/>
+            <when state="Superscript" output="ᴹ"/>
+            <when state="s1" output="Ḿ"/>
+        </action>
+        <action id="M 1">
+            <when state="none" output="M"/>
+            <when state="Dot above" output="Ṁ"/>
+            <when state="Dot below" output="Ṃ"/>
+            <when state="Greek" output="Μ"/>
+            <when state="Superscript" output="ᴹ"/>
+            <when state="s1" output="Ḿ"/>
+        </action>
+        <action id="N">
+            <when state="none" output="N"/>
+            <when state="Caron" output="Ň"/>
+            <when state="Cedilla" output="Ņ"/>
+            <when state="Dot above" output="Ṅ"/>
+            <when state="Dot below" output="Ṇ"/>
+            <when state="Greek" output="Ν"/>
+            <when state="IPA" output="ŋ"/>
+            <when state="IPA modifiers" output="̼"/>
+            <when state="Math" output="ℕ"/>
+            <when state="Superscript" output="ᴺ"/>
+            <when state="s1" output="Ń"/>
+            <when state="s4" output="Ñ"/>
+            <when state="s5" output="Ǹ"/>
+        </action>
+        <action id="O">
+            <when state="none" output="O"/>
+            <when state="Breve" output="Ŏ"/>
+            <when state="Caron" output="Ǒ"/>
+            <when state="Circled" output="⊚"/>
+            <when state="Dot above" output="Ȯ"/>
+            <when state="Dot below" output="Ọ"/>
+            <when state="Double acute" output="Ő"/>
+            <when state="Greek" output="Ο"/>
+            <when state="IPA" output="ɔ"/>
+            <when state="IPA modifiers" output="̹"/>
+            <when state="Macron" output="Ō"/>
+            <when state="Math" output="𝕆"/>
+            <when state="Ogonek" output="Ǫ"/>
+            <when state="Slash" output="Ø"/>
+            <when state="Superscript" output="ᴼ"/>
+            <when state="Symbols" output="⇓"/>
+            <when state="s1" output="Ó"/>
+            <when state="s2" output="Ö"/>
+            <when state="s3" output="Ô"/>
+            <when state="s4" output="Õ"/>
+            <when state="s5" output="Ò"/>
+        </action>
+        <action id="P">
+            <when state="none" output="P"/>
+            <when state="Dot above" output="Ṗ"/>
+            <when state="Greek" output="Π"/>
+            <when state="IPA" output="ʋ"/>
+            <when state="Math" output="ℙ"/>
+            <when state="Superscript" output="ᴾ"/>
+            <when state="s1" output="Ṕ"/>
+        </action>
+        <action id="P 1">
+            <when state="none" output="P"/>
+            <when state="Dot above" output="Ṗ"/>
+            <when state="Greek" output="Π"/>
+            <when state="Superscript" output="ᴾ"/>
+            <when state="s1" output="Ṕ"/>
+        </action>
+        <action id="Q">
+            <when state="none" output="Q"/>
+            <when state="Greek" output="Θ"/>
+            <when state="IPA" output="ɒ"/>
+            <when state="Math" output="ℚ"/>
+        </action>
+        <action id="Q 1">
+            <when state="none" output="Q"/>
+            <when state="Greek" output="Θ"/>
+        </action>
+        <action id="R">
+            <when state="none" output="R"/>
+            <when state="Caron" output="Ř"/>
+            <when state="Cedilla" output="Ŗ"/>
+            <when state="Dot above" output="Ṙ"/>
+            <when state="Dot below" output="Ṛ"/>
+            <when state="Greek" output="Ρ"/>
+            <when state="IPA" output="ʁ"/>
+            <when state="IPA modifiers" output="̌"/>
+            <when state="Math" output="ℝ"/>
+            <when state="Superscript" output="ᴿ"/>
+            <when state="Symbols" output="♧"/>
+            <when state="s1" output="Ŕ"/>
+            <when state="s3" output="Ȓ"/>
+        </action>
+        <action id="R 1">
+            <when state="none" output="R"/>
+            <when state="Caron" output="Ř"/>
+            <when state="Cedilla" output="Ŗ"/>
+            <when state="Dot above" output="Ṙ"/>
+            <when state="Dot below" output="Ṛ"/>
+            <when state="Greek" output="Ρ"/>
+            <when state="Superscript" output="ᴿ"/>
+            <when state="s1" output="Ŕ"/>
+            <when state="s3" output="Ȓ"/>
+        </action>
+        <action id="S">
+            <when state="none" output="S"/>
+            <when state="Caron" output="Š"/>
+            <when state="Cedilla" output="Ş"/>
+            <when state="Dot above" output="Ṡ"/>
+            <when state="Dot below" output="Ṣ"/>
+            <when state="Greek" output="Σ"/>
+            <when state="IPA" output="ʃ"/>
+            <when state="IPA affricate" output="ʧ"/>
+            <when state="Math" output="𝕊"/>
+            <when state="Symbols" output="⇪"/>
+            <when state="s1" output="Ś"/>
+            <when state="s3" output="Ŝ"/>
+        </action>
+        <action id="S 1">
+            <when state="none" output="S"/>
+            <when state="Caron" output="Š"/>
+            <when state="Cedilla" output="Ş"/>
+            <when state="Dot above" output="Ṡ"/>
+            <when state="Dot below" output="Ṣ"/>
+            <when state="Greek" output="Σ"/>
+            <when state="s1" output="Ś"/>
+            <when state="s3" output="Ŝ"/>
+        </action>
+        <action id="T">
+            <when state="none" output="T"/>
+            <when state="Caron" output="Ť"/>
+            <when state="Cedilla" output="Ţ"/>
+            <when state="Dot above" output="Ṫ"/>
+            <when state="Dot below" output="Ṭ"/>
+            <when state="Greek" output="Τ"/>
+            <when state="IPA" output="θ"/>
+            <when state="IPA modifiers" output="˥"/>
+            <when state="Math" output="𝕋"/>
+            <when state="Slash" output="Ⱦ"/>
+            <when state="Superscript" output="ᵀ"/>
+            <when state="Symbols" output="Þ"/>
+        </action>
+        <action id="T 1">
+            <when state="none" output="T"/>
+            <when state="Caron" output="Ť"/>
+            <when state="Cedilla" output="Ţ"/>
+            <when state="Dot above" output="Ṫ"/>
+            <when state="Dot below" output="Ṭ"/>
+            <when state="Greek" output="Τ"/>
+            <when state="Slash" output="Ⱦ"/>
+            <when state="Superscript" output="ᵀ"/>
+        </action>
+        <action id="U">
+            <when state="none" output="U"/>
+            <when state="Breve" output="Ŭ"/>
+            <when state="Caron" output="Ǔ"/>
+            <when state="Dot below" output="Ụ"/>
+            <when state="Double acute" output="Ű"/>
+            <when state="Greek" output="Υ"/>
+            <when state="IPA" output="ʊ"/>
+            <when state="Macron" output="Ū"/>
+            <when state="Math" output="𝕌"/>
+            <when state="Ogonek" output="Ų"/>
+            <when state="Ring" output="Ů"/>
+            <when state="Superscript" output="ᵁ"/>
+            <when state="s1" output="Ú"/>
+            <when state="s2" output="Ü"/>
+            <when state="s3" output="Û"/>
+            <when state="s4" output="Ũ"/>
+            <when state="s5" output="Ù"/>
+        </action>
+        <action id="V">
+            <when state="none" output="V"/>
+            <when state="Dot below" output="Ṿ"/>
+            <when state="Greek" output="ς"/>
+            <when state="IPA" output="ʌ"/>
+            <when state="Math" output="𝕍"/>
+            <when state="s4" output="Ṽ"/>
+        </action>
+        <action id="V 1">
+            <when state="none" output="V"/>
+            <when state="Dot below" output="Ṿ"/>
+            <when state="Greek" output="ς"/>
+            <when state="s4" output="Ṽ"/>
+        </action>
+        <action id="W">
+            <when state="none" output="W"/>
+            <when state="Dot above" output="Ẇ"/>
+            <when state="Dot below" output="Ẉ"/>
+            <when state="Greek" output="Ω"/>
+            <when state="IPA" output="ʍ"/>
+            <when state="Math" output="𝕎"/>
+            <when state="Superscript" output="ᵂ"/>
+            <when state="s1" output="Ẃ"/>
+            <when state="s2" output="Ẅ"/>
+            <when state="s3" output="Ŵ"/>
+            <when state="s5" output="Ẁ"/>
+        </action>
+        <action id="W 1">
+            <when state="none" output="W"/>
+            <when state="Dot above" output="Ẇ"/>
+            <when state="Dot below" output="Ẉ"/>
+            <when state="Greek" output="Ω"/>
+            <when state="Superscript" output="ᵂ"/>
+            <when state="s1" output="Ẃ"/>
+            <when state="s2" output="Ẅ"/>
+            <when state="s3" output="Ŵ"/>
+            <when state="s5" output="Ẁ"/>
+        </action>
+        <action id="X">
+            <when state="none" output="X"/>
+            <when state="Dot above" output="Ẋ"/>
+            <when state="Greek" output="Ξ"/>
+            <when state="IPA" output="χ"/>
+            <when state="IPA modifiers" output="̆"/>
+            <when state="Math" output="𝕏"/>
+            <when state="s2" output="Ẍ"/>
+        </action>
+        <action id="X 1">
+            <when state="none" output="X"/>
+            <when state="Circled" output="⊗"/>
+            <when state="Dot above" output="Ẋ"/>
+            <when state="Greek" output="Ξ"/>
+            <when state="s2" output="Ẍ"/>
+        </action>
+        <action id="Y">
+            <when state="none" output="Y"/>
+            <when state="Dot above" output="Ẏ"/>
+            <when state="Dot below" output="Ỵ"/>
+            <when state="Greek" output="Ψ"/>
+            <when state="IPA" output="ʏ"/>
+            <when state="Macron" output="Ȳ"/>
+            <when state="Math" output="𝕐"/>
+            <when state="s1" output="Ý"/>
+            <when state="s2" output="Ÿ"/>
+            <when state="s3" output="Ŷ"/>
+            <when state="s4" output="Ỹ"/>
+            <when state="s5" output="Ỳ"/>
+        </action>
+        <action id="Z">
+            <when state="none" output="Z"/>
+            <when state="Caron" output="Ž"/>
+            <when state="Dot above" output="Ż"/>
+            <when state="Dot below" output="Ẓ"/>
+            <when state="Greek" output="Ζ"/>
+            <when state="IPA" output="ʒ"/>
+            <when state="IPA affricate" output="ʤ"/>
+            <when state="Math" output="ℤ"/>
+            <when state="s1" output="Ź"/>
+            <when state="s3" output="Ẑ"/>
+        </action>
+        <action id="Z 1">
+            <when state="none" output="Z"/>
+            <when state="Caron" output="Ž"/>
+            <when state="Dot above" output="Ż"/>
+            <when state="Dot below" output="Ẓ"/>
+            <when state="Greek" output="Ζ"/>
+            <when state="s1" output="Ź"/>
+            <when state="s3" output="Ẑ"/>
+        </action>
+        <action id="[">
+            <when state="none" output="["/>
+            <when state="Math" output="〚"/>
+            <when state="Symbols" output="□"/>
+        </action>
+        <action id="\">
+            <when state="none" output="\"/>
+            <when state="Greek" output="∴"/>
+            <when state="IPA" output="͡"/>
+            <when state="IPA modifiers" output="̂"/>
+            <when state="Math" output="⋃"/>
+        </action>
+        <action id="\ 1">
+            <when state="none" output="\"/>
+            <when state="Greek" output="∴"/>
+        </action>
+        <action id="]">
+            <when state="none" output="]"/>
+            <when state="Math" output="〛"/>
+            <when state="Symbols" output="■"/>
+        </action>
+        <action id="^">
+            <when state="none" output="^"/>
+            <when state="Greek" output="⊥"/>
+            <when state="IPA" output="ꜛ"/>
+            <when state="IPA modifiers" output="̯"/>
+        </action>
+        <action id="_">
+            <when state="none" output="_"/>
+            <when state="IPA" next="IPA modifiers"/>
+        </action>
+        <action id="`">
+            <when state="none" next="s5"/>
+        </action>
+        <action id="` 1">
+            <when state="none" output="`"/>
+            <when state="IPA" next="Retroflex"/>
+            <when state="IPA modifiers" output="˞"/>
+            <when state="implosive" output="ᶑ"/>
+        </action>
+        <action id="` 2">
+            <when state="none" next="s5"/>
+        </action>
+        <action id="` 3">
+            <when state="none" next="Superscript"/>
+        </action>
+        <action id="a">
+            <when state="none" output="a"/>
+            <when state="Breve" output="ă"/>
+            <when state="Caron" output="ǎ"/>
+            <when state="Dot above" output="ȧ"/>
+            <when state="Dot below" output="ạ"/>
+            <when state="Greek" output="α"/>
+            <when state="IPA modifiers" output="̺"/>
+            <when state="Macron" output="ā"/>
+            <when state="Math" output="∀"/>
+            <when state="Ogonek" output="ą"/>
+            <when state="Ring" output="å"/>
+            <when state="Slash" output="ⱥ"/>
+            <when state="Superscript" output="ᵃ"/>
+            <when state="Symbols" output="←"/>
+            <when state="s1" output="á"/>
+            <when state="s2" output="ä"/>
+            <when state="s3" output="â"/>
+            <when state="s4" output="ã"/>
+            <when state="s5" output="à"/>
+        </action>
+        <action id="b">
+            <when state="none" output="b"/>
+            <when state="Dot above" output="ḃ"/>
+            <when state="Dot below" output="ḅ"/>
+            <when state="Greek" output="β"/>
+            <when state="Superscript" output="ᵇ"/>
+            <when state="Symbols" output="♭"/>
+            <when state="implosive" output="ɓ"/>
+        </action>
+        <action id="c">
+            <when state="none" output="c"/>
+            <when state="Caron" output="č"/>
+            <when state="Cedilla" output="ç"/>
+            <when state="Dot above" output="ċ"/>
+            <when state="Greek" output="χ"/>
+            <when state="IPA modifiers" output="̜"/>
+            <when state="Slash" output="ȼ"/>
+            <when state="Symbols" output="♦"/>
+            <when state="s1" output="ć"/>
+            <when state="s3" output="ĉ"/>
+        </action>
+        <action id="d">
+            <when state="none" output="d"/>
+            <when state="Caron" output="ď"/>
+            <when state="Cedilla" output="ḑ"/>
+            <when state="Dot above" output="ḋ"/>
+            <when state="Dot below" output="ḍ"/>
+            <when state="Greek" output="δ"/>
+            <when state="IPA" next="IPA affricate"/>
+            <when state="IPA modifiers" output="̪"/>
+            <when state="Math" output="∂"/>
+            <when state="Retroflex" output="ɖ"/>
+            <when state="Superscript" output="ᵈ"/>
+            <when state="Symbols" output="ð"/>
+            <when state="implosive" output="ɗ"/>
+        </action>
+        <action id="e">
+            <when state="none" output="e"/>
+            <when state="Breve" output="ĕ"/>
+            <when state="Caron" output="ě"/>
+            <when state="Cedilla" output="ȩ"/>
+            <when state="Dot above" output="ė"/>
+            <when state="Dot below" output="ẹ"/>
+            <when state="Greek" output="ε"/>
+            <when state="IPA modifiers" output="̴"/>
+            <when state="Macron" output="ē"/>
+            <when state="Math" output="∃"/>
+            <when state="Ogonek" output="ę"/>
+            <when state="Slash" output="ɇ"/>
+            <when state="Superscript" output="ᵉ"/>
+            <when state="Symbols" output="→"/>
+            <when state="s1" output="é"/>
+            <when state="s2" output="ë"/>
+            <when state="s3" output="ê"/>
+            <when state="s4" output="ẽ"/>
+            <when state="s5" output="è"/>
+        </action>
+        <action id="f">
+            <when state="none" output="f"/>
+            <when state="Dot above" output="ḟ"/>
+            <when state="Greek" output="φ"/>
+            <when state="Superscript" output="ᶠ"/>
+            <when state="Symbols" output="♀"/>
+        </action>
+        <action id="g">
+            <when state="none" output="g"/>
+            <when state="Breve" output="ğ"/>
+            <when state="Caron" output="ǧ"/>
+            <when state="Cedilla" output="ģ"/>
+            <when state="Dot above" output="ġ"/>
+            <when state="Greek" output="γ"/>
+            <when state="IPA" output="ɡ"/>
+            <when state="Macron" output="ḡ"/>
+            <when state="Superscript" output="ᵍ"/>
+            <when state="Symbols" output="♥"/>
+            <when state="implosive" output="ɠ"/>
+            <when state="s1" output="ǵ"/>
+            <when state="s3" output="ĝ"/>
+        </action>
+        <action id="h">
+            <when state="none" output="h"/>
+            <when state="Caron" output="ȟ"/>
+            <when state="Cedilla" output="ḩ"/>
+            <when state="Dot above" output="ḣ"/>
+            <when state="Dot below" output="ḥ"/>
+            <when state="Greek" output="η"/>
+            <when state="IPA modifiers" output="ʰ"/>
+            <when state="Math" output="ℏ"/>
+            <when state="Superscript" output="ʰ"/>
+            <when state="s2" output="ḧ"/>
+            <when state="s3" output="ĥ"/>
+        </action>
+        <action id="i">
+            <when state="none" output="i"/>
+            <when state="Breve" output="ĭ"/>
+            <when state="Caron" output="ǐ"/>
+            <when state="Dot below" output="ị"/>
+            <when state="Greek" output="ι"/>
+            <when state="Macron" output="ī"/>
+            <when state="Math" output="∈"/>
+            <when state="Ogonek" output="į"/>
+            <when state="Superscript" output="ⁱ"/>
+            <when state="s1" output="í"/>
+            <when state="s2" output="ï"/>
+            <when state="s3" output="î"/>
+            <when state="s4" output="ĩ"/>
+            <when state="s5" output="ì"/>
+        </action>
+        <action id="j">
+            <when state="none" output="j"/>
+            <when state="Caron" output="ǰ"/>
+            <when state="Dot above" output="ȷ"/>
+            <when state="Greek" output="ϕ"/>
+            <when state="IPA modifiers" output="ʲ"/>
+            <when state="Superscript" output="ʲ"/>
+            <when state="Symbols" output="⌘"/>
+            <when state="s3" output="ĵ"/>
+        </action>
+        <action id="k">
+            <when state="none" output="k"/>
+            <when state="Caron" output="ǩ"/>
+            <when state="Cedilla" output="ķ"/>
+            <when state="Dot below" output="ḳ"/>
+            <when state="Greek" output="κ"/>
+            <when state="IPA modifiers" output="̰"/>
+            <when state="Superscript" output="ᵏ"/>
+            <when state="s1" output="ḱ"/>
+        </action>
+        <action id="l">
+            <when state="none" output="l"/>
+            <when state="Caron" output="ľ"/>
+            <when state="Cedilla" output="ļ"/>
+            <when state="Dot above" output="ŀ"/>
+            <when state="Dot below" output="ḷ"/>
+            <when state="Greek" output="λ"/>
+            <when state="IPA modifiers" output="ˡ"/>
+            <when state="Math" output="ℓ"/>
+            <when state="Retroflex" output="ɭ"/>
+            <when state="Slash" output="ł"/>
+            <when state="Superscript" output="ˡ"/>
+            <when state="Symbols" output="♠"/>
+            <when state="s1" output="ĺ"/>
+            <when state="s4" output="ɫ"/>
+        </action>
+        <action id="m">
+            <when state="none" output="m"/>
+            <when state="Dot above" output="ṁ"/>
+            <when state="Dot below" output="ṃ"/>
+            <when state="Greek" output="μ"/>
+            <when state="IPA modifiers" output="̻"/>
+            <when state="Superscript" output="ᵐ"/>
+            <when state="Symbols" output="♂"/>
+            <when state="s1" output="ḿ"/>
+        </action>
+        <action id="n">
+            <when state="none" output="n"/>
+            <when state="Caron" output="ň"/>
+            <when state="Cedilla" output="ņ"/>
+            <when state="Dot above" output="ṅ"/>
+            <when state="Dot below" output="ṇ"/>
+            <when state="Greek" output="ν"/>
+            <when state="IPA modifiers" output="ⁿ"/>
+            <when state="Retroflex" output="ɳ"/>
+            <when state="Superscript" output="ⁿ"/>
+            <when state="Symbols" output="♮"/>
+            <when state="s1" output="ń"/>
+            <when state="s4" output="ñ"/>
+            <when state="s5" output="ǹ"/>
+        </action>
+        <action id="o">
+            <when state="none" output="o"/>
+            <when state="Breve" output="ŏ"/>
+            <when state="Caron" output="ǒ"/>
+            <when state="Circled" output="⊚"/>
+            <when state="Dot above" output="ȯ"/>
+            <when state="Dot below" output="ọ"/>
+            <when state="Double acute" output="ő"/>
+            <when state="Greek" output="ο"/>
+            <when state="IPA modifiers" output="̞"/>
+            <when state="Macron" output="ō"/>
+            <when state="Math" next="Circled"/>
+            <when state="Ogonek" output="ǫ"/>
+            <when state="Slash" output="ø"/>
+            <when state="Superscript" output="ᵒ"/>
+            <when state="Symbols" output="↓"/>
+            <when state="s1" output="ó"/>
+            <when state="s2" output="ö"/>
+            <when state="s3" output="ô"/>
+            <when state="s4" output="õ"/>
+            <when state="s5" output="ò"/>
+        </action>
+        <action id="p">
+            <when state="none" output="p"/>
+            <when state="Dot above" output="ṗ"/>
+            <when state="Greek" output="π"/>
+            <when state="Math" output="⊋"/>
+            <when state="Superscript" output="ᵖ"/>
+            <when state="s1" output="ṕ"/>
+        </action>
+        <action id="q">
+            <when state="none" output="q"/>
+            <when state="Greek" output="θ"/>
+            <when state="IPA modifiers" output="̙"/>
+            <when state="Symbols" output="⌥"/>
+        </action>
+        <action id="r">
+            <when state="none" output="r"/>
+            <when state="Caron" output="ř"/>
+            <when state="Cedilla" output="ŗ"/>
+            <when state="Dot above" output="ṙ"/>
+            <when state="Dot below" output="ṛ"/>
+            <when state="Greek" output="ρ"/>
+            <when state="IPA modifiers" output="̝"/>
+            <when state="Retroflex" output="ɽ"/>
+            <when state="Superscript" output="ʳ"/>
+            <when state="Symbols" output="♣"/>
+            <when state="s1" output="ŕ"/>
+        </action>
+        <action id="s">
+            <when state="none" output="s"/>
+            <when state="Caron" output="š"/>
+            <when state="Cedilla" output="ş"/>
+            <when state="Dot above" output="ṡ"/>
+            <when state="Dot below" output="ṣ"/>
+            <when state="Greek" output="σ"/>
+            <when state="IPA affricate" output="ʦ"/>
+            <when state="Retroflex" output="ʂ"/>
+            <when state="Superscript" output="ˢ"/>
+            <when state="Symbols" output="⇧"/>
+            <when state="s1" output="ś"/>
+            <when state="s3" output="ŝ"/>
+        </action>
+        <action id="t">
+            <when state="none" output="t"/>
+            <when state="Caron" output="ť"/>
+            <when state="Cedilla" output="ţ"/>
+            <when state="Dot above" output="ṫ"/>
+            <when state="Dot below" output="ṭ"/>
+            <when state="Greek" output="τ"/>
+            <when state="IPA" next="IPA affricate"/>
+            <when state="IPA modifiers" output="̤"/>
+            <when state="Retroflex" output="ʈ"/>
+            <when state="Slash" output="ⱦ"/>
+            <when state="Superscript" output="ᵗ"/>
+            <when state="Symbols" output="þ"/>
+            <when state="s2" output="ẗ"/>
+        </action>
+        <action id="u">
+            <when state="none" output="u"/>
+            <when state="Breve" output="ŭ"/>
+            <when state="Caron" output="ǔ"/>
+            <when state="Dot below" output="ụ"/>
+            <when state="Double acute" output="ű"/>
+            <when state="Greek" output="υ"/>
+            <when state="Macron" output="ū"/>
+            <when state="Math" output="⋃"/>
+            <when state="Ogonek" output="ų"/>
+            <when state="Ring" output="ů"/>
+            <when state="Superscript" output="ᵘ"/>
+            <when state="s1" output="ú"/>
+            <when state="s2" output="ü"/>
+            <when state="s3" output="û"/>
+            <when state="s4" output="ũ"/>
+            <when state="s5" output="ù"/>
+        </action>
+        <action id="v">
+            <when state="none" output="v"/>
+            <when state="Dot below" output="ṿ"/>
+            <when state="Greek" output="ϖ"/>
+            <when state="IPA modifiers" output="̬"/>
+            <when state="Superscript" output="ᵛ"/>
+            <when state="Symbols" output="✓"/>
+            <when state="s4" output="ṽ"/>
+        </action>
+        <action id="w">
+            <when state="none" output="w"/>
+            <when state="Dot above" output="ẇ"/>
+            <when state="Dot below" output="ẉ"/>
+            <when state="Greek" output="ω"/>
+            <when state="IPA modifiers" output="ʷ"/>
+            <when state="Ring" output="ẘ"/>
+            <when state="Superscript" output="ʷ"/>
+            <when state="s1" output="ẃ"/>
+            <when state="s2" output="ẅ"/>
+            <when state="s3" output="ŵ"/>
+            <when state="s5" output="ẁ"/>
+        </action>
+        <action id="x">
+            <when state="none" output="x"/>
+            <when state="Circled" output="⊗"/>
+            <when state="Dot above" output="ẋ"/>
+            <when state="Greek" output="ξ"/>
+            <when state="IPA modifiers" output="̽"/>
+            <when state="Math" output="×"/>
+            <when state="Superscript" output="ˣ"/>
+            <when state="Symbols" output="×"/>
+            <when state="s2" output="ẍ"/>
+        </action>
+        <action id="y">
+            <when state="none" output="y"/>
+            <when state="Dot above" output="ẏ"/>
+            <when state="Dot below" output="ỵ"/>
+            <when state="Greek" output="ψ"/>
+            <when state="Macron" output="ȳ"/>
+            <when state="Ring" output="ẙ"/>
+            <when state="Superscript" output="ʸ"/>
+            <when state="s1" output="ý"/>
+            <when state="s2" output="ÿ"/>
+            <when state="s3" output="ŷ"/>
+            <when state="s4" output="ỹ"/>
+            <when state="s5" output="ỳ"/>
+        </action>
+        <action id="z">
+            <when state="none" output="z"/>
+            <when state="Caron" output="ž"/>
+            <when state="Dot above" output="ż"/>
+            <when state="Dot below" output="ẓ"/>
+            <when state="Greek" output="ζ"/>
+            <when state="IPA affricate" output="ʣ"/>
+            <when state="Retroflex" output="ʐ"/>
+            <when state="Superscript" output="ᶻ"/>
+            <when state="s1" output="ź"/>
+            <when state="s3" output="ẑ"/>
+        </action>
+        <action id="{">
+            <when state="none" output="{"/>
+            <when state="IPA" output="æ"/>
+        </action>
+        <action id="|">
+            <when state="none" output="|"/>
+            <when state="IPA" output="͜"/>
+            <when state="Math" output="∨"/>
+        </action>
+        <action id="}">
+            <when state="none" output="}"/>
+            <when state="IPA" output="ʉ"/>
+            <when state="IPA modifiers" output="̚"/>
+        </action>
+        <action id="~">
+            <when state="none" output="~"/>
+            <when state="IPA" output="̃"/>
+            <when state="IPA modifiers" output="̃"/>
+            <when state="Ring" output="⸛"/>
+            <when state="Symbols" output="⁓"/>
+        </action>
+        <action id=" ">
+            <when state="none" output=" "/>
+            <when state="Greek" output="⊇"/>
+        </action>
+        <action id="¡">
+            <when state="none" output="¡"/>
+            <when state="Greek" output="ℑ"/>
+            <when state="Superscript" output="₁"/>
+        </action>
+        <action id="¢">
+            <when state="none" output="¢"/>
+            <when state="Greek" output="ʹ"/>
+            <when state="Superscript" output="₄"/>
+        </action>
+        <action id="£">
+            <when state="none" output="£"/>
+            <when state="Greek" output="≤"/>
+            <when state="IPA" output="ɞ"/>
+            <when state="Superscript" output="₃"/>
+        </action>
+        <action id="¥">
+            <when state="none" output="¥"/>
+            <when state="Greek" output="×"/>
+        </action>
+        <action id="§">
+            <when state="none" output="§"/>
+            <when state="Greek" output="⁄"/>
+            <when state="Superscript" output="₆"/>
+            <when state="Symbols" output="🎶"/>
+        </action>
+        <action id="¨">
+            <when state="none" next="s2"/>
+            <when state="Greek" output="←"/>
+            <when state="Superscript" output="ᵤ"/>
+            <when state="Symbols" output="🦄"/>
+            <when state="s1" next="Double acute"/>
+        </action>
+        <action id="¨ 1">
+            <when state="none" next="s2"/>
+        </action>
+        <action id="¨ 2">
+            <when state="none" next="s2"/>
+            <when state="Greek" output="←"/>
+            <when state="IPA" output="ᵿ"/>
+            <when state="Superscript" output="ᵤ"/>
+        </action>
+        <action id="©">
+            <when state="none" output="©"/>
+            <when state="Greek" output="♥"/>
+        </action>
+        <action id="ª">
+            <when state="none" output="ª"/>
+            <when state="Greek" output="≈"/>
+            <when state="Superscript" output="₉"/>
+            <when state="Symbols" output="😿"/>
+        </action>
+        <action id="«">
+            <when state="none" output="«"/>
+            <when state="Greek" output="∩"/>
+            <when state="IPA" output="ǁ"/>
+        </action>
+        <action id="¬">
+            <when state="none" output="¬"/>
+            <when state="Greek" output="ℜ"/>
+            <when state="IPA" output="ɺ"/>
+            <when state="IPA modifiers" output="᷅"/>
+        </action>
+        <action id="®">
+            <when state="none" output="®"/>
+            <when state="Greek" output="♦"/>
+            <when state="IPA" output="ɹ"/>
+            <when state="IPA modifiers" output="᷈"/>
+            <when state="Retroflex" output="ɻ"/>
+            <when state="Superscript" output="ᵣ"/>
+            <when state="Symbols" output="🐰"/>
+        </action>
+        <action id="¯">
+            <when state="none" next="Macron"/>
+            <when state="Greek" output="⎠"/>
+            <when state="IPA" output="ʢ"/>
+            <when state="Math" output="⊈"/>
+            <when state="Symbols" output="△"/>
+        </action>
+        <action id="°">
+            <when state="none" output="°"/>
+            <when state="Greek" output="ϒ"/>
+            <when state="Symbols" output="⭐️"/>
+        </action>
+        <action id="±">
+            <when state="none" output="±"/>
+            <when state="Greek" output="±"/>
+            <when state="IPA" output="ǂ"/>
+            <when state="Superscript" output="₊"/>
+        </action>
+        <action id="´">
+            <when state="none" next="s1"/>
+            <when state="Math" output="∄"/>
+            <when state="Superscript" output="ₑ"/>
+            <when state="Symbols" output="►"/>
+            <when state="s1" next="Double acute"/>
+            <when state="s2" next="Double acute"/>
+        </action>
+        <action id="´ 1">
+            <when state="none" next="s1"/>
+        </action>
+        <action id="µ">
+            <when state="none" output="µ"/>
+            <when state="Greek" output="∝"/>
+            <when state="Symbols" output="🐭"/>
+        </action>
+        <action id="¶">
+            <when state="none" output="¶"/>
+            <when state="Greek" output="ƒ"/>
+            <when state="Superscript" output="₇"/>
+            <when state="Symbols" output="🎵"/>
+        </action>
+        <action id="·">
+            <when state="none" output="·"/>
+            <when state="Circled" output="⊙"/>
+            <when state="Greek" output="〈"/>
+            <when state="Superscript" output="₍"/>
+            <when state="Symbols" output="😢"/>
+        </action>
+        <action id="¸">
+            <when state="none" next="Cedilla"/>
+            <when state="Greek" output="⎫"/>
+            <when state="Symbols" output="💤"/>
+        </action>
+        <action id="º">
+            <when state="none" output="º"/>
+            <when state="Greek" output="…"/>
+            <when state="Superscript" output="₀"/>
+            <when state="Symbols" output="😺"/>
+        </action>
+        <action id="»">
+            <when state="none" output="»"/>
+            <when state="Greek" output="∪"/>
+            <when state="IPA" output="ǀ"/>
+        </action>
+        <action id="¿">
+            <when state="none" output="¿"/>
+            <when state="Greek" output="ℵ"/>
+            <when state="IPA" output="ʕ"/>
+            <when state="IPA modifiers" output="ˤ"/>
+            <when state="Symbols" output="�"/>
+        </action>
+        <action id="Á">
+            <when state="none" output="Á"/>
+            <when state="Greek" output="⎜"/>
+        </action>
+        <action id="Â">
+            <when state="none" next="Math"/>
+            <when state="Greek" output="∑"/>
+            <when state="IPA" output="ɰ"/>
+            <when state="IPA modifiers" output="̄"/>
+            <when state="Symbols" output="🌙"/>
+        </action>
+        <action id="Å">
+            <when state="none" output="Å"/>
+            <when state="Symbols" output="◁"/>
+            <when state="s1" output="Ǻ"/>
+        </action>
+        <action id="Å 1">
+            <when state="none" output="Å"/>
+            <when state="s1" output="Ǻ"/>
+        </action>
+        <action id="Æ">
+            <when state="none" output="Æ"/>
+            <when state="Greek" output="→"/>
+            <when state="Macron" output="Ǣ"/>
+            <when state="s1" output="Ǽ"/>
+        </action>
+        <action id="Æ 1">
+            <when state="none" output="Æ"/>
+            <when state="Macron" output="Ǣ"/>
+            <when state="s1" output="Ǽ"/>
+        </action>
+        <action id="Ç">
+            <when state="none" output="Ç"/>
+            <when state="Symbols" output="☁️"/>
+            <when state="s1" output="Ḉ"/>
+        </action>
+        <action id="Ç 1">
+            <when state="none" output="Ç"/>
+            <when state="s1" output="Ḉ"/>
+        </action>
+        <action id="Í">
+            <when state="none" output="¯\_(ツ)_/¯"/>
+            <when state="Greek" output="⎢"/>
+            <when state="Symbols" output="☀️"/>
+        </action>
+        <action id="Î">
+            <when state="none" output="Î"/>
+            <when state="Greek" output="⎣"/>
+        </action>
+        <action id="Ï">
+            <when state="none" output="█"/>
+            <when state="Greek" output="⎧"/>
+            <when state="Symbols" output="❄️"/>
+        </action>
+        <action id="Ò">
+            <when state="none" next="Greek"/>
+            <when state="Greek" output="〉"/>
+            <when state="IPA" output="ʟ"/>
+            <when state="IPA modifiers" output="̀"/>
+        </action>
+        <action id="Ó">
+            <when state="none" next="Dot below"/>
+            <when state="IPA" output="ʜ"/>
+            <when state="IPA modifiers" output="́"/>
+        </action>
+        <action id="Ó 1">
+            <when state="none" next="Dot above"/>
+        </action>
+        <action id="Ô">
+            <when state="none" output="Ô"/>
+            <when state="Greek" output="⎪"/>
+            <when state="IPA" output="ɟ"/>
+            <when state="implosive" output="ʄ"/>
+        </action>
+        <action id="Ø">
+            <when state="none" output="Ø"/>
+            <when state="Greek" output="↓"/>
+            <when state="IPA" output="ʘ"/>
+            <when state="Symbols" output="▽"/>
+            <when state="s1" output="Ǿ"/>
+        </action>
+        <action id="Ø 1">
+            <when state="none" output="Ø"/>
+            <when state="s1" output="Ǿ"/>
+        </action>
+        <action id="Ú">
+            <when state="none" next="Symbols"/>
+            <when state="Greek" output="∫"/>
+            <when state="IPA" output="ˑ"/>
+        </action>
+        <action id="ß">
+            <when state="none" output="ß"/>
+            <when state="Greek" output="♣"/>
+            <when state="IPA" output="ɕ"/>
+            <when state="IPA affricate" output="ʨ"/>
+        </action>
+        <action id="å">
+            <when state="none" output="å"/>
+            <when state="Superscript" output="ₐ"/>
+            <when state="Symbols" output="◄"/>
+            <when state="s1" output="ǻ"/>
+        </action>
+        <action id="æ">
+            <when state="none" output="æ"/>
+            <when state="Greek" output="⎯"/>
+            <when state="Macron" output="ǣ"/>
+            <when state="s1" output="ǽ"/>
+        </action>
+        <action id="ç">
+            <when state="none" output="ç"/>
+            <when state="Symbols" output="🐱"/>
+            <when state="s1" output="ḉ"/>
+        </action>
+        <action id="÷">
+            <when state="none" output="÷"/>
+            <when state="Greek" output="√"/>
+        </action>
+        <action id="ø">
+            <when state="none" output="ø"/>
+            <when state="Greek" output="↵"/>
+            <when state="Superscript" output="ₒ"/>
+            <when state="Symbols" output="▼"/>
+            <when state="s1" output="ǿ"/>
+        </action>
+        <action id="ı">
+            <when state="none" output="ı"/>
+            <when state="Greek" output="⌡"/>
+            <when state="IPA" output="ʙ"/>
+            <when state="IPA modifiers" output="̏"/>
+        </action>
+        <action id="ŋ">
+            <when state="none" output="ŋ"/>
+            <when state="Greek" output="⎟"/>
+            <when state="IPA" output="ɴ"/>
+            <when state="Superscript" output="ᵑ"/>
+        </action>
+        <action id="Œ">
+            <when state="none" output="Œ"/>
+            <when state="Greek" output="∈"/>
+        </action>
+        <action id="œ">
+            <when state="none" output="œ"/>
+            <when state="Greek" output="∉"/>
+        </action>
+        <action id="ƒ">
+            <when state="none" output="ƒ"/>
+            <when state="Greek" output="⊗"/>
+            <when state="IPA modifiers" output="᷈"/>
+            <when state="Symbols" output="🌸"/>
+        </action>
+        <action id="ə">
+            <when state="none" output="ə"/>
+            <when state="Greek" output="↔"/>
+            <when state="Symbols" output="▷"/>
+        </action>
+        <action id="ˆ">
+            <when state="none" next="s3"/>
+            <when state="Math" output="∉"/>
+            <when state="Superscript" output="ᵢ"/>
+        </action>
+        <action id="ˆ 1">
+            <when state="none" next="IPA"/>
+            <when state="Greek" output="⎞"/>
+            <when state="IPA" output="ᵻ"/>
+            <when state="Math" output="∉"/>
+        </action>
+        <action id="ˆ 2">
+            <when state="none" next="s3"/>
+        </action>
+        <action id="ˇ">
+            <when state="none" next="Caron"/>
+            <when state="IPA modifiers" output="̋"/>
+            <when state="Symbols" output="🏳️‍⚧️"/>
+        </action>
+        <action id="˘">
+            <when state="none" next="Breve"/>
+            <when state="Greek" output="⎤"/>
+            <when state="IPA" output="ʡ"/>
+            <when state="Math" output="⊉"/>
+        </action>
+        <action id="˙">
+            <when state="none" next="Dot above"/>
+            <when state="Greek" output="⎥"/>
+            <when state="IPA" output="ɦ"/>
+            <when state="IPA modifiers" output="᷄"/>
+            <when state="Symbols" output="🤔"/>
+        </action>
+        <action id="˚">
+            <when state="none" next="Ring"/>
+            <when state="Greek" output="⎦"/>
+        </action>
+        <action id="˚ 1">
+            <when state="none" next="Ring"/>
+        </action>
+        <action id="˛">
+            <when state="none" next="Ogonek"/>
+            <when state="Greek" output="⎭"/>
+            <when state="IPA" output="ħ"/>
+        </action>
+        <action id="˜">
+            <when state="none" next="s4"/>
+            <when state="Superscript" output="ᵑ"/>
+        </action>
+        <action id="˜ 1">
+            <when state="none" next="s4"/>
+        </action>
+        <action id="˜ 2">
+            <when state="none" output="˜"/>
+        </action>
+        <action id="˝">
+            <when state="none" next="Double acute"/>
+            <when state="Greek" output="⎬"/>
+            <when state="IPA" output="ɢ"/>
+            <when state="Symbols" output="🏳️‍🌈"/>
+            <when state="implosive" output="ʛ"/>
+        </action>
+        <action id="Ω">
+            <when state="none" output="Ω"/>
+            <when state="Greek" output="⏐"/>
+            <when state="IPA" output="ʑ"/>
+            <when state="IPA affricate" output="ʥ"/>
+            <when state="Symbols" output="😴"/>
+        </action>
+        <action id="π">
+            <when state="none" output="π"/>
+            <when state="Greek" output="≠"/>
+            <when state="IPA" output="ɸ"/>
+            <when state="Symbols" output="🐾"/>
+        </action>
+        <action id="–">
+            <when state="none" output="–"/>
+            <when state="Greek" output="∠"/>
+            <when state="IPA" output="‿"/>
+            <when state="Superscript" output="₋"/>
+        </action>
+        <action id="—">
+            <when state="none" output="—"/>
+            <when state="Greek" output="∇"/>
+        </action>
+        <action id="‘">
+            <when state="none" output="‘"/>
+            <when state="Greek" output="™"/>
+            <when state="Symbols" output="🐈"/>
+        </action>
+        <action id="’">
+            <when state="none" output="’"/>
+            <when state="Greek" output="∏"/>
+            <when state="Symbols" output="🙂"/>
+        </action>
+        <action id="‚">
+            <when state="none" output="‚"/>
+            <when state="Greek" output="®"/>
+            <when state="Superscript" output="₎"/>
+            <when state="Symbols" output="😃"/>
+        </action>
+        <action id="“">
+            <when state="none" output="“"/>
+            <when state="Greek" output="®"/>
+            <when state="Symbols" output="😾"/>
+        </action>
+        <action id="”">
+            <when state="none" output="”"/>
+            <when state="Greek" output="©"/>
+            <when state="Symbols" output="😡"/>
+        </action>
+        <action id="„">
+            <when state="none" output="„"/>
+            <when state="Greek" output="©"/>
+        </action>
+        <action id="†">
+            <when state="none" output="†"/>
+            <when state="Greek" output="€"/>
+            <when state="IPA modifiers" output="᷄"/>
+            <when state="Symbols" output="💭"/>
+        </action>
+        <action id="‡">
+            <when state="none" output="‡"/>
+            <when state="Greek" output="◊"/>
+            <when state="Symbols" output="✨"/>
+        </action>
+        <action id="‡ 1">
+            <when state="none" output="‡"/>
+            <when state="Greek" output="◊"/>
+            <when state="Symbols" output="🐭"/>
+        </action>
+        <action id="•">
+            <when state="none" output="•"/>
+            <when state="Greek" output="∞"/>
+            <when state="Superscript" output="₈"/>
+            <when state="Symbols" output="🌟"/>
+        </action>
+        <action id="…">
+            <when state="none" output="…"/>
+            <when state="Greek" output="⊃"/>
+        </action>
+        <action id="‰">
+            <when state="none" output="‰"/>
+            <when state="Greek" output="™"/>
+            <when state="IPA" output="ʀ"/>
+            <when state="Symbols" output="🌈"/>
+        </action>
+        <action id="‹">
+            <when state="none" output="‹"/>
+            <when state="Greek" output="⇐"/>
+            <when state="Symbols" output="💛"/>
+        </action>
+        <action id="›">
+            <when state="none" output="›"/>
+            <when state="Greek" output="⇑"/>
+            <when state="Symbols" output="💚"/>
+        </action>
+        <action id="⁄">
+            <when state="none" next="Slash"/>
+            <when state="Greek" output="∨"/>
+            <when state="IPA" output="ǃ"/>
+            <when state="Symbols" output="❤️"/>
+        </action>
+        <action id="€">
+            <when state="none" output="€"/>
+            <when state="Greek" output="⇔"/>
+            <when state="IPA" output="ɘ"/>
+            <when state="Symbols" output="¤"/>
+        </action>
+        <action id="™">
+            <when state="none" output="™"/>
+            <when state="Greek" output="♠"/>
+            <when state="Superscript" output="₂"/>
+        </action>
+        <action id="∂">
+            <when state="none" output="∂"/>
+            <when state="Greek" output="∂"/>
+            <when state="Symbols" output="🐶"/>
+        </action>
+        <action id="∆">
+            <when state="none" output="∆"/>
+            <when state="Greek" output="∅"/>
+            <when state="IPA" output="ʝ"/>
+            <when state="Superscript" output="ⱼ"/>
+        </action>
+        <action id="∏">
+            <when state="none" output="∏"/>
+            <when state="Greek" output="÷"/>
+        </action>
+        <action id="∑">
+            <when state="none" output="∑"/>
+            <when state="Greek" output="•"/>
+            <when state="Symbols" output="🐺"/>
+        </action>
+        <action id="√">
+            <when state="none" output="√"/>
+            <when state="Greek" output="℘"/>
+            <when state="IPA" output="ʋ"/>
+            <when state="Superscript" output="ᵥ"/>
+            <when state="Symbols" output="✔︎"/>
+        </action>
+        <action id="∞">
+            <when state="none" output="∞"/>
+            <when state="Greek" output="°"/>
+            <when state="Superscript" output="₅"/>
+        </action>
+        <action id="∫">
+            <when state="none" output="∫"/>
+            <when state="Greek" output="≡"/>
+            <when state="IPA modifiers" output="᷅"/>
+            <when state="Symbols" output="🦋"/>
+        </action>
+        <action id="≈">
+            <when state="none" output="≈"/>
+            <when state="Greek" output="⊕"/>
+            <when state="IPA" output="ɧ"/>
+            <when state="Superscript" output="ₓ"/>
+            <when state="Symbols" output="🐦"/>
+        </action>
+        <action id="≠">
+            <when state="none" output="≠"/>
+            <when state="Greek" output="↑"/>
+            <when state="IPA" output="ǂ"/>
+            <when state="Math" output="≢"/>
+            <when state="Superscript" output="₌"/>
+        </action>
+        <action id="≤">
+            <when state="none" output="≤"/>
+            <when state="Greek" output="ʺ"/>
+            <when state="Math" output="⊄"/>
+            <when state="Symbols" output="▲"/>
+        </action>
+        <action id="≥">
+            <when state="none" output="≥"/>
+            <when state="Greek" output="≥"/>
+            <when state="Math" output="⊅"/>
+        </action>
+        <action id="◊">
+            <when state="none" output="◊"/>
+            <when state="Greek" output="⋅"/>
+        </action>
+        <action id="">
+            <when state="none" output=""/>
+            <when state="IPA" output="ɮ"/>
+        </action>
+        <action id="ﬁ">
+            <when state="none" output="ﬁ"/>
+            <when state="Greek" output="⇒"/>
+            <when state="Symbols" output="💙"/>
+        </action>
+        <action id="ﬂ">
+            <when state="none" output="ﬂ"/>
+            <when state="Greek" output="⇓"/>
+            <when state="Symbols" output="💜"/>
+        </action>
+    </actions>
+    <terminators>
+        <when state="Breve" output="˘"/>
+        <when state="Caron" output="ˇ"/>
+        <when state="Cedilla" output="¸"/>
+        <when state="Circled" output="o"/>
+        <when state="Dot above" output="˙"/>
+        <when state="Dot below" output="."/>
+        <when state="Double acute" output="˝"/>
+        <when state="Fraction 0" output="0"/>
+        <when state="Fraction 1" output="⅟"/>
+        <when state="Fraction 2" output="2"/>
+        <when state="Fraction 3" output="3"/>
+        <when state="Fraction 4" output="4"/>
+        <when state="Fraction 5" output="5"/>
+        <when state="Fraction 7" output="7"/>
+        <when state="Greek" output="g"/>
+        <when state="IPA" output="i"/>
+        <when state="IPA affricate" output="t"/>
+        <when state="IPA modifiers" output="_"/>
+        <when state="Macron" output="¯"/>
+        <when state="Math" output="m"/>
+        <when state="Ogonek" output="˛"/>
+        <when state="Retroflex" output="˞"/>
+        <when state="Ring" output="˚"/>
+        <when state="Slash" output="⁄"/>
+        <when state="Superscript" output="^"/>
+        <when state="Symbols" output="s"/>
+        <when state="implosive" output="_&#x003C;"/>
+        <when state="s1" output="´"/>
+        <when state="s2" output="¨"/>
+        <when state="s3" output="ˆ"/>
+        <when state="s4" output="˜"/>
+        <when state="s5" output="`"/>
+    </terminators>
+</keyboard>
