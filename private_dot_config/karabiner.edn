@@ -29,7 +29,8 @@
                  [:!CTi "open -a Firefox"]
                  [:!CTy "open -a Finder"]
                  [:!CTd "open -a Emacs"]
-                 [:!CTw "open -a OmniFocus"]]}
+                 [:!CTw "open -a OmniFocus"]
+                 [:!CTa "open -a Anki"]]}
         {:des "Sculpt keys"
          :rules [[:##page_up :page_down [:sculpt]]
                  [:##page_down :end [:sculpt]]
