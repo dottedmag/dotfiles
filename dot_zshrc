@@ -186,3 +186,13 @@ dm_git_prompt() {
   DM_PROMPT_GIT=" %F{green}(${git_ref}${git_action})%f "
 }
 add-zsh-hook precmd dm_git_prompt
+
+# grep
+
+## Easier to type
+alias -g GG="| grep"
+
+# Git, Go
+
+## Ignore tests in 'git grep'
+alias -g GONTE="':!:*_test.go'"
