@@ -89,6 +89,10 @@
 (set-face-attribute 'font-lock-type-face nil :foreground "#008080")
 (set-face-attribute 'highlight nil :background "#333333")
 
+;; Disable keybinding suggestions (they display over minibuffer contents)
+
+(setq suggest-key-bindings nil)
+
 ;; * Visual bell *
 
 ;; Default visual bell is ugly, so make our own by flashing the mode line
