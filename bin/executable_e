@@ -1,7 +1,7 @@
 #!/bin/sh
 
 if [ $(uname -s) = Darwin ]; then
-    exec /opt/homebrew/bin/emacsclient -t "$@" --alternate-editor nano
+    exec /Applications/Emacs.app/Contents/MacOS/bin/emacsclient -t "$@" --alternate-editor nano
 else
     exec emacsclient -t "$@" --alternate-editor nano
 fi
