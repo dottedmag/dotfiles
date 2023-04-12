@@ -22,6 +22,12 @@
 [init]
 	defaultBranch = master
 
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+
 [user]
 {{- if eq .chezmoi.hostname "p1" }}
 	email = misha@ridge.co
