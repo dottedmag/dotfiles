@@ -623,9 +623,6 @@
 ;; *** VCS ***
 
 (straight-use-package 'magit)
-(straight-use-package 'git-gutter)
-
-(global-git-gutter-mode 1)
 
 ;; I do not use anyting but Git in Emacs anyway
 (setq vc-handled-backends nil)
