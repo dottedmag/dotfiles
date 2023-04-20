@@ -5,6 +5,7 @@ Library/Keyboard Layouts
 .hammerspoon
 bin/tokindle
 bin/rgrep
+.terminfo/78/xterm-kitty
 {{ end }}
 README.md
 new-mac.md
