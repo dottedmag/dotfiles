@@ -1,5 +1,5 @@
 {{ if ne .chezmoi.os "darwin" }}
-Library/Keyboard Layouts
+Library
 .config/karabiner.edn
 .config/kitty
 .hammerspoon
