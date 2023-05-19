@@ -64,10 +64,9 @@
 (setq mouse-yank-at-point t)
 
 (defun dm>frame-title ()
-  (let ((f (buffer-file-name)))
-    (if f
-        (abbreviate-file-name f)
-      (buffer-name))))
+  (if-let ((f (buffer-file-name)))
+      (abbreviate-file-name f)
+    (buffer-name)))
 
 ;; Show current file or buffer name in title
 (setq frame-title-format
@@ -211,23 +210,21 @@
 
 ;; *** Whitespace ***
 
-;; This `require' is needed because whitespace-display-mappings are modified below
-(require 'whitespace)
+(with-eval-after-load 'whitespace
+  (setq whitespace-line-column 120)
 
-(setq whitespace-line-column 120)
+  ;; Do not display spaces as dots
+  (setq-default
+   whitespace-display-mappings
+   (remove '(space-mark ?\  [?·] [?.]) whitespace-display-mappings))
 
-;; Do not display spaces as dots
-(setq-default
- whitespace-display-mappings
- (remove '(space-mark ?\  [?·] [?.]) whitespace-display-mappings))
+  ;; Show tabs as light-gray chevrons, not black
+  (set-face-attribute 'whitespace-tab nil :foreground "#4d4d4d" :background 'unspecified)
 
-;; Show tabs as light-gray chevrons, not black
-(set-face-attribute 'whitespace-tab nil :foreground "#4d4d4d" :background 'unspecified)
+  ;; Show overly long lines as gray
+  (set-face-attribute 'whitespace-line nil :background "#4d4d4d")
 
-;; Show overly long lines as gray
-(set-face-attribute 'whitespace-line nil :background "#4d4d4d")
-
-(setq whitespace-style
+  (setq whitespace-style
       '(face             ;; Enable visualization via faces
         trailing         ;; Highlight trailing spaces
         tabs             ;; Display tabs via faces (to mellow their tab-mark chevron look)
@@ -236,7 +233,7 @@
         empty            ;; Highlight empty lines at the beginning/end of the buffer
         space-before-tab ;; Highlight spaces before TABs
         space-mark       ;; Display hard spaces (regular spaces are removed in assignment above)
-        ))
+        )))
 
 (global-whitespace-mode 1)
 
@@ -303,7 +300,6 @@
 
 (when (eq system-type 'darwin)
   (straight-use-package 'exec-path-from-shell)
-  (require 'exec-path-from-shell)
   (exec-path-from-shell-initialize))
 
 ;; *** OS integration ***
@@ -355,31 +351,34 @@
 (straight-use-package 'lsp-mode)
 (straight-use-package 'lsp-ui)
 
-(require 'lsp-ui) ;; lsp-ui-doc--frame-visible-p is used below
-
 ;; Do not use default configuration: it enables too much UX
 (setq lsp-auto-configure nil)
 
-;; No slowpokes around
-(setq lsp-idle-delay 0.01)
+(with-eval-after-load 'lsp-ui
+  ;; No slowpokes around
+  (setq lsp-idle-delay 0.01)
 
-;; Large repos
-(setq lsp-file-watch-threshold 10000)
+  ;; Large repos
+  (setq lsp-file-watch-threshold 10000)
 
-(defvar-local lsp-gopls-ignored-directories nil)
-(put 'lsp-gopls-ignored-directories 'safe-local-variable 'arrayp)
-(lsp-register-custom-settings '(("gopls.directoryFilters" lsp-gopls-ignored-directories)))
+  (defvar-local lsp-gopls-ignored-directories nil)
+  (put 'lsp-gopls-ignored-directories 'safe-local-variable 'arrayp)
+  (lsp-register-custom-settings '(("gopls.directoryFilters" lsp-gopls-ignored-directories)))
 
-;; Enable symbol highlight (what lsp-ui usually does)
-(defun dm>lsp-enable-symbol-highlight ()
-  (setq lsp-enable-symbol-highlighting t)
-  (add-hook 'lsp-on-idle-hook #'lsp--document-highlight nil t))
-(add-hook 'lsp-configure-hook #'dm>lsp-enable-symbol-highlight)
+  ;; Enable symbol highlight (what lsp-ui usually does)
+  (defun dm>lsp-enable-symbol-highlight ()
+    (setq lsp-enable-symbol-highlighting t)
+    (add-hook 'lsp-on-idle-hook #'lsp--document-highlight nil t))
+  (add-hook 'lsp-configure-hook #'dm>lsp-enable-symbol-highlight)
 
-;; Disable ElDoc in LSP, lsp-ui enables it unconditionally
-(defun dm>lsp-disable-eldoc ()
-  (eldoc-mode 0))
-(add-hook 'lsp-configure-hook #'dm>lsp-disable-eldoc)
+  ;; Disable ElDoc in LSP, lsp-ui enables it unconditionally
+  (defun dm>lsp-disable-eldoc ()
+    (eldoc-mode 0))
+  (add-hook 'lsp-configure-hook #'dm>lsp-disable-eldoc)
+
+  ;; Configuration of lsp-ui doc window
+  (setq lsp-ui-doc-header t
+        lsp-ui-doc-include-signature t))
 
 ;; Can be used by any mode
 (defun dm>lsp-ui-doc-toggle ()
@@ -387,10 +386,6 @@
   (if (lsp-ui-doc--frame-visible-p)
       (lsp-ui-doc-hide)
     (lsp-ui-doc-show)))
-
-;; Configuration of lsp-ui doc window
-(setq lsp-ui-doc-header t
-      lsp-ui-doc-include-signature t)
 
 ;; * Flycheck *
 
@@ -406,9 +401,6 @@
 ;; * Go *
 
 (straight-use-package 'go-mode)
-
-;; Needed to add keys to go-mode-map
-(require 'go-mode)
 
 (when (eq system-type 'darwin)
   (exec-path-from-shell-copy-env "GOPATH"))
@@ -428,7 +420,8 @@
 (add-hook 'go-mode-hook #'dm>go-mode-hook)
 
 ;; Show documentation on Ctrl-F1
-(define-key go-mode-map (kbd "C-<f1>") #'dm>lsp-ui-doc-toggle)
+(with-eval-after-load 'go-mode
+  (define-key go-mode-map (kbd "C-<f1>") #'dm>lsp-ui-doc-toggle))
 
 ;; Open documentation in browser on Shift-Ctrl-F1
 (defconst dm>godoc-re "(https://godoc\\.org/\\(.*?\\))")
@@ -449,7 +442,9 @@
    (lsp-request "textDocument/hover" (lsp--text-document-position-params))
    (or (bounds-of-thing-at-point 'symbol) (cons (point) (1+ (point))))
    (current-buffer)))
-(define-key go-mode-map (kbd "C-S-<f1>") #'dm>godoc-open)
+
+(with-eval-after-load 'go-mode
+  (define-key go-mode-map (kbd "C-S-<f1>") #'dm>godoc-open))
 
 ;; Run golangci-lint after LSP lint
 
@@ -552,21 +547,18 @@
 
 (eval-after-load 'paredit #'dm>setup-paredit)
 
-;; Required to set face attributes below
-(require 'rainbow-delimiters)
-
-(set-face-attribute 'rainbow-delimiters-depth-1-face nil :foreground "#ffffff")
-(set-face-attribute 'rainbow-delimiters-depth-2-face nil :foreground "#ee0000")
-(set-face-attribute 'rainbow-delimiters-depth-3-face nil :foreground "#0000ee")
-(set-face-attribute 'rainbow-delimiters-depth-4-face nil :foreground "#ee7600")
-(set-face-attribute 'rainbow-delimiters-depth-5-face nil :foreground "#00eeee")
-(set-face-attribute 'rainbow-delimiters-depth-6-face nil :foreground "#cdcd00")
-(set-face-attribute 'rainbow-delimiters-depth-7-face nil :foreground "#ff40ff")
-(set-face-attribute 'rainbow-delimiters-depth-8-face nil :foreground "#32cd32")
-(set-face-attribute 'rainbow-delimiters-depth-9-face nil :foreground "#b03060")
-
-(set-face-attribute 'rainbow-delimiters-unmatched-face nil :foreground "#8b0000" :background "#ff4500")
-(set-face-attribute 'rainbow-delimiters-mismatched-face nil :foreground "#8b0000" :background "#ff4500")
+(with-eval-after-load 'rainbow-delimiters
+  (set-face-attribute 'rainbow-delimiters-depth-1-face nil :foreground "#ffffff")
+  (set-face-attribute 'rainbow-delimiters-depth-2-face nil :foreground "#ee0000")
+  (set-face-attribute 'rainbow-delimiters-depth-3-face nil :foreground "#0000ee")
+  (set-face-attribute 'rainbow-delimiters-depth-4-face nil :foreground "#ee7600")
+  (set-face-attribute 'rainbow-delimiters-depth-5-face nil :foreground "#00eeee")
+  (set-face-attribute 'rainbow-delimiters-depth-6-face nil :foreground "#cdcd00")
+  (set-face-attribute 'rainbow-delimiters-depth-7-face nil :foreground "#ff40ff")
+  (set-face-attribute 'rainbow-delimiters-depth-8-face nil :foreground "#32cd32")
+  (set-face-attribute 'rainbow-delimiters-depth-9-face nil :foreground "#b03060")
+  (set-face-attribute 'rainbow-delimiters-unmatched-face nil :foreground "#8b0000" :background "#ff4500")
+  (set-face-attribute 'rainbow-delimiters-mismatched-face nil :foreground "#8b0000" :background "#ff4500"))
 
 ;; * elisp *
 
