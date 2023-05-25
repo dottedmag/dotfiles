@@ -107,6 +107,23 @@
 
 (setq ring-bell-function #'dm>ring-bell-flash-mode-line)
 
+;; ** Modern text zoom keybindings **
+
+;; Remove default bindings
+(define-key ctl-x-map [(control ?+)] nil)
+(define-key ctl-x-map [(control ?-)] nil)
+(define-key ctl-x-map [(control ?=)] nil)
+(define-key ctl-x-map [(control ?0)] nil)
+
+;; Set modern bindings not only on Mac
+(define-key global-map (kbd "s-=") 'text-scale-adjust)
+(define-key global-map (kbd "s-+") 'text-scale-adjust)
+(define-key global-map (kbd "s--") 'text-scale-adjust)
+(define-key global-map (kbd "s-0") 'text-scale-adjust)
+
+;; Smoother adjustment
+(setq text-scale-mode-step 1.1)
+
 ;; *** Fonts ***
 
 (if (eq system-type 'darwin)
