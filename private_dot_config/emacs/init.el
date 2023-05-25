@@ -354,6 +354,8 @@
 ;; Do not use default configuration: it enables too much UX
 (setq lsp-auto-configure nil)
 
+(put 'lsp-gopls-ignored-directories 'safe-local-variable 'arrayp)
+
 (with-eval-after-load 'lsp-ui
   ;; No slowpokes around
   (setq lsp-idle-delay 0.01)
@@ -362,7 +364,6 @@
   (setq lsp-file-watch-threshold 10000)
 
   (defvar-local lsp-gopls-ignored-directories nil)
-  (put 'lsp-gopls-ignored-directories 'safe-local-variable 'arrayp)
   (lsp-register-custom-settings '(("gopls.directoryFilters" lsp-gopls-ignored-directories)))
 
   ;; Enable symbol highlight (what lsp-ui usually does)
