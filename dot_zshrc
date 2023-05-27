@@ -93,6 +93,10 @@ case "$TERM" in
 	;;
 esac
 
+if [ -n "$CHEZMOI" ]; then
+  PROMPT="%U%F{red}(chezmoi)%f%u $PROMPT"
+fi
+
 dm_git_action() {
   local git_dir="$1"
 
