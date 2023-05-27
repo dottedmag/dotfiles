@@ -174,7 +174,7 @@
 (global-auto-revert-mode t)
 (with-eval-after-load 'autorevert
   ;; Modern machines are pretty fast, no need to wait 2.5s between reverts
-  (auto-revert--lockout-interval 0.1))
+  (setq auto-revert--lockout-interval 0.1))
 
 ;; *** emacsclient ***
 
