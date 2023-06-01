@@ -169,12 +169,16 @@
 
 (define-key global-map (kbd "s-.") 'execute-extended-command)
 
+;; *** eldoc ***
+
+(setq eldoc-idle-delay 0.01)
+
 ;; *** Autorevert ***
 
 (global-auto-revert-mode t)
 (with-eval-after-load 'autorevert
   ;; Modern machines are pretty fast, no need to wait 2.5s between reverts
-  (setq auto-revert--lockout-interval 0.1))
+  (setq auto-revert--lockout-interval 0.01))
 
 ;; *** emacsclient ***
 
@@ -204,7 +208,7 @@
 
 ;; * Highlight full expressions *
 
-(setq show-paren-delay 0)
+(setq show-paren-delay 0.01)
 (setq show-paren-style 'expression)
 (setq show-paren-when-point-inside-paren t)
 
@@ -412,7 +416,7 @@
 (straight-use-package 'flycheck)
 
 ;; Give me errors without delay
-(setq flycheck-display-errors-delay 0)
+(setq flycheck-display-errors-delay 0.01)
 
 ;; * Shell *
 
