@@ -376,6 +376,11 @@
   (require 'projectile) ;; bbatsov/projectile#1846
   (add-hook 'project-find-functions #'project-projectile))
 
+
+;; * Native compilation *
+
+(setq native-comp-async-report-warnings-errors 'silent)
+
 ;; *** Modes ***
 
 ;; * LSP *
