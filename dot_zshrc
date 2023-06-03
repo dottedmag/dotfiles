@@ -32,7 +32,11 @@ export LESS=-iQRS
 
 alias gdb='gdb -q'
 
-export EDITOR=e
+if [[ -f $HOME/bin/e ]]; then
+  export EDITOR=e
+else
+  export EDITOR=nano
+fi
 
 # History
 

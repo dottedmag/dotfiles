@@ -7,6 +7,12 @@ bin/tokindle
 bin/rgrep
 .terminfo/78/xterm-kitty
 {{ end }}
+{{ if eq .chezmoi.hostname "tea" }}
+.config/emacs
+.config/xkb
+.emacs.d
+bin/e
+{{ end }}
 README.md
 new-mac.md
 new-linux.md
