@@ -60,6 +60,7 @@ unsetopt AUTO_MENU
 unsetopt BEEP
 # / is not a part of word
 slashre=/; export WORDCHARS=${WORDCHARS/$slashre}
+unsetopt AUTO_REMOVE_SLASH # do not remove / after completion
 
 # Prompt, terminal title
 
