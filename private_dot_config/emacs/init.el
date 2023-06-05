@@ -322,8 +322,8 @@
 
 ;; *** Environment ***
 
+(straight-use-package 'exec-path-from-shell)
 (when (eq system-type 'darwin)
-  (straight-use-package 'exec-path-from-shell)
   (exec-path-from-shell-initialize))
 
 ;; *** OS integration ***
