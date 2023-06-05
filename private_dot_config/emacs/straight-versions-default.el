@@ -1,6 +1,6 @@
 (("Emacs-wgrep" . "f9687c28bbc2e84f87a479b6ce04407bb97cfb23")
  ("clojure-mode" . "7d3c0c16e4aa14a051b393c249f0f4d307a2c74d")
- ("copilot.el" . "17348d0c875ac76d263c98d6ddf031e46e3a297e")
+ ("copilot.el" . "efd6c1079a0abe989c8645cf1fb1c2e6c5e97c70")
  ("dash.el" . "da167c51e9fd167a48d06c7c0ee8e3ac7abd9718")
  ("editorconfig-emacs" . "541298aa616c344aa6a90f08205ae1041f6f016e")
  ("el-get" . "960f3fb962c35d3196bab20b2a3f6d6228119277")
