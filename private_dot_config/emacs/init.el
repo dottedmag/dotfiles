@@ -611,11 +611,8 @@
 ;; *** Copilot ***
 
 (straight-use-package
- '(copilot :type git :host github :repo "zerolfx/copilot.el"))
-
-(defun dm>link-copilot-el (name &rest args)
-  (when (string= name "copilot")
-    (make-symbolic-link "../../repos/copilot.el/dist"
+ '(copilot :type git :host github :repo "zerolfx/copilot.el"
+           :post-build (make-symbolic-link "../../repos/copilot.el/dist"
                         (concat user-emacs-directory "straight/build/copilot/dist") t)))
 
 (add-hook 'straight-use-package-post-build-functions #'dm>link-copilot-el)
