@@ -47,9 +47,13 @@ Host mml
   ForwardAgent yes
 {{- end }}
 
+
 Host *
   ControlMaster auto
   ControlPath ~/.local/share/ssh/control/%C
   ControlPersist yes
   ExitOnForwardFailure yes
   HashKnownHosts yes
+{{ if eq .chezmoi.os "darwin" -}}
+  IdentityAgent "~/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"
+{{- end }}
