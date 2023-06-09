@@ -299,6 +299,22 @@
 
 (global-set-key (kbd "s-n") 'dm>new-buffer)
 
+(defvar dm>skip-buffers-titles '("*Messages*" "*Completions*" "*Help*"))
+(defvar dm>skip-buffers-modes nil)
+
+(require 'seq)
+
+(defun dm>switch-to-prev-buffer-skip (window buffer bury-or-kill)
+  (let ((m (with-current-buffer buffer major-mode))
+        (n (with-current-buffer buffer (buffer-name))))
+    (or (seq-some
+         (lambda (subtitle) (string-search subtitle n)) dm>skip-buffers-titles)
+        (seq-some
+         (lambda (mode) (eq mode m)) dm>skip-buffers-modes))))
+
+
+(setq switch-to-prev-buffer-skip #'dm>switch-to-prev-buffer-skip)
+
 ;; *** Search ***
 
 (straight-use-package 'rg)
