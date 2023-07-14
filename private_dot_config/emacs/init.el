@@ -631,8 +631,6 @@
            :post-build (make-symbolic-link "../../repos/copilot.el/dist"
                         (concat user-emacs-directory "straight/build/copilot/dist") t)))
 
-(add-hook 'straight-use-package-post-build-functions #'dm>link-copilot-el)
-
 ;; FIXME (dottedmag): Linux
 (when (eq system-type 'darwin)
   (setq copilot-node-executable
