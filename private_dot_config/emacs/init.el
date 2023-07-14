@@ -642,3 +642,11 @@
 (global-set-key (kbd "C-<return>") 'copilot-accept-completion)
 (global-set-key (kbd "M-p") 'copilot-previous-completion)
 (global-set-key (kbd "M-n") 'copilot-next-completion)
+
+;; openai
+
+(straight-use-package
+ '(gptel :type git :host github :repo "karthink/gptel"))
+
+(with-eval-after-load 'gptel
+  (setq-default gptel-model "gpt-4"))
