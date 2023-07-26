@@ -34,7 +34,8 @@
                  [:!CTy "open -a Finder"]
                  [:!CTd "open -a Emacs"]
                  [:!CTw "open -a OmniFocus"]
-                 [:!CTa "open -a Anki"]]}
+                 [:!CTa "open -a Anki"]
+                 [:!CTs "open -a Obsidian"]]}
         {:des "Sculpt keys"
          :rules [[:##page_up :page_down [:sculpt]]
                  [:##page_down :end [:sculpt]]
