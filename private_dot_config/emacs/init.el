@@ -647,4 +647,5 @@
  '(gptel :type git :host github :repo "karthink/gptel"))
 
 (with-eval-after-load 'gptel
+  (setq-default gptel--system-message "You are a large language model living in Emacs and a helpful assistant. Use British English. Be snarky and witty. Respond concisely.")
   (setq-default gptel-model "gpt-4"))
