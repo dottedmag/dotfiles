@@ -413,25 +413,6 @@
        (unless (string= msg "[eglot] No \"source.organizeImports\" code actions here")
          (error msg))))))
 
-(defun dm>eglot-save-modified-files-after (orig-fun &rest args)
-  (let* (modified-files
-         (remember-modified-file
-          (lambda (&rest args)
-            (setq modified-files (cons (buffer-file-name) modified-files)))))
-    (unwind-protect
-        (progn
-          (advice-add 'eglot--apply-text-edits :after remember-modified-file)
-          (apply orig-fun args))
-      (advice-remove 'eglot--apply-text-edits remember-modified-file)
-      (dolist (modified-file modified-files)
-        (with-current-buffer (find-buffer-visiting modified-file)
-          (print modified-file)
-          (save-buffer))))))
-
-;; Save files after rename
-(with-eval-after-load 'eglot
-  (advice-add 'eglot-rename :around #'dm>eglot-save-modified-files-after))
-
 ;; * Flycheck *
 
 (straight-use-package 'flycheck)
