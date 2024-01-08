@@ -205,3 +205,8 @@ alias -g GG="| grep"
 
 ## Ignore tests in 'git grep'
 alias -g GONTE="':!:*_test.go'"
+
+# ffmpeg/ffprobe
+
+alias ffmpeg='ffmpeg -hide_banner'
+alias ffprobe='ffprobe -hide_banner'
