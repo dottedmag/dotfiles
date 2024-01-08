@@ -32,21 +32,7 @@ Host azbooka
   Hostname 192.168.111.1
   KexAlgorithms diffie-hellman-group1-sha1
   User root
-{{- else if eq .chezmoi.hostname "p1" -}}
-Host pi
-  User pi
-  Hostname pi.local
-  ForwardAgent yes
-
-Host ridge
-  Hostname ridge.local
-  ForwardAgent yes
-
-Host mml
-  Hostname mml.local
-  ForwardAgent yes
 {{- end }}
-
 
 Host *
   ControlMaster auto
