@@ -6,6 +6,7 @@ Library
 bin/tokindle
 bin/rgrep
 .terminfo/78/xterm-kitty
+.colima
 {{ end }}
 {{ if eq .chezmoi.hostname "tea" }}
 .config/emacs
