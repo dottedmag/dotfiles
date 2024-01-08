@@ -631,3 +631,11 @@
   (setq-default gptel--system-message "You are a large language model living in Emacs and a helpful assistant. Use British English. Respond concisely.")
   (setq-default gptel-model "gpt-4"))
 
+;; swift
+
+(straight-use-package 'swift-mode)
+
+;; WebAssembly
+
+(straight-use-package
+ '(wat-mode :type git :host github :repo "devonsparks/wat-mode"))
