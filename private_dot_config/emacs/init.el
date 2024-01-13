@@ -396,6 +396,7 @@
 ;; * Native compilation *
 
 (setq native-comp-async-report-warnings-errors 'silent)
+(setq warning-minimum-level :error)
 
 ;; *** Modes ***
 
