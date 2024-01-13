@@ -41,6 +41,7 @@ dconf write /org/gnome/shell/keybindings/toggle-message-tray "['']"
 dconf write /org/gnome/shell/keybindings/toggle-overview "['']"
 dconf write /org/gnome/shell/keybindings/focus-active-notification "['']"
 dconf write /org/freedesktop/ibus/panel/emoji/hotkey "['']"
+dconf write /org/freedesktop/ibus/general/hotkey/triggers "['']"
 dconf write /org/gnome/mutter/wayland/keybindings/restore-shortcuts "['']"
 dconf write /org/gnome/settings-daemon/plugins/media-keys/rotate-video-lock-static "['']"
 dconf write /org/gnome/desktop/interface/enable-hot-corners false
@@ -49,11 +50,14 @@ dconf write /org/gnome/desktop/wm/keybindings/switch-input-source "['']"
 dconf write /org/gnome/desktop/wm/keybindings/switch-input-source-backward "['']"
 dconf write /org/gnome/mutter/keybindings/switch-monitor "['']"
 dconf write /org/gnome/shell/keybindings/toggle-application-view "['']"
+dconf write /org/gnome/shell/keybindings/toggle-quick-settings "['']"
 
 Add needed hotkeys:
 
 dconf write /org/gnome/Terminal/Legacy/Keybindings/copy "<Super>c"
 dconf write /org/gnome/Terminal/Legacy/Keybindings/paste "<Super>v"
+# Replaces Alt+F4
+dconf write /org/gnome/desktop/wm/keybindings/close "['<Super>q']"
 # Replaces Cmd+A
 dconf write /org/gnome/shell/keybindings/toggle-application-view "['<Control><Super>Space']"
 
