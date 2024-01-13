@@ -6,7 +6,7 @@
 <enable passwordless sudo>
 sudo rpm -e PackageKit-command-not-found
 sudo dnf config-manager --add-repo https://download.docker.com/linux/fedora/docker-ce.repo
-sudo dnf install sway swaybg swaylock swayidle dmenu kitty-terminfo emacs nodejs zsh gitk docker-ce docker-ce-cli docker-buildx-plugin docker-compose-plugin
+sudo dnf install sway swaybg swaylock swayidle dmenu kitty-terminfo emacs nodejs zsh gitk docker-ce docker-ce-cli docker-buildx-plugin docker-compose-plugin gopass gopass-jsonapi wl-clipboard
 sudo usermod -a -G docker $USER
 sudo systemctl enable sshd docker
 sudo systemctl start sshd docker
@@ -14,6 +14,7 @@ chsh -s /usr/bin/zsh
 <download chezmoi>
 chezmoi init https://github.com/dottedmag/dotfiles
 chezmoi update
+gopass-jsonapi configure
 ```
 
 ## Debian
