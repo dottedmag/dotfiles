@@ -26,5 +26,8 @@ For Sculpt (how to disable for other keyboards?):
 
 Terminal:
 
-- dconf write /org/gnome/terminal/legacy/keybindings/copy "<Super>c"
-- dconf paste /org/gnome/terminal/legacy/keybindings/paste "<Super>v"
+dconf write /org/gnome/shell/keybindings/toggle-message-tray "['']"
+dconf write /org/gnome/shell/keybindings/toggle-overview "['']"
+dconf write /org/gnome/Terminal/Legacy/Keybindings/copy "<Super>c"
+dconf write /org/gnome/Terminal/Legacy/Keybindings/paste "<Super>v"
+dconf write /org/gnome/desktop/interface/enable-hot-corners false
