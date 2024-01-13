@@ -25,10 +25,39 @@ For Sculpt (how to disable for other keyboards?):
 
 - dconf write /org/gnome/desktop/input-sources/xkb-options "['caps:ctrl_modifier', 'grp:switch', 'altwin:swap_lalt_lwin', 'dottedmag:sculpt']"
 
-Terminal:
+Switch to apps via hotkeys:
+
+- Emacs app 1
+- Terminal app 2
+- Firefox app3
+
+dconf write /org/gnome/shell/keybindings/switch-to-application-1 "['<Control><Super>e']"
+dconf write /org/gnome/shell/keybindings/switch-to-application-2 "['<Control><Super>t']"
+dconf write /org/gnome/shell/keybindings/switch-to-application-3 "['<Control><Super>c']"
+
+Remove unneeded hotkeys:
 
 dconf write /org/gnome/shell/keybindings/toggle-message-tray "['']"
 dconf write /org/gnome/shell/keybindings/toggle-overview "['']"
+dconf write /org/gnome/shell/keybindings/focus-active-notification "['']"
+dconf write /org/freedesktop/ibus/panel/emoji/hotkey "['']"
+dconf write /org/gnome/mutter/wayland/keybindings/restore-shortcuts "['']"
+dconf write /org/gnome/settings-daemon/plugins/media-keys/rotate-video-lock-static "['']"
+dconf write /org/gnome/desktop/interface/enable-hot-corners false
+dconf write /org/gnome/mutter/overlay-key "''"
+dconf write /org/gnome/desktop/wm/keybindings/switch-input-source "['']"
+dconf write /org/gnome/desktop/wm/keybindings/switch-input-source-backward "['']"
+dconf write /org/gnome/mutter/keybindings/switch-monitor "['']"
+dconf write /org/gnome/shell/keybindings/toggle-application-view "['']"
+
+Add needed hotkeys:
+
 dconf write /org/gnome/Terminal/Legacy/Keybindings/copy "<Super>c"
 dconf write /org/gnome/Terminal/Legacy/Keybindings/paste "<Super>v"
-dconf write /org/gnome/desktop/interface/enable-hot-corners false
+# Replaces Cmd+A
+dconf write /org/gnome/shell/keybindings/toggle-application-view "['<Control><Super>Space']"
+
+Misc:
+
+dconf write /org/gnome/desktop/notifications/show-in-lock-screen false
+dconf write /org/gnome/desktop/search-providers/disable-external false
