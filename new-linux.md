@@ -51,6 +51,8 @@ dconf write /org/gnome/desktop/wm/keybindings/switch-input-source-backward "['']
 dconf write /org/gnome/mutter/keybindings/switch-monitor "['']"
 dconf write /org/gnome/shell/keybindings/toggle-application-view "['']"
 dconf write /org/gnome/shell/keybindings/toggle-quick-settings "['']"
+dconf write /org/gnome/desktop/wm/keybindings/switch-group "['']"
+dconf write /org/gnome/desktop/wm/keybindings/switch-group-backward "['']"
 
 Add needed hotkeys:
 
@@ -60,6 +62,8 @@ dconf write /org/gnome/Terminal/Legacy/Keybindings/paste "<Super>v"
 dconf write /org/gnome/desktop/wm/keybindings/close "['<Super>q']"
 # Replaces Cmd+A
 dconf write /org/gnome/shell/keybindings/toggle-application-view "['<Control><Super>Space']"
+dconf write /org/gnome/desktop/wm/keybindings/cycle-group-backward "['<Super>grave']"
+dconf write /org/gnome/desktop/wm/keybindings/cycle-group "['<Shift><Super>grave']"
 
 Misc:
 
