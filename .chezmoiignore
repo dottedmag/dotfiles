@@ -18,6 +18,9 @@ bin/rgrep
 .emacs.d
 bin/e
 {{ end }}
+{{ if ne .chezmoi.hostname "mm" }}
+.ssh/config.local
+{{ end }}
 README.md
 new-mac.md
 new-linux.md
