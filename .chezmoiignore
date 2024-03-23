@@ -5,6 +5,7 @@ Library
 .hammerspoon
 bin/tokindle
 bin/rgrep
+bin/ls
 .terminfo/78/xterm-kitty
 .colima
 {{ end }}
