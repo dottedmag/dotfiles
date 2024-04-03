@@ -27,6 +27,8 @@ if [[ -z "$_ZSHENV_PATH_SET" ]]; then
     prepend_path "$HOME/.cargo/bin"
     prepend_path "$HOME/.local/bin"
     prepend_path "$HOME/.gem/ruby/3.2.0/bin"
+    prepend_path "/Applications/Emacs.app/Contents/MacOS/bin"
+    prepend_path "$HOME/Applications/Emacs.app/Contents/MacOS/bin"
     export PATH
 
     export _ZSHENV_PATH_SET=1
