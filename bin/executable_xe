@@ -8,5 +8,3 @@
 . ~/.setenv
 
 exec emacsclient -n "$@" --alternate-editor nano
-
-sleep 100
