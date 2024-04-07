@@ -1,0 +1,35 @@
+prepend_path() {
+  if [ -d "$1" ]; then
+    PATH="$1:$PATH"
+  fi
+}
+
+if [ -z "$_ZSHENV_PATH_SET" ]; then
+  case $OSTYPE in
+    linux-gnu)
+    # Nothing to do
+    ;;
+    darwin*)
+      prepend_path /usr/local/bin
+      prepend_path "$HOME/Library/Python/3.8/bin"
+      prepend_path "$HOME/Library/Python/3.9/bin"
+      prepend_path "$HOME/Library/Python/3.10/bin"
+      prepend_path "$HOME/Library/Python/3.11/bin"
+      prepend_path "$HOME/Library/Python/3.12/bin"
+      prepend_path "/Applications/Emacs.app/Contents/MacOS/bin"
+      prepend_path "$HOME/Applications/Emacs.app/Contents/MacOS/bin"
+      eval "$(/opt/homebrew/bin/brew shellenv)"
+      ;;
+    *)
+      #echo "Unknown OS $OSTYPE" >&2
+      ;;
+  esac
+
+  prepend_path "$HOME/.cargo/bin"
+  prepend_path "$HOME/.local/bin"
+  prepend_path "$HOME/.gem/ruby/3.2.0/bin"
+  prepend_path "$HOME/go/bin"
+  prepend_path "$HOME/bin"
+  export PATH
+  export _ZSHENV_PATH_SET=1
+fi

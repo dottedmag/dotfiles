@@ -9,4 +9,4 @@ if [[ -z "$_ZSHENV_PATH_SET" ]]; then
     esac
 fi
 
-. ~/.profile
+. ~/.setenv

@@ -1,3 +1,10 @@
 #!/bin/sh
 
-exec emacsclient -t "$@" --alternate-editor nano
+#
+# This script might be called from many places, including non-login shells and no shells.
+# Update the environment accordingly.
+#
+
+. ~/.setenv
+
+emacsclient -t "$@" --alternate-editor nano
