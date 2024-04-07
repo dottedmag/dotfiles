@@ -7,4 +7,4 @@
 
 . ~/.setenv
 
-emacsclient -t "$@" --alternate-editor nano
+exec emacsclient -t "$@" --alternate-editor nano
