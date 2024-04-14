@@ -632,12 +632,10 @@
 (defun dm>gptel-mode-wrap-lines ()
   (setq-local truncate-lines nil))
 
-(add-hook 'gptel-mode-hook #'dm>gptel-mode-wrap-lines)
-
 (with-eval-after-load 'gptel
   (setq-default gptel--system-message "You are a large language model living in Emacs and a helpful assistant. Use British English. Respond concisely.")
   (setq-default gptel-model "gpt-4")
-  (add-hook 'gptel-mode-hook ))
+  (add-hook 'gptel-mode-hook #'dm>gptel-mode-wrap-lines))
 
 ;; swift
 
