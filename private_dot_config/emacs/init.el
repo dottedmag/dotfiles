@@ -578,8 +578,8 @@
 ;; Autosave modified buffers
 (setq compilation-ask-about-save nil)
 
-;; Stop at first error
-(setq compilation-scroll-output 'first-error)
+;; Scroll compilation
+(setq compilation-scroll-output t)
 
 (global-set-key (kbd "<f6>") 'compile)
 
