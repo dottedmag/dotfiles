@@ -634,7 +634,7 @@
 
 (with-eval-after-load 'gptel
   (setq-default gptel--system-message "You are a large language model living in Emacs and a helpful assistant. Use British English. Respond concisely.")
-  (setq-default gptel-model "gpt-4")
+  (setq-default gptel-model "gpt-4o")
   (add-hook 'gptel-mode-hook #'dm>gptel-mode-wrap-lines))
 
 ;; swift
