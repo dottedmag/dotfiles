@@ -645,3 +645,7 @@
 
 (straight-use-package
  '(wat-mode :type git :host github :repo "devonsparks/wat-mode"))
+
+;; TOML
+
+(straight-use-package 'toml-mode)
