@@ -649,3 +649,7 @@
 ;; TOML
 
 (straight-use-package 'toml-mode)
+
+;; Typescript
+
+(straight-use-package 'typescript-mode)
