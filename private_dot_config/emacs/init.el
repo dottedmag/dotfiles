@@ -653,3 +653,5 @@
 ;; Typescript
 
 (straight-use-package 'typescript-mode)
+(with-eval-after-load 'typescript-mode
+  (add-hook 'typescript-mode-hook #'dm>disable-indent-tabs))
