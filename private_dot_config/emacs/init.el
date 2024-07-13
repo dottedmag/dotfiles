@@ -655,3 +655,23 @@
 (straight-use-package 'typescript-mode)
 (with-eval-after-load 'typescript-mode
   (add-hook 'typescript-mode-hook #'dm>disable-indent-tabs))
+
+;; Templ.guide
+
+(defun dm>templ-fmt ()
+  (let ((temp-buffer (generate-new-buffer " *templ-fmt*" t)))
+    (unwind-protect
+        (if (= (call-process-region nil nil "templ" nil temp-buffer nil "fmt") 0)
+            (replace-buffer-contents temp-buffer)
+          (message "Failed to run templ fmt"))
+      (and (buffer-name temp-buffer)
+           (kill-buffer temp-buffer)))))
+
+(define-minor-mode templ-mode
+  "Toogle mode for templ"
+  :init-value nil
+  :lighter " TE"
+  :after-hook
+  (add-hook 'before-save-hook #'dm>templ-fmt -10 t))
+
+(add-to-list 'auto-mode-alist '("\\.templ\\'" . templ-mode))
