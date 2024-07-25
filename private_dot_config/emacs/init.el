@@ -656,6 +656,10 @@
 (with-eval-after-load 'typescript-mode
   (add-hook 'typescript-mode-hook #'dm>disable-indent-tabs))
 
+(with-eval-after-load 'eglot
+  (add-to-list 'eglot-server-programs
+               '(typescript-mode . ("npx" "@vtsls/language-server" "--" "server/bin/vtsls.js" "--stdio"))))
+
 ;; Templ.guide
 
 (defun dm>templ-fmt ()
