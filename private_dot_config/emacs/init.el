@@ -671,11 +671,16 @@
       (and (buffer-name temp-buffer)
            (kill-buffer temp-buffer)))))
 
+(defun dm>templ-mode-before-save-hook ()
+  (if templ-mode
+      (add-hook 'before-save-hook #'dm>templ-fmt -10 t)
+    (remove-hook 'before-save-hook #'dm>templ-fmt t)))
+
 (define-minor-mode templ-mode
   "Toogle mode for templ"
   :init-value nil
   :lighter " TE"
   :after-hook
-  (add-hook 'before-save-hook #'dm>templ-fmt -10 t))
+  (dm>templ-mode-before-save-hook))
 
 (add-to-list 'auto-mode-alist '("\\.templ\\'" . templ-mode))
