@@ -29,6 +29,7 @@
          :rules [[:!Fleft_control :to-ipa]]}
         {:des "Open apps"
          :rules [[:!CTk "open -a Kitty"]
+                 [:!CTu "open -a Chromium"]
                  [:!CTi "open -a Firefox"]
                  [:!CTy "open -a Finder"]
                  [:!CTd "open -a Emacs"]
