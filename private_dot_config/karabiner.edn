@@ -29,13 +29,14 @@
          :rules [[:!Fleft_control :to-ipa]]}
         {:des "Open apps"
          :rules [[:!CTk "open -a Kitty"]
-                 [:!CTu "open -a Chromium"]
                  [:!CTi "open -a Firefox"]
+                 [:!CTo "open -a Arc"]
                  [:!CTy "open -a Finder"]
                  [:!CTd "open -a Emacs"]
                  [:!CTw "open -a OmniFocus"]
                  [:!CTa "open -a Anki"]
-                 [:!CTs "open -a Obsidian"]]}
+                 [:!CTs "open -a Obsidian"]
+                 [:!CTslash "open -a Zed"]]}
         {:des "Sculpt keys"
          :rules [[:##page_up :page_down [:sculpt]]
                  [:##page_down :end [:sculpt]]
