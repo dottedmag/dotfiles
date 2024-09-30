@@ -317,9 +317,9 @@
 
 ;; *** Search ***
 
-(straight-use-package 'rg)
+(grep-apply-setting 'grep-command "git --no-pager grep -n ")
 
-(global-set-key (kbd "s-f") #'rg)
+(global-set-key (kbd "s-f") #'grep)
 (global-set-key (kbd "<f11>") #'previous-error)
 (global-set-key (kbd "<f12>") #'next-error)
 
