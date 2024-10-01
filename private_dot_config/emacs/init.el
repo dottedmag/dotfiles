@@ -317,7 +317,8 @@
 
 ;; *** Search ***
 
-(grep-apply-setting 'grep-command "git --no-pager grep -n ")
+(with-eval-after-load 'grep
+  (grep-apply-setting 'grep-command "git --no-pager grep -n "))
 
 (global-set-key (kbd "s-f") #'grep)
 (global-set-key (kbd "<f11>") #'previous-error)
