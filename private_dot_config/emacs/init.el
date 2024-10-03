@@ -318,7 +318,8 @@
 ;; *** Search ***
 
 (with-eval-after-load 'grep
-  (grep-apply-setting 'grep-command "git --no-pager grep -n "))
+  (grep-apply-setting 'grep-command "git --no-pager grep -n ")
+  (grep-apply-setting 'grep-use-null-device nil))
 
 (global-set-key (kbd "s-f") #'grep)
 (global-set-key (kbd "<f11>") #'previous-error)
