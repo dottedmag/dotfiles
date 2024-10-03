@@ -1,4 +1,8 @@
 {{ if eq .chezmoi.hostname "mm" -}}
+Include config.drozd
+{{- end }}
+
+{{ if eq .chezmoi.hostname "mm" -}}
 Include /Users/dottedmag/.colima/ssh_config
 {{- end }}
 
