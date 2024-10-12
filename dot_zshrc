@@ -1,3 +1,7 @@
+if [ -f /opt/homebrew/share/zsh-autocomplete/zsh-autocomplete.plugin.zsh ]; then
+  source /opt/homebrew/share/zsh-autocomplete/zsh-autocomplete.plugin.zsh
+fi
+
 autoload add-zsh-hook
 
 case $OSTYPE in
