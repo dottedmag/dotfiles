@@ -416,6 +416,23 @@
        (unless (string= msg "[eglot] No \"source.organizeImports\" code actions here")
          (error msg))))))
 
+;; * LSP (lsp-bridge) *
+
+;;; Dependencies
+(straight-use-package 'yasnippet)
+(straight-use-package 'markdown-mode)
+
+(straight-use-package
+ '(lsp-bridge :type git
+              :host github
+              :repo "manateelazycat/lsp-bridge"
+              :files (:defaults "*.el" "*.py" "acm" "core" "langserver" "multiserver" "resources")
+              :build (:not compile)))
+
+(setq lsp-bridge-python-command "/opt/homebrew/bin/python3.10")
+
+(global-lsp-bridge-mode)
+
 ;; * Flycheck *
 
 (straight-use-package 'flycheck)
@@ -436,13 +453,13 @@
 
 ;; Format on save
 
-(defun dm>go-mode-format-before-save ()
-  (add-hook 'before-save-hook #'eglot-format-buffer -10 t)
-  (add-hook 'before-save-hook #'dm>eglot-organize-imports nil t))
+;; (defun dm>go-mode-format-before-save ()
+;;   (add-hook 'before-save-hook #'eglot-format-buffer -10 t)
+;;   (add-hook 'before-save-hook #'dm>eglot-organize-imports nil t))
 
-(with-eval-after-load 'go-mode
-  (add-hook 'go-mode-hook 'eglot-ensure)
-  (add-hook 'go-mode-hook #'dm>go-mode-format-before-save))
+;; (with-eval-after-load 'go-mode
+;;   (add-hook 'go-mode-hook 'eglot-ensure)
+;;   (add-hook 'go-mode-hook #'dm>go-mode-format-before-save))
 
 ;; * YAML *
 
@@ -658,9 +675,9 @@
 (with-eval-after-load 'typescript-mode
   (add-hook 'typescript-mode-hook #'dm>disable-indent-tabs))
 
-(with-eval-after-load 'eglot
-  (add-to-list 'eglot-server-programs
-               '(typescript-mode . ("npx" "@vtsls/language-server" "--" "server/bin/vtsls.js" "--stdio"))))
+;; (with-eval-after-load 'eglot
+;;   (add-to-list 'eglot-server-programs
+;;                '(typescript-mode . ("npx" "@vtsls/language-server" "--" "server/bin/vtsls.js" "--stdio"))))
 
 ;; Templ.guide
 
