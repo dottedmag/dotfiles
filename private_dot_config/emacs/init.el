@@ -402,25 +402,15 @@
 
 ;; *** Modes ***
 
-;; * LSP *
-
-(defun dm>eglot-organize-imports ()
-  ;; - try to save a file with imports that are already organized
-  ;; - gopls responds that source.organizeImports code action is not applicable
-  ;; - eglot raises an error
-  ;; Hence we have to suppress this completely useless error.
-  (condition-case exc
-      (call-interactively 'eglot-code-action-organize-imports)
-    (error
-     (let ((msg (error-message-string exc)))
-       (unless (string= msg "[eglot] No \"source.organizeImports\" code actions here")
-         (error msg))))))
-
 ;; * LSP (lsp-bridge) *
 
 ;;; Dependencies
 (straight-use-package 'yasnippet)
 (straight-use-package 'markdown-mode)
+
+;; Implicit dependency for lsp-bridge-code-format
+(with-eval-after-load 'lsp-bridge
+  (require 'cc-vars))
 
 (straight-use-package
  '(lsp-bridge :type git
@@ -429,9 +419,101 @@
               :files (:defaults "*.el" "*.py" "acm" "core" "langserver" "multiserver" "resources")
               :build (:not compile)))
 
+;; TODO: make it less stupid
 (setq lsp-bridge-python-command "/opt/homebrew/bin/python3.10")
 
 (global-lsp-bridge-mode)
+
+(defun dm>lsp-bridge-call-file-api-sync (method &rest args)
+  (if (lsp-bridge-is-remote-file)
+      (lsp-bridge-remote-send-lsp-request method args)
+    (if (and buffer-file-name (file-remote-p (buffer-file-name)))
+        (message "[LSP-Bridge] remote file \"%s\" is updating info... skip call %s."
+                 (buffer-file-name) method)
+      (when (lsp-bridge-call-file-api-p)
+        (if (and (boundp 'acm-backend-lsp-filepath)
+                 (file-exists-p acm-backend-lsp-filepath))
+            (if lsp-bridge-buffer-file-deleted
+                ;; If buffer's file create again (such as switch branch back), we need save buffer first,
+                ;; send the LSP request after the file is changed next time.
+                (progn
+                  (save-buffer)
+                  (setq-local lsp-bridge-buffer-file-deleted nil)
+                  (message "[LSP-Bridge] %s is back, will send the %s LSP request after the file is changed next time." acm-backend-lsp-filepath method))
+              (when (and acm-backend-lsp-filepath
+                         (not (string-equal acm-backend-lsp-filepath "")))
+                (lsp-bridge-deferred-chain
+                  (lsp-bridge-epc-call-sync lsp-bridge-epc-process (read method) (append (list acm-backend-lsp-filepath) args)))))
+          ;; We need send `closeFile' request to lsp server if we found buffer's file is not exist,
+          ;; it is usually caused by switching branch or other tools to delete file.
+          ;;
+          ;; We won't send any lsp request until buffer's file create again.
+          (unless lsp-bridge-buffer-file-deleted
+            (lsp-bridge-close-buffer-file)
+            (setq-local lsp-bridge-buffer-file-deleted t)
+            (message "[LSP-Bridge] %s is not exist, stop send the %s LSP request until file create again." acm-backend-lsp-filepath method)))))))
+
+(defun dm>lsp-bridge-code-format-sync ()
+  (interactive)
+  (when (and
+         ;; Current buffer has LSP server.
+         (lsp-bridge-has-lsp-server-p)
+         ;; Completion menu not show.
+         (not (lsp-bridge-completion-ui-visible-p))
+         ;; Yasnippet not active.
+         (or (not (boundp 'yas--active-snippets))
+             (not yas--active-snippets))
+         ;; Tempel not active.
+         (or (not (boundp 'tempel--active))
+             (not tempel--active)))
+    (let* ((indent (symbol-value (lsp-bridge--get-indent-width major-mode)))
+           (start (lsp-bridge--point-position (if (region-active-p) (region-beginning) (point))))
+           (end (lsp-bridge--point-position (if (region-active-p) (region-end) (point)))))
+      (dm>lsp-bridge-call-file-api-sync "try_formatting"
+                                        start
+                                        end
+                                        ;; Sometimes `c-basic-offset' return string `set-from-style', make some lsp server broken, such as, gopls,
+                                        ;; so we need convert indent to integer `4' to make sure code format works expectantly.
+                                        (if (eq indent 'set-from-style)
+                                            4
+                                          indent)))))
+
+
+(defun dm>lsp-bridge-code-format-sync ()
+  (lsp-bridge-deferred-chain
+    (lsp-bridge-epc-call-sync lsp-bridge-epc-process
+                              (read "try_formatting")
+                              (append (list acm-backend-lsp-filepath) '( (point) (point) 4)))))
+
+(defun dm>lsp-bridge-code-action-sync (&optional action-kind)
+  "Send code action to LSP server to fixes code or problems.
+
+Default request all kind code-action.
+
+You can send special kind of code-action, parameter `action-kind' can use one of below:
+
+'quickfix'
+'refactor'
+'refactor.extract'
+'refactor.inline'
+'refactor.rewrite'
+'source'
+'source.organizeImports'
+'source.fixAll'
+
+Please read https://microsoft.github.io/language-server-protocol/specifications/lsp/3.17/specification/#codeActionKind for detail explain.
+"
+  (interactive)
+  (when (lsp-bridge-has-lsp-server-p)
+    (let ((range (lsp-bridge-code-action-get-range)))
+      (dm>lsp-bridge-call-file-api-sync "try_code_action"
+                                (lsp-bridge--point-position (car range))
+                                (lsp-bridge--point-position (cdr range))
+                                action-kind)
+      )))
+
+(defun dm>lsp-organize-imports ()
+  (dm>lsp-bridge-code-action-sync "source.organizeImports"))
 
 ;; * Flycheck *
 
@@ -453,13 +535,14 @@
 
 ;; Format on save
 
-;; (defun dm>go-mode-format-before-save ()
-;;   (add-hook 'before-save-hook #'eglot-format-buffer -10 t)
-;;   (add-hook 'before-save-hook #'dm>eglot-organize-imports nil t))
 
-;; (with-eval-after-load 'go-mode
-;;   (add-hook 'go-mode-hook 'eglot-ensure)
-;;   (add-hook 'go-mode-hook #'dm>go-mode-format-before-save))
+(defun dm>lsp-go-setup ()
+  (add-hook 'before-save-hook #'lsp-bridge-code-format -10 t)
+;;  (add-hook 'before-save-hook #'dm>lsp-organize-imports-sync nil t)
+  )
+
+(with-eval-after-load 'go-mode
+  (add-hook 'go-mode-hook 'dm>lsp-go-setup))
 
 ;; * YAML *
 
