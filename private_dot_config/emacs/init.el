@@ -444,6 +444,7 @@
   (add-hook 'go-mode-hook 'eglot-ensure)
   (add-hook 'go-mode-hook #'dm>go-mode-format-before-save))
 
+
 ;; * YAML *
 
 (straight-use-package 'yaml-mode)
@@ -659,6 +660,7 @@
   (add-hook 'typescript-mode-hook #'dm>disable-indent-tabs))
 
 (with-eval-after-load 'eglot
+  (add-to-list 'eglot-stay-out-of 'imenu)
   (add-to-list 'eglot-server-programs
                '(typescript-mode . ("npx" "@vtsls/language-server" "--" "server/bin/vtsls.js" "--stdio"))))
 
@@ -686,3 +688,4 @@
   (dm>templ-mode-before-save-hook))
 
 (add-to-list 'auto-mode-alist '("\\.templ\\'" . templ-mode))
+(put 'upcase-region 'disabled nil)
