@@ -288,7 +288,7 @@
 
 (global-set-key (kbd "s-o") 'find-file)
 (global-set-key (kbd "s-s") 'save-buffer)
-(global-set-key (kbd "s-w") 'kill-this-buffer)
+(global-set-key (kbd "s-w") 'kill-current-buffer)
 
 (defun dm>new-buffer ()
   (interactive)
