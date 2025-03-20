@@ -10,6 +10,7 @@ bin/ls
 .colima
 {{ end }}
 {{ if ne .chezmoi.os "linux" }}
+bin/ok
 .config/sway
 {{ end }}
 {{ if eq .chezmoi.hostname "tea" }}
