@@ -69,7 +69,7 @@ unsetopt AUTO_REMOVE_SLASH # do not remove / after completion
 # Prompt, terminal title
 
 case "$HOST" in
-  p1)
+  a.local)
     EXPECTED_USER=misha;;
   *)
     EXPECTED_USER=dottedmag;;

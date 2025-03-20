@@ -29,11 +29,13 @@
 	process = git-lfs filter-process
 	required = true
 
+{{- if eq .chezmoi.hostname "mm" }}
 [user]
-{{- if eq .chezmoi.hostname "p1" }}
-	email = misha.gusarov@codethink.co.uk
-	name = Mikhail Gusarov
-{{ else }}
 	email = dottedmag@dottedmag.net
 	name = Mikhail Gusarov
+{{ else if eq .chezmoi.hostname "a" }}
+[include]
+	path = gitconfig.local
+{{ else }}
+	{{ fail "unknown git config for this machine" }}
 {{ end -}}
