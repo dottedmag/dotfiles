@@ -689,3 +689,9 @@
 
 (add-to-list 'auto-mode-alist '("\\.templ\\'" . templ-mode))
 (put 'upcase-region 'disabled nil)
+
+(put 'dired-find-alternate-file 'disabled nil)
+
+;; ninja
+
+(straight-use-package 'ninja-mode)
